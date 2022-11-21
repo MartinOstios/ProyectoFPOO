@@ -9,6 +9,29 @@ package Modelos;
  *
  * @author Usuario
  */
-public class Arbitro {
+public class Arbitro extends Persona{
+    private boolean fifa;
+
+    public Arbitro(String cedula, String nombre, String apellido, int edad, boolean fifa) {
+        super(cedula, nombre, apellido, edad);
+        this.fifa = fifa;
+    }
+
+    /**
+     * @return the fifa
+     */
+    public boolean isFifa() {
+        return fifa;
+    }
+
+    /**
+     * @param fifa the fifa to set
+     */
+    public void setFifa(boolean fifa) {
+        this.fifa = fifa;
+    }
+    
+    
+    
     
 }
