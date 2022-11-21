@@ -10,8 +10,11 @@ import java.util.LinkedList;
 public class Equipo {
     private String nombre;
     private int anioFundacion;
-    private int numTitulos;
+    private int numTitulosNacionales;
+    private int numTitulosInternacionales;
+    private int puntos;
     private int golesContra;
+    private int golesFavor;
     private int partidosJugados;
     private LinkedList<Partido> misPartidos;
     private LinkedList<Aficionado> misAficionados;
@@ -22,20 +25,29 @@ public class Equipo {
      * Constructor de objetos Equipo, con valores dados por el usuario
      * @param nombre nombre del equipo
      * @param anioFundacion año de fundación del equipo
-     * @param numTitulos número de título obtenidos por el equipo
+     * @param numTitulosNacionales número de títulos nacionales obtenidos por el equipo
+     * @param numTitulosInternacionales número de títulos internacionales obtenidos por el equipo
+     * @param puntos cantidad de puntos del equipo
      * @param golesContra goles en contra hechos en la liga
+     * @param golesFavor goles a favor hechos en la liga
      * @param partidosJugados  partidos jugados en la liga
      */
-    public Equipo(String nombre, int anioFundacion, int numTitulos, int golesContra, int partidosJugados) {
+    public Equipo(String nombre, int anioFundacion, int numTitulosNacionales, int numTitulosInternacionales, int puntos, int golesContra, int golesFavor, int partidosJugados) {
         this.nombre = nombre;
         this.anioFundacion = anioFundacion;
-        this.numTitulos = numTitulos;
+        this.numTitulosNacionales = numTitulosNacionales;
+        this.numTitulosInternacionales = numTitulosInternacionales;
+        this.puntos = puntos;
         this.golesContra = golesContra;
+        this.golesFavor = golesFavor;
         this.partidosJugados = partidosJugados;
         this.misPartidos = new LinkedList<>();
         this.misAficionados = new LinkedList<>();
         this.misJugadores = new LinkedList<>();
     }
+
+    
+    
     
     //===Relaciones===
     //Agregación entre Equipo y Técnico
@@ -132,17 +144,17 @@ public class Equipo {
     }
 
     /**
-     * @return the numTitulos
+     * @return the numTitulosNacionales
      */
-    public int getNumTitulos() {
-        return numTitulos;
+    public int getNumTitulosNacionales() {
+        return numTitulosNacionales;
     }
 
     /**
-     * @param numTitulos the numTitulos to set
+     * @param numTitulosNacionales the numTitulosNacionales to set
      */
-    public void setNumTitulos(int numTitulos) {
-        this.numTitulos = numTitulos;
+    public void setNumTitulosNacionales(int numTitulosNacionales) {
+        this.numTitulosNacionales = numTitulosNacionales;
     }
 
     /**
@@ -227,5 +239,47 @@ public class Equipo {
      */
     public void setTecnico(Tecnico tecnico) {
         this.tecnico = tecnico;
+    }
+
+    /**
+     * @return the numTitulosInternacionales
+     */
+    public int getNumTitulosInternacionales() {
+        return numTitulosInternacionales;
+    }
+
+    /**
+     * @param numTitulosInternacionales the numTitulosInternacionales to set
+     */
+    public void setNumTitulosInternacionales(int numTitulosInternacionales) {
+        this.numTitulosInternacionales = numTitulosInternacionales;
+    }
+
+    /**
+     * @return the puntos
+     */
+    public int getPuntos() {
+        return puntos;
+    }
+
+    /**
+     * @param puntos the puntos to set
+     */
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+
+    /**
+     * @return the golesFavor
+     */
+    public int getGolesFavor() {
+        return golesFavor;
+    }
+
+    /**
+     * @param golesFavor the golesFavor to set
+     */
+    public void setGolesFavor(int golesFavor) {
+        this.golesFavor = golesFavor;
     }
 }
