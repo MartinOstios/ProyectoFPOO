@@ -58,20 +58,58 @@ public class Liga {
      *
      * @return lista con la tabla de posiciones
      */
-    public LinkedList<Equipo> tablaPosiciones() {
+    public LinkedList<Equipo> organizarPorPuntos() {
         LinkedList<Equipo> resultado = new LinkedList<>();
+        LinkedList<Equipo> aux = new LinkedList<>();
+        //Pasa los datos de la lista de equipos a una lista auxiliar (Para no afectar la lista original)
+        //No se utiliza
+        //aux = this.getMisEquipos()
+        //porque todo lo que se haga en el auxiliar, también afecta la lista orginal
+        //Por eso se crea una lista nueva y se llena desde cero
+        for (Equipo actual : this.getMisEquipos()) {
+            aux.add(actual);
+        }
         Equipo equipoMayor = null;
-        int tam = this.getMisEquipos().size();
+        int tam = aux.size();
         for (int i = 0; i < tam; i++) {
             int mayor = Integer.MIN_VALUE;
-            for (Equipo actual : this.getMisEquipos()) {
+            //Busca el equipo con mayor puntos (En la lissta auxiliar)
+            for (Equipo actual : aux) {
                 if (actual.getPuntos() > mayor) {
                     mayor = actual.getPuntos();
                     equipoMayor = actual;
                 }
             }
+            //Lo agrega a la lista del Resultado
             resultado.add(equipoMayor);
-            this.getMisEquipos().remove(equipoMayor);
+            //Lo quita de la lista de equipos auxiliar
+            aux.remove(equipoMayor);
+        }
+
+        return resultado;
+    }
+
+    public LinkedList<Equipo> organizarPorGoles() {
+        //Obtiene la lista ordenada por puntos
+        LinkedList<Equipo> resultado = this.organizarPorPuntos();
+        Equipo aux = null;
+        for (int i = 0; i < resultado.size() - 1; i++) {
+            //Mira si el equipo en la posición i tiene los mismos puntos que el equipo en la posición i+1
+            if (resultado.get(i).getPuntos() == resultado.get(i + 1).getPuntos()) {
+                //Ambas variables son para guardar la diferencia de goles del equipo i, y el equipo i+1
+                int difGolesActual = resultado.get(i).getGolesFavor() - resultado.get(i).getGolesContra();
+                int difGolesSiguiente = resultado.get(i + 1).getGolesFavor() - resultado.get(i + 1).getGolesContra();
+                //Si la diferencia de goles del equipo i es menor al del equipo i+1 entonces
+                if (difGolesActual < difGolesSiguiente) {
+                    //Guarda el equipo en la posición i en el auxiliar
+                    aux = resultado.get(i);
+                    //El equipo que está en la posición i+1 lo pone en la posición i
+                    resultado.set(i, resultado.get(i + 1));
+                    //En la posición i+1 pone el equipo que estaba en la posición i, que anteriormente
+                    //se guardó en la variable aux
+                    resultado.set(i + 1, aux);
+                }
+            }
         }
         return resultado;
     }
