@@ -46,12 +46,12 @@ public class Liga {
      */
     public Jugador jugadorMasJoven() {
         Jugador resultado = null;
-        int mayor= Integer.MIN_VALUE;
-        for(Persona actual: this.misPersonas){
-            if(actual instanceof Jugador){
-                if(actual.getEdad()>mayor){
-                    mayor= actual.getEdad();
-                    resultado= (Jugador)actual;
+        int mayor = Integer.MIN_VALUE;
+        for (Persona actual : this.misPersonas) {
+            if (actual instanceof Jugador) {
+                if (actual.getEdad() > mayor) {
+                    mayor = actual.getEdad();
+                    resultado = (Jugador) actual;
                 }
             }
         }
@@ -96,26 +96,21 @@ public class Liga {
 
         return resultado;
     }
-
-    public LinkedList<Equipo> organizarPorGoles() {
+    
+     public LinkedList<Equipo> tablaPosiciones() {
         //Obtiene la lista ordenada por puntos
         LinkedList<Equipo> resultado = this.organizarPorPuntos();
         Equipo aux = null;
         for (int i = 0; i < resultado.size() - 1; i++) {
-            //Mira si el equipo en la posición i tiene los mismos puntos que el equipo en la posición i+1
-            if (resultado.get(i).getPuntos() == resultado.get(i + 1).getPuntos()) {
-                //Ambas variables son para guardar la diferencia de goles del equipo i, y el equipo i+1
-                int difGolesActual = resultado.get(i).getGolesFavor() - resultado.get(i).getGolesContra();
-                int difGolesSiguiente = resultado.get(i + 1).getGolesFavor() - resultado.get(i + 1).getGolesContra();
-                //Si la diferencia de goles del equipo i es menor al del equipo i+1 entonces
-                if (difGolesActual < difGolesSiguiente) {
-                    //Guarda el equipo en la posición i en el auxiliar
-                    aux = resultado.get(i);
-                    //El equipo que está en la posición i+1 lo pone en la posición i
-                    resultado.set(i, resultado.get(i + 1));
-                    //En la posición i+1 pone el equipo que estaba en la posición i, que anteriormente
-                    //se guardó en la variable aux
-                    resultado.set(i + 1, aux);
+            for (int j = i + 1; j <= resultado.size() - 1; j++) {
+                if (resultado.get(i).getPuntos() == resultado.get(j).getPuntos()) {
+                    int difGolesActual = resultado.get(i).getGolesFavor() - resultado.get(i).getGolesContra(); //(i)
+                    int difGolesSiguiente = resultado.get(j).getGolesFavor() - resultado.get(j).getGolesContra(); //(j)
+                    if (difGolesActual < difGolesSiguiente) {
+                        aux = resultado.get(i);
+                        resultado.set(i, resultado.get(j));
+                        resultado.set(j, aux);
+                    }
                 }
             }
         }
@@ -129,12 +124,12 @@ public class Liga {
      */
     public Jugador jugadorMayorGoles() {
         Jugador resultado = null;
-        int mayor= Integer.MIN_VALUE;
-        for(Persona actual: this.misPersonas){
-            if(actual instanceof Jugador){
-                if(((Jugador) actual).getGolesMarcados()>mayor){
-                    mayor= ((Jugador)actual).getGolesMarcados();
-                    resultado= (Jugador)actual;
+        int mayor = Integer.MIN_VALUE;
+        for (Persona actual : this.misPersonas) {
+            if (actual instanceof Jugador) {
+                if (((Jugador) actual).getGolesMarcados() > mayor) {
+                    mayor = ((Jugador) actual).getGolesMarcados();
+                    resultado = (Jugador) actual;
                 }
             }
         }
