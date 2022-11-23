@@ -46,15 +46,7 @@ public class Liga {
      */
     public Jugador jugadorMasJoven() {
         Jugador resultado = null;
-        int mayor= Integer.MIN_VALUE;
-        for(Persona actual: this.misPersonas){
-            if(actual instanceof Jugador){
-                if(actual.getEdad()>mayor){
-                    mayor= actual.getEdad();
-                    resultado= (Jugador) actual;
-                }
-            }
-        }
+
         return resultado;
     }
 
@@ -129,15 +121,7 @@ public class Liga {
      */
     public Jugador jugadorMayorGoles() {
         Jugador resultado = null;
-        int mayor= Integer.MIN_VALUE;
-        for(Persona actual: this.misPersonas){
-            if(actual instanceof Jugador){
-                if(((Jugador) actual).getGolesMarcados()>mayor){
-                    mayor= ((Jugador)actual).getGolesMarcados();
-                    resultado= (Jugador)actual;
-                }
-            }
-        }
+
         return resultado;
     }
 
