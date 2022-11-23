@@ -79,7 +79,13 @@ public class Equipo {
      */
     public double promEdad(){
         double resultado = 0.0;
-        
+        double cont = 0;
+        double suma = 0;
+        for (Jugador actual : this.getMisJugadores()) {
+            suma += actual.getEdad();
+            cont++;
+        }
+        resultado = suma / cont;
         return resultado;
     }
     
@@ -109,7 +115,19 @@ public class Equipo {
      */
     public int totalNomina(){
         int resultado = 0;
-        
+        for (Jugador actual : this.getMisJugadores()) {
+            resultado += actual.getSalario();
+        }
+        return resultado + this.getTecnico().getSalario();
+    }
+    
+    public Jugador getArquero(){
+        Jugador resultado = null;
+        for (Jugador actual : this.misJugadores) {
+            if(actual.getPosicion().equals("Arquero")){
+                resultado = actual;
+            }
+        }
         return resultado;
     }
     

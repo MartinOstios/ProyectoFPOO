@@ -143,7 +143,14 @@ public class Liga {
      */
     public Equipo equipoMayorNomina() {
         Equipo resultado = null;
-
+        double mayor = Double.MIN_VALUE;
+        for (Equipo actual : this.misEquipos) {
+            double nomina = actual.totalNomina();
+            if(nomina>mayor){
+                mayor = nomina;
+                resultado = actual;
+            }
+        }
         return resultado;
     }
 
@@ -154,7 +161,13 @@ public class Liga {
      */
     public Equipo equipoMayorAficionados() {
         Equipo resultado = null;
-
+        int mayor = Integer.MIN_VALUE;
+        for (Equipo actual : this.misEquipos) {
+            if(actual.getMisAficionados().size()>mayor){
+                mayor = actual.getMisAficionados().size();
+                resultado = actual;
+            }
+        }
         return resultado;
     }
 
@@ -166,7 +179,17 @@ public class Liga {
      */
     public Jugador arqueroMenosGoles() {
         Jugador resultado = null;
-
+        Equipo menorGoles = null;
+        int menor = Integer.MAX_VALUE;
+        for (Equipo actual : this.misEquipos) {
+            if(actual.getGolesContra()<menor){
+                menor = actual.getGolesContra();
+                menorGoles = actual;
+            }
+            
+        }
+        System.out.println("Equipo: " + menorGoles.getNombre());
+        resultado = menorGoles.getArquero();
         return resultado;
     }
 
