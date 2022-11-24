@@ -95,7 +95,15 @@ public class Equipo {
      */
     public int cantPartidosGoleada(){
         int resultado = 0;
-        
+        int golesloc= 0;
+        int golesvis= 0;
+        for(Partido actual:this.misPartidos){
+            golesloc=actual.getGolesLocal();
+            golesvis=actual.getGolesVisitante();
+            if(golesloc-golesvis>=4){
+                resultado+=1;
+            }
+        }
         return resultado;
     }
     

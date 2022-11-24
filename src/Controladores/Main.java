@@ -109,6 +109,19 @@ public class Main {
         System.out.println("i. Arquero que le han marcado menos goles");
         
         System.out.println("Nombre: "+liga.arqueroMenosGoles().getNombre());
+        
+        System.out.println("a. Jugador mas joven de la liga: ");
+        System.out.println(liga.jugadorMasJoven());
+        
+        System.out.println("c. Cantidad de partidos en el que un equipo gano por goleada: ");
+        System.out.println(liga.getMisEquipos().get(3).cantPartidosGoleada());
+        
+        System.out.println("e. Jugador que ha marcado mas goles en la liga: ");
+        System.out.println(liga.jugadorMayorGoles());
+        
+        
+        
+        
     }
 
 }
