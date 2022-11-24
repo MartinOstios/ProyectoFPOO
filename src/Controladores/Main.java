@@ -56,6 +56,25 @@ public class Main {
         Jugador jugador16 = new Jugador("16", "Miguel", "Perez", 20, "Colombia", "Defensa", 0, 5200000);
         Jugador jugador17 = new Jugador("17", "Mario", "Perez", 18, "Colombia", "Atacante", 0, 2400000);
         Jugador jugador18 = new Jugador("18", "Joel", "Perez", 21, "Colombia", "Arquero", 0, 6300000);
+        
+        liga.getMisPersonas().add(jugador1);
+        liga.getMisPersonas().add(jugador2);
+        liga.getMisPersonas().add(jugador3);
+        liga.getMisPersonas().add(jugador4);
+        liga.getMisPersonas().add(jugador5);
+        liga.getMisPersonas().add(jugador6);
+        liga.getMisPersonas().add(jugador7);
+        liga.getMisPersonas().add(jugador8);
+        liga.getMisPersonas().add(jugador9);
+        liga.getMisPersonas().add(jugador10);
+        liga.getMisPersonas().add(jugador11);
+        liga.getMisPersonas().add(jugador12);
+        liga.getMisPersonas().add(jugador13);
+        liga.getMisPersonas().add(jugador14);
+        liga.getMisPersonas().add(jugador15);
+        liga.getMisPersonas().add(jugador16);
+        liga.getMisPersonas().add(jugador17);
+        liga.getMisPersonas().add(jugador18);
 
         liga.getMisEquipos().get(0).agregarJugador(jugador1);
         liga.getMisEquipos().get(0).agregarJugador(jugador2);
@@ -107,17 +126,16 @@ public class Main {
         System.out.println("g. Equipo con mayor cantidad de aficionados");
         System.out.println(liga.equipoMayorAficionados().getNombre());
         System.out.println("i. Arquero que le han marcado menos goles");
-        
         System.out.println("Nombre: "+liga.arqueroMenosGoles().getNombre());
         
         System.out.println("a. Jugador mas joven de la liga: ");
-        System.out.println(liga.jugadorMasJoven());
+        System.out.println(liga.jugadorMasJoven().getNombre());
         
         System.out.println("c. Cantidad de partidos en el que un equipo gano por goleada: ");
         System.out.println(liga.getMisEquipos().get(3).cantPartidosGoleada());
         
         System.out.println("e. Jugador que ha marcado mas goles en la liga: ");
-        System.out.println(liga.jugadorMayorGoles());
+        System.out.println(liga.jugadorMayorGoles().getNombre());
         
         
         
