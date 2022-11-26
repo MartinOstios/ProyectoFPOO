@@ -29,6 +29,16 @@ public class Liga {
         this.misEquipos = new LinkedList<>();
         this.misPersonas = new LinkedList<>();
     }
+    
+    public Persona buscarPersona(String cedula){
+        Persona resultado = null;
+        for (Persona actual : this.getMisPersonas()) {
+            if(actual.getCedula().equals(cedula)){
+                resultado = actual;
+            }
+        }
+        return resultado;
+    }
 
     //===Relaciones===
     //Relación de composición entre Liga y Equipos
