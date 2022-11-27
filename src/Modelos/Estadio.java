@@ -40,7 +40,9 @@ public class Estadio {
      */
     public int totalGoles(){
         int resultado = 0;
-        
+        for(Partido actual: this.misPartidos){
+            resultado+= actual.getGolesLocal()+ actual.getGolesVisitante();
+        }
         return resultado;
     }
     
@@ -50,7 +52,14 @@ public class Estadio {
      */
     public Partido partidoMasGoles(){
         Partido resultado = null;
-        
+        int mayor= Integer.MIN_VALUE;
+        for(Partido actual: this.misPartidos){
+            int aux= actual.getGolesLocal()+ actual.getGolesVisitante();
+            if(aux>mayor){
+                mayor=aux;
+                resultado=actual;
+            }
+        }
         return resultado;
     }
     //=============
