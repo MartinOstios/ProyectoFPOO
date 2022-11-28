@@ -6,19 +6,14 @@
 package VistaControladores;
 
 import Modelos.*;
+import java.util.LinkedList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author Usuario
- */
 public class Vista extends javax.swing.JFrame {
 
     Liga miLiga;
 
-    /**
-     * Creates new form Vista
-     */
     public Vista() {
         this.miLiga = new Liga("01", "Colombia");
         //TESTEO
@@ -245,6 +240,9 @@ public class Vista extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblPosiciones = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -368,7 +366,7 @@ public class Vista extends javax.swing.JFrame {
                     .addComponent(btnActualizarTecnico)
                     .addComponent(btnEliminarTecnico)
                     .addComponent(btnLimpiarTecnico))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -489,7 +487,7 @@ public class Vista extends javax.swing.JFrame {
                     .addComponent(btnActualizarAficionado)
                     .addComponent(btnEliminarAficionado)
                     .addComponent(btnLimpiarAficionado))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Aficionado", jPanel9);
@@ -502,7 +500,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 456, Short.MAX_VALUE)
+            .addGap(0, 457, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Jugador", jPanel10);
@@ -515,7 +513,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 456, Short.MAX_VALUE)
+            .addGap(0, 457, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Manager", jPanel11);
@@ -528,7 +526,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 456, Short.MAX_VALUE)
+            .addGap(0, 457, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("Árbitro", jPanel12);
@@ -546,7 +544,7 @@ public class Vista extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2)
                 .addContainerGap())
         );
 
@@ -560,7 +558,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Equipo", jPanel2);
@@ -573,7 +571,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Estadio", jPanel3);
@@ -586,7 +584,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Partido", jPanel4);
@@ -599,20 +597,48 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Jornada", jPanel5);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setText("Tabla de posiciones");
+
+        tblPosiciones.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tblPosiciones);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 811, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(327, 327, 327)
+                .addComponent(jLabel13)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(106, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel13)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Tabla de posiciones", jPanel6);
@@ -625,7 +651,7 @@ public class Vista extends javax.swing.JFrame {
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 506, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Reportes", jPanel7);
@@ -643,7 +669,7 @@ public class Vista extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
@@ -735,6 +761,9 @@ public class Vista extends javax.swing.JFrame {
 
     private void btnLimpiarTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarTecnicoActionPerformed
         this.limpiarCajas();
+        
+        
+        this.tablaPosiciones();
     }//GEN-LAST:event_btnLimpiarTecnicoActionPerformed
 
     //==========================================================================
@@ -832,9 +861,30 @@ public class Vista extends javax.swing.JFrame {
     //==========================================================================
     //SECCIÓN PERSONAS -> ÁRBITRO
     //==========================================================================
-    /**
-     * @param args the command line arguments
-     */
+    
+    
+    
+    
+    //==========================================================================
+    //SECCIÓN TABLA DE POSICIONES
+    public void tablaPosiciones(){
+        String nombreColumnas[] = {"Posición", "Equipo", "Puntos", "Diferencia de goles", "Partidos jugados"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblPosiciones.setModel(miModelo);
+        LinkedList<Equipo> lista = this.miLiga.tablaPosiciones();
+        int cont = 1;
+        for (Equipo actual : lista) {
+            String fila[] = new String[nombreColumnas.length];
+            fila[0] = ""+cont++; 
+            fila[1] = actual.getNombre();
+            fila[2] = ""+actual.getPuntos();
+            fila[3] = ""+(actual.getGolesFavor() - actual.getGolesContra());
+            fila[4] = ""+actual.getPartidosJugados();
+            miModelo.addRow(fila);
+        }
+    }
+    //==========================================================================
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -884,6 +934,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -904,8 +955,10 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable tblPosiciones;
     private javax.swing.JTextField txtApellidoAficionado;
     private javax.swing.JTextField txtApellidoTecnico;
     private javax.swing.JTextField txtCedulaAficionado;
