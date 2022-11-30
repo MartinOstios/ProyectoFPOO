@@ -215,7 +215,14 @@ public class Liga implements Serializable{
      */
     public String nombreEstadioMasGoles() {
         String resultado = "";
-
+        int mayor= Integer.MIN_VALUE;
+        for(Estadio actual: this.misEstadios){
+            int aux= actual.totalGoles();
+            if(aux>mayor){
+                mayor= aux;
+                resultado= actual.getNombre();
+            }
+        }
         return resultado;
     }
 
@@ -226,7 +233,10 @@ public class Liga implements Serializable{
      */
     public String idPartidoMasGoles() {
         String resultado = "";
-
+        for(Estadio actual: this.misEstadios){
+            Partido aux = actual.partidoMasGoles();
+            resultado= aux.getId();
+        }
         return resultado;
     }
 

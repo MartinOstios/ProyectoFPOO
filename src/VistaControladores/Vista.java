@@ -177,6 +177,12 @@ public class Vista extends javax.swing.JFrame {
 
         System.out.println("e. Jugador que ha marcado mas goles en la liga: ");
         System.out.println(miLiga.jugadorMayorGoles().getNombre());
+        
+        System.out.println("h. Identificador del partido el cual tuvo más goles");
+        System.out.println(miLiga.idPartidoMasGoles());
+        
+        System.out.println("j. Nombre del estadio donde se marcaron más goles en toda la liga");
+        System.out.println(miLiga.nombreEstadioMasGoles());
 
     }
 
