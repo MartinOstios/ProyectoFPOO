@@ -5,11 +5,13 @@
  */
 package Modelos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Partido {
+public class Partido implements Serializable{
     private String id;
     private String fecha;
     private int golesLocal;

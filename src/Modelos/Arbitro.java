@@ -5,11 +5,13 @@
  */
 package Modelos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Arbitro extends Persona{
+public class Arbitro extends Persona implements Serializable{
     private boolean fifa;
 
     public Arbitro(String cedula, String nombre, String apellido, int edad, boolean fifa) {

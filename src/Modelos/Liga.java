@@ -1,5 +1,6 @@
 package Modelos;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -8,13 +9,15 @@ import java.util.LinkedList;
  * @author Camilo Andrés Molano y Martin Ostios
  * @version 1.0
  */
-public class Liga {
+public class Liga implements Serializable{
 
     private String id;
     private String pais;
     private LinkedList<Estadio> misEstadios;
     private LinkedList<Equipo> misEquipos;
     private LinkedList<Persona> misPersonas;
+    private LinkedList<Partido> misPartidos;
+    private LinkedList<Jornada> misJornadas;
 
     /**
      * Constructor de objetos Liga, con valores dados por el usuario
@@ -28,6 +31,8 @@ public class Liga {
         this.misEstadios = new LinkedList<>();
         this.misEquipos = new LinkedList<>();
         this.misPersonas = new LinkedList<>();
+        this.misPartidos = new LinkedList<>();
+        this.misJornadas = new LinkedList<>();
     }
     
     public Persona buscarPersona(String cedula){
@@ -57,7 +62,7 @@ public class Liga {
     public Jugador jugadorMasJoven() {
         Jugador resultado = null;
         int mayor = Integer.MIN_VALUE;
-        for (Persona actual : this.misPersonas) {
+        for (Persona actual : this.getMisPersonas()) {
             if (actual instanceof Jugador) {
                 if (actual.getEdad() > mayor) {
                     mayor = actual.getEdad();
@@ -135,7 +140,7 @@ public class Liga {
     public Jugador jugadorMayorGoles() {
         Jugador resultado = null;
         int mayor = Integer.MIN_VALUE;
-        for (Persona actual : this.misPersonas) {
+        for (Persona actual : this.getMisPersonas()) {
             if (actual instanceof Jugador) {
                 if (((Jugador) actual).getGolesMarcados() > mayor) {
                     mayor = ((Jugador) actual).getGolesMarcados();
@@ -154,7 +159,7 @@ public class Liga {
     public Equipo equipoMayorNomina() {
         Equipo resultado = null;
         double mayor = Double.MIN_VALUE;
-        for (Equipo actual : this.misEquipos) {
+        for (Equipo actual : this.getMisEquipos()) {
             double nomina = actual.totalNomina();
             if(nomina>mayor){
                 mayor = nomina;
@@ -172,7 +177,7 @@ public class Liga {
     public Equipo equipoMayorAficionados() {
         Equipo resultado = null;
         int mayor = Integer.MIN_VALUE;
-        for (Equipo actual : this.misEquipos) {
+        for (Equipo actual : this.getMisEquipos()) {
             if(actual.getMisAficionados().size()>mayor){
                 mayor = actual.getMisAficionados().size();
                 resultado = actual;
@@ -191,7 +196,7 @@ public class Liga {
         Jugador resultado = null;
         Equipo menorGoles = null;
         int menor = Integer.MAX_VALUE;
-        for (Equipo actual : this.misEquipos) {
+        for (Equipo actual : this.getMisEquipos()) {
             if(actual.getGolesContra()<menor){
                 menor = actual.getGolesContra();
                 menorGoles = actual;
@@ -294,6 +299,34 @@ public class Liga {
      */
     public void setMisPersonas(LinkedList<Persona> misPersonas) {
         this.misPersonas = misPersonas;
+    }
+
+    /**
+     * @return the misPartidos
+     */
+    public LinkedList<Partido> getMisPartidos() {
+        return misPartidos;
+    }
+
+    /**
+     * @param misPartidos the misPartidos to set
+     */
+    public void setMisPartidos(LinkedList<Partido> misPartidos) {
+        this.misPartidos = misPartidos;
+    }
+
+    /**
+     * @return the misJornadas
+     */
+    public LinkedList<Jornada> getMisJornadas() {
+        return misJornadas;
+    }
+
+    /**
+     * @param misJornadas the misJornadas to set
+     */
+    public void setMisJornadas(LinkedList<Jornada> misJornadas) {
+        this.misJornadas = misJornadas;
     }
 
 }

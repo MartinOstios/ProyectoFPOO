@@ -1,5 +1,6 @@
 package Modelos;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -7,7 +8,7 @@ import java.util.LinkedList;
  * @author Camilo Andrés Molano y Martin Ostios
  * @version 1.0
  */
-public class Equipo {
+public class Equipo implements Serializable{
     private String nombre;
     private int anioFundacion;
     private int numTitulosNacionales;

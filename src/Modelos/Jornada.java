@@ -5,13 +5,14 @@
  */
 package Modelos;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
  *
  * @author Usuario
  */
-public class Jornada {
+public class Jornada implements Serializable{
     private int numero;
     private String eslogan;
     private LinkedList<Partido> misPartidos;

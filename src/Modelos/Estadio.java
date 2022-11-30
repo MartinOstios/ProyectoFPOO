@@ -1,5 +1,6 @@
 package Modelos;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
@@ -7,7 +8,7 @@ import java.util.LinkedList;
  * @author Camilo Andrés Molano y Martin Ostios
  * @version 1.0
  */
-public class Estadio {
+public class Estadio implements Serializable{
     private String id;
     private String ciudad;
     private String nombre;

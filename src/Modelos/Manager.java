@@ -5,13 +5,14 @@
  */
 package Modelos;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**
  *
  * @author Usuario
  */
-public class Manager extends Persona{
+public class Manager extends Persona implements Serializable{
     private int aniosAfiliacion;
     private Equipo miEquipo;
     private LinkedList<Jugador> misJugadores;

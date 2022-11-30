@@ -5,13 +5,16 @@
  */
 package Modelos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Tecnico extends Persona{
+public class Tecnico extends Persona implements Serializable{
     private int aniosExperiencia;
     private int salario;
+    private Equipo miEquipo;
 
     public Tecnico(String cedula, String nombre, String apellido, int edad, int aniosExperiencia, int salario) {
         super(cedula, nombre, apellido, edad);
@@ -45,6 +48,20 @@ public class Tecnico extends Persona{
      */
     public void setSalario(int salario) {
         this.salario = salario;
+    }
+
+    /**
+     * @return the miEquipo
+     */
+    public Equipo getMiEquipo() {
+        return miEquipo;
+    }
+
+    /**
+     * @param miEquipo the miEquipo to set
+     */
+    public void setMiEquipo(Equipo miEquipo) {
+        this.miEquipo = miEquipo;
     }
     
     

@@ -5,11 +5,13 @@
  */
 package Modelos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Aficionado extends Persona{
+public class Aficionado extends Persona implements Serializable{
     private int aniosFidelidad;
     private boolean abono;
 

@@ -5,11 +5,13 @@
  */
 package Modelos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Usuario
  */
-public class Jugador extends Persona{
+public class Jugador extends Persona implements Serializable{
     private String nacionalidad;
     private String posicion;
     private int golesMarcados;
