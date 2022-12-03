@@ -9,7 +9,7 @@ import java.util.LinkedList;
  * @author Camilo Andrés Molano y Martin Ostios
  * @version 1.0
  */
-public class Liga implements Serializable{
+public class Liga implements Serializable {
 
     private String id;
     private String pais;
@@ -34,21 +34,65 @@ public class Liga implements Serializable{
         this.misPartidos = new LinkedList<>();
         this.misJornadas = new LinkedList<>();
     }
-    
-    public Persona buscarPersona(String cedula){
+
+    //====BUSCAR OBJETOS=====
+    public Persona buscarPersona(String cedula) {
         Persona resultado = null;
         for (Persona actual : this.getMisPersonas()) {
-            if(actual.getCedula().equals(cedula)){
+            if (actual.getCedula().equals(cedula)) {
                 resultado = actual;
             }
         }
         return resultado;
     }
 
+    public Estadio buscarEstadio(String id) {
+        Estadio resultado = null;
+        for (Estadio actual : this.getMisEstadios()) {
+            if (actual.getId().equals(id)) {
+                resultado = actual;
+            }
+        }
+        return resultado;
+    }
+
+    public Equipo buscarEquipo(String id) {
+        Equipo resultado = null;
+        for (Equipo actual : this.getMisEquipos()) {
+            if (actual.getId().equals(id)) {
+                resultado = actual;
+            }
+        }
+        return resultado;
+    }
+    
+    public Partido buscarPartido(String id) {
+        Partido resultado = null;
+        for (Partido actual : this.getMisPartidos()) {
+            if (actual.getId().equals(id)) {
+                resultado = actual;
+            }
+        }
+        return resultado;
+    }
+    
+    public Jornada buscarJornada(int numero) {
+        Jornada resultado = null;
+        for (Jornada actual : this.getMisJornadas()) {
+            if (actual.getNumero()==numero) {
+                resultado = actual;
+            }
+        }
+        return resultado;
+    }
+    
+    
+
+    //=======================
     //===Relaciones===
     //Relación de composición entre Liga y Equipos
-    public void crearEquipo(String nombre, int anioFundacion, int numTitulosNacionales, int numTitulosInternacionales, int puntos, int golesContra, int golesFavor, int partidosJugados) {
-        Equipo nuevoEquipo = new Equipo(nombre, anioFundacion, numTitulosNacionales, numTitulosInternacionales, puntos, golesContra, golesFavor, partidosJugados);
+    public void crearEquipo(String id, String nombre, int anioFundacion, int numTitulosNacionales, int numTitulosInternacionales, int puntos, int golesContra, int golesFavor, int partidosJugados) {
+        Equipo nuevoEquipo = new Equipo(id, nombre, anioFundacion, numTitulosNacionales, numTitulosInternacionales, puntos, golesContra, golesFavor, partidosJugados);
         this.getMisEquipos().add(nuevoEquipo);
     }
 
@@ -111,8 +155,8 @@ public class Liga implements Serializable{
 
         return resultado;
     }
-    
-     public LinkedList<Equipo> tablaPosiciones() {
+
+    public LinkedList<Equipo> tablaPosiciones() {
         //Obtiene la lista ordenada por puntos
         LinkedList<Equipo> resultado = this.organizarPorPuntos();
         Equipo aux = null;
@@ -161,7 +205,7 @@ public class Liga implements Serializable{
         double mayor = Double.MIN_VALUE;
         for (Equipo actual : this.getMisEquipos()) {
             double nomina = actual.totalNomina();
-            if(nomina>mayor){
+            if (nomina > mayor) {
                 mayor = nomina;
                 resultado = actual;
             }
@@ -178,7 +222,7 @@ public class Liga implements Serializable{
         Equipo resultado = null;
         int mayor = Integer.MIN_VALUE;
         for (Equipo actual : this.getMisEquipos()) {
-            if(actual.getMisAficionados().size()>mayor){
+            if (actual.getMisAficionados().size() > mayor) {
                 mayor = actual.getMisAficionados().size();
                 resultado = actual;
             }
@@ -197,11 +241,11 @@ public class Liga implements Serializable{
         Equipo menorGoles = null;
         int menor = Integer.MAX_VALUE;
         for (Equipo actual : this.getMisEquipos()) {
-            if(actual.getGolesContra()<menor){
+            if (actual.getGolesContra() < menor) {
                 menor = actual.getGolesContra();
                 menorGoles = actual;
             }
-            
+
         }
         System.out.println("Equipo: " + menorGoles.getNombre());
         resultado = menorGoles.getArquero();
@@ -215,12 +259,12 @@ public class Liga implements Serializable{
      */
     public String nombreEstadioMasGoles() {
         String resultado = "";
-        int mayor= Integer.MIN_VALUE;
-        for(Estadio actual: this.misEstadios){
-            int aux= actual.totalGoles();
-            if(aux>mayor){
-                mayor= aux;
-                resultado= actual.getNombre();
+        int mayor = Integer.MIN_VALUE;
+        for (Estadio actual : this.misEstadios) {
+            int aux = actual.totalGoles();
+            if (aux > mayor) {
+                mayor = aux;
+                resultado = actual.getNombre();
             }
         }
         return resultado;
@@ -233,9 +277,9 @@ public class Liga implements Serializable{
      */
     public String idPartidoMasGoles() {
         String resultado = "";
-        for(Estadio actual: this.misEstadios){
+        for (Estadio actual : this.misEstadios) {
             Partido aux = actual.partidoMasGoles();
-            resultado= aux.getId();
+            resultado = aux.getId();
         }
         return resultado;
     }

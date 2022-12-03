@@ -13,6 +13,7 @@ import java.io.Serializable;
  */
 public class Arbitro extends Persona implements Serializable{
     private boolean fifa;
+    
 
     public Arbitro(String cedula, String nombre, String apellido, int edad, boolean fifa) {
         super(cedula, nombre, apellido, edad);

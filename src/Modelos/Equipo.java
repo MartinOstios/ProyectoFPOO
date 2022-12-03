@@ -9,6 +9,7 @@ import java.util.LinkedList;
  * @version 1.0
  */
 public class Equipo implements Serializable{
+    private String id;
     private String nombre;
     private int anioFundacion;
     private int numTitulosNacionales;
@@ -33,7 +34,8 @@ public class Equipo implements Serializable{
      * @param golesFavor goles a favor hechos en la liga
      * @param partidosJugados  partidos jugados en la liga
      */
-    public Equipo(String nombre, int anioFundacion, int numTitulosNacionales, int numTitulosInternacionales, int puntos, int golesContra, int golesFavor, int partidosJugados) {
+    public Equipo(String id, String nombre, int anioFundacion, int numTitulosNacionales, int numTitulosInternacionales, int puntos, int golesContra, int golesFavor, int partidosJugados) {
+        this.id = id;
         this.nombre = nombre;
         this.anioFundacion = anioFundacion;
         this.numTitulosNacionales = numTitulosNacionales;
@@ -98,7 +100,7 @@ public class Equipo implements Serializable{
         int resultado = 0;
         int golesloc= 0;
         int golesvis= 0;
-        for(Partido actual:this.misPartidos){
+        for(Partido actual:this.getMisPartidos()){
             golesloc=actual.getGolesLocal();
             golesvis=actual.getGolesVisitante();
             if(golesloc-golesvis>=4){
@@ -132,7 +134,7 @@ public class Equipo implements Serializable{
     
     public Jugador getArquero(){
         Jugador resultado = null;
-        for (Jugador actual : this.misJugadores) {
+        for (Jugador actual : this.getMisJugadores()) {
             if(actual.getPosicion().equals("Arquero")){
                 resultado = actual;
             }
@@ -308,5 +310,19 @@ public class Equipo implements Serializable{
      */
     public void setGolesFavor(int golesFavor) {
         this.golesFavor = golesFavor;
+    }
+
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
     }
 }

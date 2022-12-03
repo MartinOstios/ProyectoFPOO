@@ -14,6 +14,7 @@ import java.io.Serializable;
 public class Aficionado extends Persona implements Serializable{
     private int aniosFidelidad;
     private boolean abono;
+    private Equipo miEquipo;
 
     public Aficionado(String cedula, String nombre, String apellido, int edad, int aniosFidelidad, boolean abono) {
         super(cedula, nombre, apellido, edad);
@@ -47,6 +48,20 @@ public class Aficionado extends Persona implements Serializable{
      */
     public void setAbono(boolean abono) {
         this.abono = abono;
+    }
+
+    /**
+     * @return the miEquipo
+     */
+    public Equipo getMiEquipo() {
+        return miEquipo;
+    }
+
+    /**
+     * @param miEquipo the miEquipo to set
+     */
+    public void setMiEquipo(Equipo miEquipo) {
+        this.miEquipo = miEquipo;
     }
     
     
