@@ -41,9 +41,11 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarTablaTecnicos();
         this.actualizarTablaAficionado();
         this.actualizarTablaEquipo();
+        this.actualizarTablaEstadio();
         this.actualizarComboTecnicoEquipo();
         this.actualizarComboJugadorEquipo();
         this.actualizarComboAficionadoEquipo();
+        this.actualizarComboPartidoEstadio();
         this.actualizarTablaJugador();
         this.tablaPosiciones();
 
@@ -281,6 +283,12 @@ public class Vista extends javax.swing.JFrame {
         this.txtGolesMarcadosJugador.setText("");
         this.txtSalarioJugador.setText("");
 
+        this.txtIdentificadorEstadio.setText("");
+        this.txtCiudadEstadio.setText("");
+        this.txtNombreEstadio.setText("");
+        this.txtCapacidadEstadio.setText("");
+        this.actualizarTablaPartidoEstadio("-1");
+
     }
 
     /**
@@ -435,6 +443,29 @@ public class Vista extends javax.swing.JFrame {
         txtNominaEquipo = new javax.swing.JTextField();
         txtArqueroEquipo = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
+        lblIdentificadorEstadio = new javax.swing.JLabel();
+        lblCiudadEstadio = new javax.swing.JLabel();
+        lblNombreEstadio = new javax.swing.JLabel();
+        lblCapacidadEstadio = new javax.swing.JLabel();
+        txtIdentificadorEstadio = new javax.swing.JTextField();
+        txtCiudadEstadio = new javax.swing.JTextField();
+        txtNombreEstadio = new javax.swing.JTextField();
+        txtCapacidadEstadio = new javax.swing.JTextField();
+        lblTituloListaEstadios = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tblEstadio = new javax.swing.JTable();
+        btnAgregarEstadio = new javax.swing.JButton();
+        btnBuscarEstadio = new javax.swing.JButton();
+        btnActualizarEstadio = new javax.swing.JButton();
+        btnEliminarEstadio = new javax.swing.JButton();
+        btnLimpiarEstadio = new javax.swing.JButton();
+        lblRelacionPartidosEstadio = new javax.swing.JLabel();
+        cbPartidoEstadio = new javax.swing.JComboBox<>();
+        btnAgregarRelacionPartidoEstadio = new javax.swing.JButton();
+        btnEliminarRelacionPartidoEstadio = new javax.swing.JButton();
+        jLabel38 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        tblPartidoEstadio = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -948,7 +979,7 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(btnEliminarJugador))
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoJugador)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Jugador", Jpanel);
@@ -1487,15 +1518,205 @@ public class Vista extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Equipo", jPanel2);
 
+        lblIdentificadorEstadio.setText("Identificador:");
+
+        lblCiudadEstadio.setText("Ciudad:");
+
+        lblNombreEstadio.setText("Nombre:");
+
+        lblCapacidadEstadio.setText("Capacidad:");
+
+        lblTituloListaEstadios.setText("Lista de estadios");
+
+        tblEstadio.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane9.setViewportView(tblEstadio);
+
+        btnAgregarEstadio.setText("Agregar");
+        btnAgregarEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarEstadioActionPerformed(evt);
+            }
+        });
+
+        btnBuscarEstadio.setText("Buscar");
+        btnBuscarEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstadioActionPerformed(evt);
+            }
+        });
+
+        btnActualizarEstadio.setText("Actualizar");
+        btnActualizarEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarEstadioActionPerformed(evt);
+            }
+        });
+
+        btnEliminarEstadio.setText("Eliminar");
+        btnEliminarEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarEstadioActionPerformed(evt);
+            }
+        });
+
+        btnLimpiarEstadio.setText("Limpiar");
+        btnLimpiarEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarEstadioActionPerformed(evt);
+            }
+        });
+
+        lblRelacionPartidosEstadio.setText("Partidos: ");
+
+        cbPartidoEstadio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnAgregarRelacionPartidoEstadio.setText("Agregar");
+        btnAgregarRelacionPartidoEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarRelacionPartidoEstadioActionPerformed(evt);
+            }
+        });
+
+        btnEliminarRelacionPartidoEstadio.setText("Eliminar");
+        btnEliminarRelacionPartidoEstadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarRelacionPartidoEstadioActionPerformed(evt);
+            }
+        });
+
+        jLabel38.setText("Lista de partidos");
+
+        tblPartidoEstadio.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane10.setViewportView(tblPartidoEstadio);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 966, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTituloListaEstadios)
+                .addGap(234, 234, 234))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(lblIdentificadorEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtIdentificadorEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(lblCiudadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCiudadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(btnAgregarEstadio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnBuscarEstadio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnActualizarEstadio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnEliminarEstadio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnLimpiarEstadio)))
+                        .addGap(43, 43, 43))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lblRelacionPartidosEstadio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbPartidoEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAgregarRelacionPartidoEstadio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEliminarRelacionPartidoEstadio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel38)
+                        .addGap(229, 229, 229))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 607, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTituloListaEstadios)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblIdentificadorEstadio)
+                            .addComponent(txtIdentificadorEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCiudadEstadio)
+                            .addComponent(txtCiudadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNombreEstadio)
+                            .addComponent(txtNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCapacidadEstadio)
+                            .addComponent(txtCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAgregarEstadio)
+                            .addComponent(btnBuscarEstadio)
+                            .addComponent(btnActualizarEstadio)
+                            .addComponent(btnEliminarEstadio)
+                            .addComponent(btnLimpiarEstadio)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblRelacionPartidosEstadio)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(cbPartidoEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAgregarRelacionPartidoEstadio)
+                                .addComponent(btnEliminarRelacionPartidoEstadio)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel38)
+                        .addGap(18, 18, 18)))
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Estadio", jPanel3);
@@ -1896,7 +2117,7 @@ public class Vista extends javax.swing.JFrame {
             int titulosInternacionales = Integer.parseInt(this.txtTitulosInternacionalesEquipo.getText());
             this.miLiga.crearEquipo(identificador, nombre, fundacion, titulosNacionales, titulosInternacionales, 0, 0, 0, 0);
             JOptionPane.showMessageDialog(this, "Se creó el equipo " + nombre);
-
+            this.tablaPosiciones();
             this.actualizarTablaEquipo();
             this.limpiarCajas();
 
@@ -1920,22 +2141,22 @@ public class Vista extends javax.swing.JFrame {
             this.txtPartidosEquipo.setText("" + equipoEncontrado.getPartidosJugados());
             this.txtGolesFavorEquipo.setText("" + equipoEncontrado.getGolesFavor());
             this.txtGolesContraEquipo.setText("" + equipoEncontrado.getGolesContra());
-            
+
             //Sección planilla
             this.txtMostrarTecnicoEquipo.setText(this.personaAsignada(equipoEncontrado.getTecnico()));
             this.actualizarTablaJugadoresEquipo(identificador);
             this.actualizarTablaAficionadosEquipo(identificador);
             this.actualizarTablaPartidosEquipo(identificador);
-            
+
             //Sección reportes
             if (equipoEncontrado.getMisJugadores().size() > 0) {
                 this.txtJugadorJovenEquipo.setText(equipoEncontrado.jugadorMasJoven().getNombre());
-                this.txtPromedioEdadJugadoresEquipo.setText(""+equipoEncontrado.promEdad());
-                this.txtCantidadPartidosGoleadaEquipo.setText(""+equipoEncontrado.cantPartidosGoleada());
+                this.txtPromedioEdadJugadoresEquipo.setText("" + equipoEncontrado.promEdad());
+                this.txtCantidadPartidosGoleadaEquipo.setText("" + equipoEncontrado.cantPartidosGoleada());
                 this.txtJugadorMasGolesEquipo.setText(equipoEncontrado.jugadorMayorGoles().getNombre());
-                this.txtNominaEquipo.setText("$"+equipoEncontrado.totalNomina());
+                this.txtNominaEquipo.setText("$" + equipoEncontrado.totalNomina());
                 this.txtArqueroEquipo.setText(equipoEncontrado.getArquero().getNombre());
-            }else{
+            } else {
                 this.txtJugadorJovenEquipo.setText("");
                 this.txtPromedioEdadJugadoresEquipo.setText("");
                 this.txtCantidadPartidosGoleadaEquipo.setText("");
@@ -1977,6 +2198,7 @@ public class Vista extends javax.swing.JFrame {
             this.miLiga.eliminarEquipo(equipoEncontrado);
             JOptionPane.showMessageDialog(this, "El equipo " + equipoEncontrado.getNombre() + " se ha eliminado");
             this.actualizarTablaEquipo();
+            this.tablaPosiciones();
         } else {
             JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
         }
@@ -2108,7 +2330,7 @@ public class Vista extends javax.swing.JFrame {
                 fila[5] = "" + actual.isAbono();
                 miModelo.addRow(fila);
             }
-        }else{
+        } else {
             miModelo.setRowCount(0);
         }
 
@@ -2367,6 +2589,146 @@ public class Vista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
         }
     }//GEN-LAST:event_btnCertificadoJugadorActionPerformed
+    //========================================================
+    //========================================================
+    //Sección estadios
+    private void btnAgregarEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEstadioActionPerformed
+        String identificador = this.txtIdentificadorEstadio.getText();
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado == null) {
+            String ciudad = this.txtCiudadEstadio.getText();
+            String nombre = this.txtNombreEstadio.getText();
+            int capacidad = Integer.parseInt(this.txtCapacidadEstadio.getText());
+            Estadio estadioCrear = new Estadio(identificador, ciudad, nombre, capacidad);
+            this.miLiga.getMisEstadios().add(estadioCrear);
+            JOptionPane.showMessageDialog(this, "El estadio " + nombre + " ha sido creado");
+            this.actualizarTablaEstadio();
+        } else {
+            JOptionPane.showMessageDialog(this, "Ya existe un estadio con esa ID");
+        }
+        this.limpiarCajas();
+    }//GEN-LAST:event_btnAgregarEstadioActionPerformed
+
+    private void btnBuscarEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEstadioActionPerformed
+        String identificador = JOptionPane.showInputDialog(this, "Ingrese el identificador del estadio");
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado != null) {
+            this.txtIdentificadorEstadio.setEditable(false);
+            this.txtIdentificadorEstadio.setText(estadioEncontrado.getId());
+            this.txtCiudadEstadio.setText(estadioEncontrado.getCiudad());
+            this.txtNombreEstadio.setText(estadioEncontrado.getNombre());
+            this.txtCapacidadEstadio.setText("" + estadioEncontrado.getCapacidad());
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnBuscarEstadioActionPerformed
+
+    private void btnActualizarEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarEstadioActionPerformed
+        String identificador = this.txtIdentificadorEstadio.getText();
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado != null) {
+            String ciudad = this.txtCiudadEstadio.getText();
+            String nombre = this.txtNombreEstadio.getText();
+            int capacidad = Integer.parseInt(this.txtCapacidadEstadio.getText());
+            estadioEncontrado.setCiudad(ciudad);
+            estadioEncontrado.setNombre(nombre);
+            estadioEncontrado.setCapacidad(capacidad);
+            JOptionPane.showMessageDialog(this, "El estadio " + nombre + " ha sido actualizado");
+            this.actualizarTablaEstadio();
+            this.txtIdentificadorEstadio.setEditable(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
+        this.limpiarCajas();
+    }//GEN-LAST:event_btnActualizarEstadioActionPerformed
+
+    private void btnEliminarEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEstadioActionPerformed
+        String identificador = JOptionPane.showInputDialog(this, "Ingrese el identificador del estadio");
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado != null) {
+            this.miLiga.getMisEstadios().remove(estadioEncontrado);
+            JOptionPane.showMessageDialog(this, "Se ha eliminado el estadio " + estadioEncontrado.getNombre());
+            this.actualizarTablaEstadio();
+            this.limpiarCajas();
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnEliminarEstadioActionPerformed
+
+    private void btnLimpiarEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEstadioActionPerformed
+        this.limpiarCajas();
+        this.txtIdentificadorEstadio.setEditable(true);
+    }//GEN-LAST:event_btnLimpiarEstadioActionPerformed
+
+    private void actualizarTablaEstadio() {
+        String nombreColumnas[] = {"Id", "Ciudad", "Nombre", "Capacidad"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblEstadio.setModel(miModelo);
+        LinkedList<Estadio> lista = this.miLiga.getMisEstadios();
+        for (Estadio actual : lista) {
+            String fila[] = new String[nombreColumnas.length];
+            fila[0] = actual.getId();
+            fila[1] = actual.getCiudad();
+            fila[2] = actual.getNombre();
+            fila[3] = "" + actual.getCapacidad();
+            miModelo.addRow(fila);
+        }
+    }
+    //RELACIONES ESTADIO
+
+    public void actualizarComboPartidoEstadio() {
+        this.cbPartidoEstadio.removeAllItems();
+        for (Partido partido : this.miLiga.getMisPartidos()) {
+            this.cbPartidoEstadio.addItem(partido.getId() + " - " + partido.getFecha());
+        }
+    }
+
+    public void actualizarTablaPartidoEstadio(String identificador) {
+        String nombreColumnas[] = {"Id", "Fecha", "Goles local", "Goles visitante"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblPartidoEstadio.setModel(miModelo);
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado != null) {
+            LinkedList<Partido> lista = estadioEncontrado.getMisPartidos();
+            for (Partido actual : lista) {
+                String fila[] = new String[nombreColumnas.length];
+                fila[0] = actual.getId();
+                fila[1] = actual.getFecha();
+                fila[2] = "" + actual.getGolesLocal();
+                fila[3] = "" + actual.getGolesVisitante();
+                miModelo.addRow(fila);
+            }
+        }else{
+            miModelo.setRowCount(0);
+        }
+        
+    }
+
+    private void btnAgregarRelacionPartidoEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionPartidoEstadioActionPerformed
+        String identificador = this.txtIdentificadorEstadio.getText();
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado != null) {
+            int indice = this.cbPartidoEstadio.getSelectedIndex();
+            Partido seleccionado = this.miLiga.getMisPartidos().get(indice);
+            estadioEncontrado.getMisPartidos().add(seleccionado);
+            JOptionPane.showMessageDialog(this, "Se ha asociado el partido de ID " + seleccionado.getId() + " con el estadio " + estadioEncontrado.getNombre());
+        } else {
+            JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnAgregarRelacionPartidoEstadioActionPerformed
+
+    private void btnEliminarRelacionPartidoEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionPartidoEstadioActionPerformed
+        String identificador = this.txtIdentificadorEstadio.getText();
+        Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
+        if (estadioEncontrado != null) {
+            int indice = this.cbPartidoEstadio.getSelectedIndex();
+            Partido seleccionado = this.miLiga.getMisPartidos().get(indice);
+            estadioEncontrado.getMisPartidos().remove(seleccionado);
+            JOptionPane.showMessageDialog(this, "Se ha desasociado el partido de ID " + seleccionado.getId() + " del estadio " + estadioEncontrado.getNombre());
+        } else {
+            JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnEliminarRelacionPartidoEstadioActionPerformed
     //TABLA JUGADORES
 
     public void actualizarTablaJugador() {
@@ -2551,17 +2913,21 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel Jpanel;
     private javax.swing.JButton btnActualizarAficionado;
     private javax.swing.JButton btnActualizarEquipo;
+    private javax.swing.JButton btnActualizarEstadio;
     private javax.swing.JButton btnActualizarJugador;
     private javax.swing.JButton btnActualizarTecnico;
     private javax.swing.JButton btnAgregarAficionado;
     private javax.swing.JButton btnAgregarEquipo;
+    private javax.swing.JButton btnAgregarEstadio;
     private javax.swing.JButton btnAgregarJugador;
     private javax.swing.JButton btnAgregarRelacionAficionadoEquipo;
     private javax.swing.JButton btnAgregarRelacionJugadorEquipo;
+    private javax.swing.JButton btnAgregarRelacionPartidoEstadio;
     private javax.swing.JButton btnAgregarRelacionTecnicoEquipo;
     private javax.swing.JButton btnAgregarTecnico;
     private javax.swing.JButton btnBuscarAficionado;
     private javax.swing.JButton btnBuscarEquipo;
+    private javax.swing.JButton btnBuscarEstadio;
     private javax.swing.JButton btnBuscarJugador;
     private javax.swing.JButton btnBuscarTecnico;
     private javax.swing.JButton btnCertificadoAficionado;
@@ -2569,16 +2935,20 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnCertificadoTecnico;
     private javax.swing.JButton btnEliminarAficionado;
     private javax.swing.JButton btnEliminarEquipo;
+    private javax.swing.JButton btnEliminarEstadio;
     private javax.swing.JButton btnEliminarJugador;
     private javax.swing.JButton btnEliminarRelacionAficionadoEquipo;
     private javax.swing.JButton btnEliminarRelacionJugadorEquipo;
+    private javax.swing.JButton btnEliminarRelacionPartidoEstadio;
     private javax.swing.JButton btnEliminarRelacionTecnicoEquipo;
     private javax.swing.JButton btnEliminarTecnico;
     private javax.swing.JButton btnLimpiarAficionado;
     private javax.swing.JButton btnLimpiarEquipo;
+    private javax.swing.JButton btnLimpiarEstadio;
     private javax.swing.JButton btnLimpiarTecnico;
     private javax.swing.JComboBox<String> cbAficionadoEquipo;
     private javax.swing.JComboBox<String> cbJugadorEquipo;
+    private javax.swing.JComboBox<String> cbPartidoEstadio;
     private javax.swing.JComboBox<String> cbTecnicoEquipo;
     private javax.swing.JCheckBox checkAbonoAficionado;
     private javax.swing.JLabel jLabel1;
@@ -2612,6 +2982,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -2634,6 +3005,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2641,6 +3013,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -2648,16 +3021,24 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel labelTituloListaPartidoEquipo;
     private javax.swing.JLabel labelTituloTablaTecnico;
     private javax.swing.JLabel lblArqueroEquipo;
+    private javax.swing.JLabel lblCapacidadEstadio;
+    private javax.swing.JLabel lblCiudadEstadio;
+    private javax.swing.JLabel lblIdentificadorEstadio;
     private javax.swing.JLabel lblJugadorMasGolesEquipo;
     private javax.swing.JLabel lblJugadorMasJovenEquipo;
+    private javax.swing.JLabel lblNombreEstadio;
     private javax.swing.JLabel lblPartidosGoleadaEquipo;
     private javax.swing.JLabel lblPromEdadJugadoresEquipo;
+    private javax.swing.JLabel lblRelacionPartidosEstadio;
     private javax.swing.JLabel lblSumaTotalNominaEquipo;
+    private javax.swing.JLabel lblTituloListaEstadios;
     private javax.swing.JTable tblAficionado;
     private javax.swing.JTable tblAficionadoEquipo;
     private javax.swing.JTable tblEquipo;
+    private javax.swing.JTable tblEstadio;
     private javax.swing.JTable tblJugador;
     private javax.swing.JTable tblJugadorEquipo;
+    private javax.swing.JTable tblPartidoEstadio;
     private javax.swing.JTable tblPartidosEquipo;
     private javax.swing.JTable tblPosiciones;
     private javax.swing.JTable tblTecnico;
@@ -2666,9 +3047,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtApellidoTecnico;
     private javax.swing.JTextField txtArqueroEquipo;
     private javax.swing.JTextField txtCantidadPartidosGoleadaEquipo;
+    private javax.swing.JTextField txtCapacidadEstadio;
     private javax.swing.JTextField txtCedulaAficionado;
     private javax.swing.JTextField txtCedulaJugador;
     private javax.swing.JTextField txtCedulaTecnico;
+    private javax.swing.JTextField txtCiudadEstadio;
     private javax.swing.JTextField txtEdadAficionado;
     private javax.swing.JTextField txtEdadJugador;
     private javax.swing.JTextField txtEdadTecnico;
@@ -2682,12 +3065,14 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtGolesFavorEquipo;
     private javax.swing.JTextField txtGolesMarcadosJugador;
     private javax.swing.JTextField txtIdentificadorEquipo;
+    private javax.swing.JTextField txtIdentificadorEstadio;
     private javax.swing.JTextField txtJugadorJovenEquipo;
     private javax.swing.JTextField txtJugadorMasGolesEquipo;
     private javax.swing.JTextField txtMostrarTecnicoEquipo;
     private javax.swing.JTextField txtNacionalidadJugador;
     private javax.swing.JTextField txtNombreAficionado;
     private javax.swing.JTextField txtNombreEquipo;
+    private javax.swing.JTextField txtNombreEstadio;
     private javax.swing.JTextField txtNombreJugador;
     private javax.swing.JTextField txtNombreTecnico;
     private javax.swing.JTextField txtNominaEquipo;
