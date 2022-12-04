@@ -133,18 +133,25 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <EmptySpace pref="58" max="32767" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="labelTituloTablaTecnico" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Component id="labelTituloTablaTecnico" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtCedulaTecnico" min="-2" max="-2" attributes="0"/>
@@ -190,12 +197,9 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnCertificadoTecnico" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="120" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -323,6 +327,11 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
+                    <Component class="javax.swing.JLabel" name="labelTituloTablaTecnico">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Lista de t&#xe9;cnicos"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel9">
@@ -361,7 +370,6 @@
                                               <Component id="txtCedulaAficionado" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                               <Component id="checkAbonoAficionado" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="btnAgregarAficionado" min="-2" max="-2" attributes="0"/>
@@ -373,25 +381,29 @@
                                           <Component id="btnEliminarAficionado" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="btnLimpiarAficionado" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace pref="48" max="32767" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
+                              <Component id="labelTituloListaAficionados" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="labelTituloListaAficionados" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtCedulaAficionado" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -437,12 +449,9 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="120" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -569,6 +578,11 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCertificadoAficionadoActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="labelTituloListaAficionados">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Lista de aficionados"/>
+                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -750,42 +764,21 @@
                     <Component class="javax.swing.JTextField" name="txtCedulaJugador">
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtNombreJugador">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtApellidoJugador">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtApellidoJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtEdadJugador">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEdadJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtNacionalidadJugador">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNacionalidadJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtSalarioJugador">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSalarioJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtGolesMarcadosJugador">
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtGolesMarcadosJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtEquipoJugador">
                       <Properties>
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEquipoJugadorActionPerformed"/>
-                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnAgregarJugador">
                       <Properties>
@@ -1245,9 +1238,9 @@
                                               <Component id="btnEliminarRelacionTecnicoEquipo" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="btnAgregarRelacionJugadorTecnico" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnAgregarRelacionJugadorEquipo" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="btnEliminarRelacionJugadorTecnico" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnEliminarRelacionJugadorEquipo" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -1267,11 +1260,11 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="cbAficionadoEquipo" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="btnAgregarRelacionAficionadoTecnico" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnAgregarRelacionAficionadoEquipo" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnEliminarRelacionAficionadoTecnico" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnEliminarRelacionAficionadoEquipo" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane6" min="-2" pref="370" max="-2" attributes="0"/>
                               </Group>
@@ -1299,12 +1292,12 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cbJugadorEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnAgregarRelacionJugadorTecnico" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnEliminarRelacionJugadorTecnico" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAgregarRelacionJugadorEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarRelacionJugadorEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="cbAficionadoEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnAgregarRelacionAficionadoTecnico" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnEliminarRelacionAficionadoTecnico" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAgregarRelacionAficionadoEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarRelacionAficionadoEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1393,36 +1386,36 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarRelacionTecnicoEquipoActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAgregarRelacionJugadorTecnico">
+                    <Component class="javax.swing.JButton" name="btnAgregarRelacionJugadorEquipo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Agregar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarRelacionJugadorTecnicoActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarRelacionJugadorEquipoActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnEliminarRelacionJugadorTecnico">
+                    <Component class="javax.swing.JButton" name="btnEliminarRelacionJugadorEquipo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Eliminar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarRelacionJugadorTecnicoActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarRelacionJugadorEquipoActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAgregarRelacionAficionadoTecnico">
+                    <Component class="javax.swing.JButton" name="btnAgregarRelacionAficionadoEquipo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Agregar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarRelacionAficionadoTecnicoActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarRelacionAficionadoEquipoActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnEliminarRelacionAficionadoTecnico">
+                    <Component class="javax.swing.JButton" name="btnEliminarRelacionAficionadoEquipo">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Eliminar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarRelacionAficionadoTecnicoActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarRelacionAficionadoEquipoActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel28">
@@ -1431,6 +1424,9 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtMostrarTecnicoEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane5">
                       <AuxValues>

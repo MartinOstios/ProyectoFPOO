@@ -261,7 +261,7 @@ public class Vista extends javax.swing.JFrame {
         this.txtPartidosEquipo.setText("");
         this.txtGolesFavorEquipo.setText("");
         this.txtGolesContraEquipo.setText("");
-        
+
         this.txtCedulaJugador.setText("");
         this.txtNombreJugador.setText("");
         this.txtApellidoJugador.setText("");
@@ -308,6 +308,7 @@ public class Vista extends javax.swing.JFrame {
         btnCertificadoTecnico = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         txtEquipoTecnico = new javax.swing.JTextField();
+        labelTituloTablaTecnico = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         txtCedulaAficionado = new javax.swing.JTextField();
@@ -331,6 +332,7 @@ public class Vista extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         txtEquipoAficionado = new javax.swing.JTextField();
         btnCertificadoAficionado = new javax.swing.JButton();
+        labelTituloListaAficionados = new javax.swing.JLabel();
         Jpanel = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -395,10 +397,10 @@ public class Vista extends javax.swing.JFrame {
         cbAficionadoEquipo = new javax.swing.JComboBox<>();
         btnAgregarRelacionTecnicoEquipo = new javax.swing.JButton();
         btnEliminarRelacionTecnicoEquipo = new javax.swing.JButton();
-        btnAgregarRelacionJugadorTecnico = new javax.swing.JButton();
-        btnEliminarRelacionJugadorTecnico = new javax.swing.JButton();
-        btnAgregarRelacionAficionadoTecnico = new javax.swing.JButton();
-        btnEliminarRelacionAficionadoTecnico = new javax.swing.JButton();
+        btnAgregarRelacionJugadorEquipo = new javax.swing.JButton();
+        btnEliminarRelacionJugadorEquipo = new javax.swing.JButton();
+        btnAgregarRelacionAficionadoEquipo = new javax.swing.JButton();
+        btnEliminarRelacionAficionadoEquipo = new javax.swing.JButton();
         jLabel28 = new javax.swing.JLabel();
         txtMostrarTecnicoEquipo = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -492,6 +494,8 @@ public class Vista extends javax.swing.JFrame {
 
         txtEquipoTecnico.setEditable(false);
 
+        labelTituloTablaTecnico.setText("Lista de técnicos");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -528,16 +532,22 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(txtApellidoTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombreTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(labelTituloTablaTecnico)
+                .addGap(195, 195, 195))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(labelTituloTablaTecnico)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -574,10 +584,8 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(btnLimpiarTecnico))
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoTecnico))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -653,6 +661,8 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        labelTituloListaAficionados.setText("Lista de aficionados");
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -678,8 +688,7 @@ public class Vista extends javax.swing.JFrame {
                                 .addComponent(txtApellidoAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtNombreAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtCedulaAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(checkAbonoAficionado))
-                            .addGap(195, 195, 195))
+                                .addComponent(checkAbonoAficionado)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                             .addComponent(btnAgregarAficionado)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -689,20 +698,24 @@ public class Vista extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(btnEliminarAficionado)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnLimpiarAficionado)
-                            .addGap(18, 18, 18)))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(btnCertificadoAficionado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addComponent(btnLimpiarAficionado)))
+                    .addComponent(btnCertificadoAficionado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelTituloListaAficionados)
+                .addGap(178, 178, 178))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelTituloListaAficionados)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(txtCedulaAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -739,10 +752,8 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(btnLimpiarAficionado))
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoAficionado))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Aficionado", jPanel9);
@@ -763,48 +774,7 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel36.setText("Goles marcados:");
 
-        txtNombreJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreJugadorActionPerformed(evt);
-            }
-        });
-
-        txtApellidoJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApellidoJugadorActionPerformed(evt);
-            }
-        });
-
-        txtEdadJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEdadJugadorActionPerformed(evt);
-            }
-        });
-
-        txtNacionalidadJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNacionalidadJugadorActionPerformed(evt);
-            }
-        });
-
-        txtSalarioJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSalarioJugadorActionPerformed(evt);
-            }
-        });
-
-        txtGolesMarcadosJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtGolesMarcadosJugadorActionPerformed(evt);
-            }
-        });
-
         txtEquipoJugador.setEditable(false);
-        txtEquipoJugador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEquipoJugadorActionPerformed(evt);
-            }
-        });
 
         btnAgregarJugador.setText("Agregar");
         btnAgregarJugador.addActionListener(new java.awt.event.ActionListener() {
@@ -1206,35 +1176,37 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        btnAgregarRelacionJugadorTecnico.setText("Agregar");
-        btnAgregarRelacionJugadorTecnico.addActionListener(new java.awt.event.ActionListener() {
+        btnAgregarRelacionJugadorEquipo.setText("Agregar");
+        btnAgregarRelacionJugadorEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarRelacionJugadorTecnicoActionPerformed(evt);
+                btnAgregarRelacionJugadorEquipoActionPerformed(evt);
             }
         });
 
-        btnEliminarRelacionJugadorTecnico.setText("Eliminar");
-        btnEliminarRelacionJugadorTecnico.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminarRelacionJugadorEquipo.setText("Eliminar");
+        btnEliminarRelacionJugadorEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarRelacionJugadorTecnicoActionPerformed(evt);
+                btnEliminarRelacionJugadorEquipoActionPerformed(evt);
             }
         });
 
-        btnAgregarRelacionAficionadoTecnico.setText("Agregar");
-        btnAgregarRelacionAficionadoTecnico.addActionListener(new java.awt.event.ActionListener() {
+        btnAgregarRelacionAficionadoEquipo.setText("Agregar");
+        btnAgregarRelacionAficionadoEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarRelacionAficionadoTecnicoActionPerformed(evt);
+                btnAgregarRelacionAficionadoEquipoActionPerformed(evt);
             }
         });
 
-        btnEliminarRelacionAficionadoTecnico.setText("Eliminar");
-        btnEliminarRelacionAficionadoTecnico.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminarRelacionAficionadoEquipo.setText("Eliminar");
+        btnEliminarRelacionAficionadoEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarRelacionAficionadoTecnicoActionPerformed(evt);
+                btnEliminarRelacionAficionadoEquipoActionPerformed(evt);
             }
         });
 
         jLabel28.setText("Técnico actual:");
+
+        txtMostrarTecnicoEquipo.setEditable(false);
 
         tblJugadorTecnico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1284,9 +1256,9 @@ public class Vista extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnEliminarRelacionTecnicoEquipo))
                             .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addComponent(btnAgregarRelacionJugadorTecnico)
+                                .addComponent(btnAgregarRelacionJugadorEquipo)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnEliminarRelacionJugadorTecnico))))
+                                .addComponent(btnEliminarRelacionJugadorEquipo))))
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1301,9 +1273,9 @@ public class Vista extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(cbAficionadoEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnAgregarRelacionAficionadoTecnico)))
+                                .addComponent(btnAgregarRelacionAficionadoEquipo)))
                         .addGap(18, 18, 18)
-                        .addComponent(btnEliminarRelacionAficionadoTecnico))
+                        .addComponent(btnEliminarRelacionAficionadoEquipo))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(106, Short.MAX_VALUE))
         );
@@ -1324,12 +1296,12 @@ public class Vista extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(cbJugadorEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAgregarRelacionJugadorTecnico)
-                    .addComponent(btnEliminarRelacionJugadorTecnico)
+                    .addComponent(btnAgregarRelacionJugadorEquipo)
+                    .addComponent(btnEliminarRelacionJugadorEquipo)
                     .addComponent(jLabel27)
                     .addComponent(cbAficionadoEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAgregarRelacionAficionadoTecnico)
-                    .addComponent(btnEliminarRelacionAficionadoTecnico))
+                    .addComponent(btnAgregarRelacionAficionadoEquipo)
+                    .addComponent(btnEliminarRelacionAficionadoEquipo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
@@ -1807,6 +1779,8 @@ public class Vista extends javax.swing.JFrame {
             this.txtGolesFavorEquipo.setText("" + equipoEncontrado.getGolesFavor());
             this.txtGolesContraEquipo.setText("" + equipoEncontrado.getGolesContra());
             this.txtMostrarTecnicoEquipo.setText(this.personaAsignada(equipoEncontrado.getTecnico()));
+            this.actualizarTablaJugadoresEquipo(identificador);
+            this.actualizarTablaAficionadosEquipo(identificador);
         } else {
             JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
         }
@@ -1895,6 +1869,44 @@ public class Vista extends javax.swing.JFrame {
         }
     }
 
+    public void actualizarTablaJugadoresEquipo(String identificador) {
+        String nombreColumnas[] = {"Cedula", "Nombre", "Apellido", "Edad", "Nacionalidad", "Posición", "Goles", "Salario"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblJugadorTecnico.setModel(miModelo);
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        LinkedList<Jugador> lista = equipoEncontrado.getMisJugadores();
+        for (Jugador actual : lista) {
+            String fila[] = new String[nombreColumnas.length];
+            fila[0] = actual.getCedula();
+            fila[1] = actual.getNombre();
+            fila[2] = actual.getApellido();
+            fila[3] = "" + actual.getEdad();
+            fila[4] = "" + actual.getNacionalidad();
+            fila[5] = "" + actual.getPosicion();
+            fila[6] = "" + actual.getGolesMarcados();
+            fila[7] = "" + actual.getSalario();
+            miModelo.addRow(fila);
+        }
+    }
+
+    public void actualizarTablaAficionadosEquipo(String identificador) {
+        String nombreColumnas[] = {"Cédula", "Nombre", "Apellido", "Edad", "Fidelidad", "Abono"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblAficionadoTecnico.setModel(miModelo);
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        LinkedList<Aficionado> lista = equipoEncontrado.getMisAficionados();
+        for (Aficionado actual : lista) {
+            String fila[] = new String[nombreColumnas.length];
+            fila[0] = actual.getCedula();
+            fila[1] = actual.getNombre();
+            fila[2] = actual.getApellido();
+            fila[3] = "" + actual.getEdad();
+            fila[4] = "" + actual.getAniosFidelidad();
+            fila[5] = "" + actual.isAbono();
+            miModelo.addRow(fila);
+        }
+    }
+
     private void btnAgregarRelacionTecnicoEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionTecnicoEquipoActionPerformed
         String identificador = this.txtIdentificadorEquipo.getText();
         Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
@@ -1907,18 +1919,16 @@ public class Vista extends javax.swing.JFrame {
                     equipoEncontrado.setTecnico(tecnicoEncontrado);
                     tecnicoEncontrado.setMiEquipo(equipoEncontrado);
                     JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el técnico " + tecnicoEncontrado.getNombre() + " con el equipo " + equipoEncontrado.getNombre());
-
-                    this.actualizarComboTecnicoEquipo();
                     this.txtMostrarTecnicoEquipo.setText(tecnicoEncontrado.getNombre());
                 } else {
                     JOptionPane.showMessageDialog(this, "El tecnico seleccionado se encuentra asociado a un equipo actualmente");
                 }
-            } else{
+            } else {
                 JOptionPane.showMessageDialog(this, "Antes de asociar un técnico, elimine el que está asociado actualmente al equipo");
             }
 
         } else {
-            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+            JOptionPane.showMessageDialog(this, "El identificador de equipo ingresado es erróneo");
         }
     }//GEN-LAST:event_btnAgregarRelacionTecnicoEquipoActionPerformed
 
@@ -1940,53 +1950,95 @@ public class Vista extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Ese técnico no está asociado con el equipo seleccionado");
             }
         } else {
-            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+            JOptionPane.showMessageDialog(this, "El identificador de equipo ingresado es erróneo");
         }
     }//GEN-LAST:event_btnEliminarRelacionTecnicoEquipoActionPerformed
 
-    private void btnAgregarRelacionJugadorTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionJugadorTecnicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarRelacionJugadorTecnicoActionPerformed
+    private void btnAgregarRelacionJugadorEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionJugadorEquipoActionPerformed
+        String identificador = this.txtIdentificadorEquipo.getText();
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        if (equipoEncontrado != null) {
+            String seleccion = (String) this.cbJugadorEquipo.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Jugador jugadorEncontrado = (Jugador) this.miLiga.buscarPersona(cedula);
+            if (jugadorEncontrado.getMiEquipo() == null) {
+                equipoEncontrado.getMisJugadores().add(jugadorEncontrado);
+                jugadorEncontrado.setMiEquipo(equipoEncontrado);
+                JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el jugador " + jugadorEncontrado.getNombre() + " con el equipo " + equipoEncontrado.getNombre());
+                this.actualizarTablaJugadoresEquipo(identificador);
+            } else {
+                JOptionPane.showMessageDialog(this, "El jugador seleccionado se encuentra asociado a un equipo actualmente");
+            }
 
-    private void btnEliminarRelacionJugadorTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionJugadorTecnicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarRelacionJugadorTecnicoActionPerformed
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador de equipo ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnAgregarRelacionJugadorEquipoActionPerformed
 
-    private void btnAgregarRelacionAficionadoTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionAficionadoTecnicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarRelacionAficionadoTecnicoActionPerformed
+    private void btnEliminarRelacionJugadorEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionJugadorEquipoActionPerformed
+        String identificador = this.txtIdentificadorEquipo.getText();
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        if (equipoEncontrado != null) {
+            String seleccion = (String) this.cbJugadorEquipo.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Jugador jugadorEncontrado = (Jugador) this.miLiga.buscarPersona(cedula);
 
-    private void btnEliminarRelacionAficionadoTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionAficionadoTecnicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarRelacionAficionadoTecnicoActionPerformed
+            if (this.buscarJugadorEquipo(jugadorEncontrado, equipoEncontrado)) {
+                equipoEncontrado.getMisJugadores().remove(jugadorEncontrado);
+                jugadorEncontrado.setMiEquipo(null);
+                JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el jugador " + jugadorEncontrado.getNombre() + " del equipo " + equipoEncontrado.getNombre());
+                this.actualizarTablaJugadoresEquipo(identificador);
+            } else {
+                JOptionPane.showMessageDialog(this, "El jugador seleccionado no hace parte del equipo elegido");
+            }
 
-    private void txtEquipoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEquipoJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEquipoJugadorActionPerformed
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador de equipo ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnEliminarRelacionJugadorEquipoActionPerformed
 
-    private void txtGolesMarcadosJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGolesMarcadosJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtGolesMarcadosJugadorActionPerformed
+    private void btnAgregarRelacionAficionadoEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionAficionadoEquipoActionPerformed
+        String identificador = this.txtIdentificadorEquipo.getText();
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        if (equipoEncontrado != null) {
+            String seleccion = (String) this.cbAficionadoEquipo.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Aficionado aficionadoEncontrado = (Aficionado) this.miLiga.buscarPersona(cedula);
+            if (aficionadoEncontrado.getMiEquipo() == null) {
+                equipoEncontrado.getMisAficionados().add(aficionadoEncontrado);
+                aficionadoEncontrado.setMiEquipo(equipoEncontrado);
+                JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el aficionado " + aficionadoEncontrado.getNombre() + " con el equipo " + equipoEncontrado.getNombre());
+                this.actualizarTablaAficionadosEquipo(identificador);
+            } else {
+                JOptionPane.showMessageDialog(this, "El aficionado seleccionado se encuentra asociado a un equipo actualmente");
+            }
 
-    private void txtSalarioJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSalarioJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSalarioJugadorActionPerformed
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador de equipo ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnAgregarRelacionAficionadoEquipoActionPerformed
 
-    private void txtNacionalidadJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNacionalidadJugadorActionPerformed
+    private void btnEliminarRelacionAficionadoEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionAficionadoEquipoActionPerformed
+        String identificador = this.txtIdentificadorEquipo.getText();
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        if (equipoEncontrado != null) {
+            String seleccion = (String) this.cbAficionadoEquipo.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Aficionado aficionadoEncontrado = (Aficionado) this.miLiga.buscarPersona(cedula);
 
-    private void txtEdadJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEdadJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEdadJugadorActionPerformed
+            if (this.buscarAficionadoEquipo(aficionadoEncontrado, equipoEncontrado)) {
+                equipoEncontrado.getMisAficionados().remove(aficionadoEncontrado);
+                aficionadoEncontrado.setMiEquipo(null);
+                JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el aficionado " + aficionadoEncontrado.getNombre() + " del equipo " + equipoEncontrado.getNombre());
+                this.actualizarTablaAficionadosEquipo(identificador);
+            } else {
+                JOptionPane.showMessageDialog(this, "El aficionado seleccionado no hace parte del equipo elegido");
+            }
 
-    private void txtApellidoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellidoJugadorActionPerformed
-
-    private void txtNombreJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreJugadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreJugadorActionPerformed
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador de equipo ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnEliminarRelacionAficionadoEquipoActionPerformed
 
     private void btnAgregarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarJugadorActionPerformed
         String cedula = this.txtCedulaJugador.getText();
@@ -1995,11 +2047,12 @@ public class Vista extends javax.swing.JFrame {
             String nombre = this.txtNombreJugador.getText();
             String apellido = this.txtApellidoJugador.getText();
             int edad = Integer.parseInt(this.txtEdadJugador.getText());
-            String nacionalidad= this.txtNacionalidadJugador.getText();
+            String nacionalidad = this.txtNacionalidadJugador.getText();
             int salario = Integer.parseInt(this.txtSalarioJugador.getText());
-            Jugador jugador= new Jugador(cedula, nombre, apellido, edad, nacionalidad, apellido, 0, salario);
+            Jugador jugador = new Jugador(cedula, nombre, apellido, edad, nacionalidad, apellido, 0, salario);
             this.miLiga.getMisPersonas().add(jugador);
             JOptionPane.showMessageDialog(this, "Se agregó el jugador " + nombre);
+            this.actualizarComboJugadorEquipo();
         } else {
             JOptionPane.showMessageDialog(null, "Ya existe una persona con esa cédula");
         }
@@ -2013,11 +2066,11 @@ public class Vista extends javax.swing.JFrame {
         Persona buscarPersona = miLiga.buscarPersona(cedula);
         if (buscarPersona != null) {
             if (buscarPersona instanceof Jugador) {
-                Jugador jugador= (Jugador) buscarPersona;
+                Jugador jugador = (Jugador) buscarPersona;
                 String nombre = this.txtNombreJugador.getText();
                 String apellido = this.txtApellidoJugador.getText();
                 int edad = Integer.parseInt(this.txtEdadJugador.getText());
-                String nacionalidad= this.txtNacionalidadJugador.getText();
+                String nacionalidad = this.txtNacionalidadJugador.getText();
                 int salario = Integer.parseInt(this.txtSalarioJugador.getText());
                 jugador.setNombre(nombre);
                 jugador.setApellido(apellido);
@@ -2042,7 +2095,7 @@ public class Vista extends javax.swing.JFrame {
         if (buscarPersona != null) {
             if (buscarPersona instanceof Jugador) {
                 this.txtCedulaJugador.setEditable(false);
-                Jugador jugador= (Jugador) buscarPersona;
+                Jugador jugador = (Jugador) buscarPersona;
                 this.txtCedulaJugador.setText(jugador.getCedula());
                 this.txtNombreJugador.setText(jugador.getNombre());
                 this.txtApellidoJugador.setText(jugador.getApellido());
@@ -2076,14 +2129,14 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarJugadorActionPerformed
 
     private void btnCertificadoJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCertificadoJugadorActionPerformed
-       String cedula = this.txtCedulaJugador.getText();
+        String cedula = this.txtCedulaJugador.getText();
         Persona buscarPersona = this.miLiga.buscarPersona(cedula);
         if (buscarPersona != null) {
             if (buscarPersona instanceof Jugador) {
-                Jugador jugador= (Jugador) buscarPersona;
+                Jugador jugador = (Jugador) buscarPersona;
                 String cuerpo = this.cuerpoCertificados(buscarPersona);
                 String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de jugador del equipo " + this.equipoAsignado(jugador.getMiEquipo()) + " ocupando la posicón de " + jugador.getPosicion() + ".";
+                String propio = " y actúa en calidad de jugador del equipo " + this.equipoAsignado(jugador.getMiEquipo()) + " ocupando la posición de " + jugador.getPosicion() + ".";
 
                 String contenido = cuerpo + propio + finalCertificado;
                 this.guardarArchivo(contenido, "doc");
@@ -2095,14 +2148,14 @@ public class Vista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnCertificadoJugadorActionPerformed
     //TABLA JUGADORES
-    
+
     public void actualizarTablaJugador() {
         String nombreColumnas[] = {"Cedula", "Nombre", "Apellido", "Edad", "Nacionalidad", "Posición", "Goles", "Salario"};
         DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
         this.tblJugador.setModel(miModelo);
         LinkedList<Persona> lista = this.miLiga.getMisPersonas();
-        for (Persona actual: lista) {
-            if(actual instanceof Jugador){
+        for (Persona actual : lista) {
+            if (actual instanceof Jugador) {
                 String fila[] = new String[nombreColumnas.length];
                 fila[0] = actual.getCedula();
                 fila[1] = actual.getNombre();
@@ -2112,12 +2165,11 @@ public class Vista extends javax.swing.JFrame {
                 fila[5] = "" + ((Jugador) actual).getPosicion();
                 fila[6] = "" + ((Jugador) actual).getGolesMarcados();
                 fila[7] = "" + ((Jugador) actual).getSalario();
-            miModelo.addRow(fila);
+                miModelo.addRow(fila);
             }
         }
     }
-    
-    
+
     //==========================================================================
     //SECCIÓN TABLA DE POSICIONES
     public void tablaPosiciones() {
@@ -2223,6 +2275,24 @@ public class Vista extends javax.swing.JFrame {
         }
     }
 
+    public boolean buscarJugadorEquipo(Jugador jugador, Equipo equipo) {
+        for (Jugador actual : equipo.getMisJugadores()) {
+            if (actual.equals(jugador)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean buscarAficionadoEquipo(Aficionado aficionado, Equipo equipo) {
+        for (Aficionado actual : equipo.getMisAficionados()) {
+            if (actual.equals(aficionado)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     //==========================================================================
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -2266,8 +2336,8 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarAficionado;
     private javax.swing.JButton btnAgregarEquipo;
     private javax.swing.JButton btnAgregarJugador;
-    private javax.swing.JButton btnAgregarRelacionAficionadoTecnico;
-    private javax.swing.JButton btnAgregarRelacionJugadorTecnico;
+    private javax.swing.JButton btnAgregarRelacionAficionadoEquipo;
+    private javax.swing.JButton btnAgregarRelacionJugadorEquipo;
     private javax.swing.JButton btnAgregarRelacionTecnicoEquipo;
     private javax.swing.JButton btnAgregarTecnico;
     private javax.swing.JButton btnBuscarAficionado;
@@ -2280,8 +2350,8 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarAficionado;
     private javax.swing.JButton btnEliminarEquipo;
     private javax.swing.JButton btnEliminarJugador;
-    private javax.swing.JButton btnEliminarRelacionAficionadoTecnico;
-    private javax.swing.JButton btnEliminarRelacionJugadorTecnico;
+    private javax.swing.JButton btnEliminarRelacionAficionadoEquipo;
+    private javax.swing.JButton btnEliminarRelacionJugadorEquipo;
     private javax.swing.JButton btnEliminarRelacionTecnicoEquipo;
     private javax.swing.JButton btnEliminarTecnico;
     private javax.swing.JButton btnLimpiarAficionado;
@@ -2353,6 +2423,8 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JLabel labelTituloListaAficionados;
+    private javax.swing.JLabel labelTituloTablaTecnico;
     private javax.swing.JTable tblAficionado;
     private javax.swing.JTable tblAficionadoTecnico;
     private javax.swing.JTable tblEquipo;
