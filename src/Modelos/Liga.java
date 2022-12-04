@@ -95,6 +95,10 @@ public class Liga implements Serializable {
         Equipo nuevoEquipo = new Equipo(id, nombre, anioFundacion, numTitulosNacionales, numTitulosInternacionales, puntos, golesContra, golesFavor, partidosJugados);
         this.getMisEquipos().add(nuevoEquipo);
     }
+    
+    public void eliminarEquipo(Equipo equipoEliminar){
+        this.getMisEquipos().remove(equipoEliminar);
+    }
 
     //================
     //===Metodos===
