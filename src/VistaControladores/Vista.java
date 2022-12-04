@@ -48,6 +48,7 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarComboPartidoEstadio();
         this.actualizarTablaJugador();
         this.tablaPosiciones();
+        this.actualizarTablaArbitro();
 
         //TESTEO
         //OBJETOS PARA TESTEO
@@ -279,15 +280,23 @@ public class Vista extends javax.swing.JFrame {
         this.txtApellidoJugador.setText("");
         this.txtEdadJugador.setText("");
         this.txtNacionalidadJugador.setText("");
-        //this.txtPosicionJugador.setText("");
-        this.txtGolesMarcadosJugador.setText("");
+        this.txtPosicionJugador.setText("");
+        this.txtPosicionJugador.setText("");
         this.txtSalarioJugador.setText("");
+        this.txtEquipoJugador.setText("");
+        this.txtGolesJugador.setText("");
 
         this.txtIdentificadorEstadio.setText("");
         this.txtCiudadEstadio.setText("");
         this.txtNombreEstadio.setText("");
         this.txtCapacidadEstadio.setText("");
         this.actualizarTablaPartidoEstadio("-1");
+        
+        this.txtCedulaArbitro.setText("");
+        this.txtNombreArbitro.setText("");
+        this.apellidoArbitro.setText("");
+        this.txtEdadArbitro.setText("");
+        this.checkArbitroFIfa.setSelected(false);
 
     }
 
@@ -366,8 +375,8 @@ public class Vista extends javax.swing.JFrame {
         txtEdadJugador = new javax.swing.JTextField();
         txtNacionalidadJugador = new javax.swing.JTextField();
         txtSalarioJugador = new javax.swing.JTextField();
-        txtGolesMarcadosJugador = new javax.swing.JTextField();
-        txtEquipoJugador = new javax.swing.JTextField();
+        txtPosicionJugador = new javax.swing.JTextField();
+        txtGolesJugador = new javax.swing.JTextField();
         btnAgregarJugador = new javax.swing.JButton();
         btnBuscarJugador = new javax.swing.JButton();
         btnActualizarJugador = new javax.swing.JButton();
@@ -376,8 +385,30 @@ public class Vista extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         tblJugador = new javax.swing.JTable();
         jLabel37 = new javax.swing.JLabel();
+        lblEquipoJugador = new javax.swing.JLabel();
+        txtEquipoJugador = new javax.swing.JTextField();
+        btnLimpiarJugador = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
+        cedulaArbitro = new javax.swing.JLabel();
+        nombreArbitro = new javax.swing.JLabel();
+        apellidoArbitro = new javax.swing.JLabel();
+        edadArbitro = new javax.swing.JLabel();
+        arbitroFIFA = new javax.swing.JLabel();
+        txtCedulaArbitro = new javax.swing.JTextField();
+        txtNombreArbitro = new javax.swing.JTextField();
+        txtApellidoArbitro = new javax.swing.JTextField();
+        txtEdadArbitro = new javax.swing.JTextField();
+        checkArbitroFIfa = new javax.swing.JCheckBox();
+        btnAgregarArbitro = new javax.swing.JButton();
+        btnBuscarArbitro = new javax.swing.JButton();
+        btnActualizarArbitro = new javax.swing.JButton();
+        btnEliminarArbitro = new javax.swing.JButton();
+        btnLimpiarArbitro = new javax.swing.JButton();
+        btnCertificadoArbitro = new javax.swing.JButton();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        tblArbitro = new javax.swing.JTable();
+        jLabel39 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel13 = new javax.swing.JPanel();
@@ -641,7 +672,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoTecnico))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -826,11 +857,11 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel34.setText("Salario:");
 
-        jLabel35.setText("Equipo:");
+        jLabel35.setText("Goles marcados:");
 
-        jLabel36.setText("Goles marcados:");
+        jLabel36.setText("Posición:");
 
-        txtEquipoJugador.setEditable(false);
+        txtGolesJugador.setEditable(false);
 
         btnAgregarJugador.setText("Agregar");
         btnAgregarJugador.addActionListener(new java.awt.event.ActionListener() {
@@ -882,6 +913,17 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel37.setText("Tabla jugadores");
 
+        lblEquipoJugador.setText("Equipo");
+
+        txtEquipoJugador.setEditable(false);
+
+        btnLimpiarJugador.setText("Limpiar");
+        btnLimpiarJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarJugadorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout JpanelLayout = new javax.swing.GroupLayout(Jpanel);
         Jpanel.setLayout(JpanelLayout);
         JpanelLayout.setHorizontalGroup(
@@ -898,7 +940,8 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblEquipoJugador))
                         .addGap(28, 28, 28)
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtCedulaJugador, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
@@ -907,8 +950,17 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(txtEdadJugador)
                             .addComponent(txtNacionalidadJugador)
                             .addComponent(txtSalarioJugador)
-                            .addComponent(txtGolesMarcadosJugador)
-                            .addComponent(txtEquipoJugador)))
+                            .addComponent(txtPosicionJugador)
+                            .addComponent(txtGolesJugador)
+                            .addComponent(txtEquipoJugador))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
+                        .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JpanelLayout.createSequentialGroup()
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(125, 125, 125))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JpanelLayout.createSequentialGroup()
+                                .addComponent(jLabel37)
+                                .addGap(274, 274, 274))))
                     .addGroup(JpanelLayout.createSequentialGroup()
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(JpanelLayout.createSequentialGroup()
@@ -919,26 +971,16 @@ public class Vista extends javax.swing.JFrame {
                                 .addComponent(btnActualizarJugador))
                             .addComponent(btnCertificadoJugador))
                         .addGap(18, 18, 18)
-                        .addComponent(btnEliminarJugador)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JpanelLayout.createSequentialGroup()
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(125, 125, 125))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JpanelLayout.createSequentialGroup()
-                        .addComponent(jLabel37)
-                        .addGap(274, 274, 274))))
+                        .addComponent(btnEliminarJugador)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLimpiarJugador)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         JpanelLayout.setVerticalGroup(
             JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JpanelLayout.createSequentialGroup()
-                .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JpanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel37)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, JpanelLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel29)
@@ -966,20 +1008,30 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel36)
-                            .addComponent(txtGolesMarcadosJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPosicionJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel35)
-                            .addComponent(txtEquipoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtGolesJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
+                        .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblEquipoJugador)
+                            .addComponent(txtEquipoJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42)
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAgregarJugador)
                             .addComponent(btnBuscarJugador)
                             .addComponent(btnActualizarJugador)
-                            .addComponent(btnEliminarJugador))
+                            .addComponent(btnEliminarJugador)
+                            .addComponent(btnLimpiarJugador))
                         .addGap(18, 18, 18)
-                        .addComponent(btnCertificadoJugador)))
-                .addContainerGap(155, Short.MAX_VALUE))
+                        .addComponent(btnCertificadoJugador))
+                    .addGroup(JpanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel37)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Jugador", Jpanel);
@@ -997,15 +1049,167 @@ public class Vista extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Manager", jPanel11);
 
+        cedulaArbitro.setText("Cédula:");
+
+        nombreArbitro.setText("Nombre:");
+
+        apellidoArbitro.setText("Apellido:");
+
+        edadArbitro.setText("Edad:");
+
+        arbitroFIFA.setText("Árbitro FIFA:");
+
+        txtCedulaArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCedulaArbitroActionPerformed(evt);
+            }
+        });
+
+        btnAgregarArbitro.setText("Agregar");
+        btnAgregarArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarArbitroActionPerformed(evt);
+            }
+        });
+
+        btnBuscarArbitro.setText("Buscar");
+        btnBuscarArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarArbitroActionPerformed(evt);
+            }
+        });
+
+        btnActualizarArbitro.setText("Actualizar");
+        btnActualizarArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarArbitroActionPerformed(evt);
+            }
+        });
+
+        btnEliminarArbitro.setText("Eliminar");
+        btnEliminarArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarArbitroActionPerformed(evt);
+            }
+        });
+
+        btnLimpiarArbitro.setText("Limpiar");
+        btnLimpiarArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarArbitroActionPerformed(evt);
+            }
+        });
+
+        btnCertificadoArbitro.setText("Generar certificado");
+        btnCertificadoArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCertificadoArbitroActionPerformed(evt);
+            }
+        });
+
+        tblArbitro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane11.setViewportView(tblArbitro);
+
+        jLabel39.setText("Lista árbitro");
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addComponent(btnCertificadoArbitro)
+                        .addContainerGap())
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(btnAgregarArbitro)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnBuscarArbitro)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnActualizarArbitro)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnEliminarArbitro)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnLimpiarArbitro))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(arbitroFIFA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(edadArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(apellidoArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nombreArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cedulaArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(checkArbitroFIfa)
+                                    .addComponent(txtCedulaArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(txtNombreArbitro)
+                                    .addComponent(txtApellidoArbitro)
+                                    .addComponent(txtEdadArbitro))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(114, 114, 114))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addGap(246, 246, 246))))))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cedulaArbitro)
+                            .addComponent(txtCedulaArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel39)))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombreArbitro)
+                            .addComponent(txtNombreArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(apellidoArbitro)
+                            .addComponent(txtApellidoArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(edadArbitro)
+                            .addComponent(txtEdadArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(arbitroFIFA)
+                            .addComponent(checkArbitroFIfa))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAgregarArbitro)
+                            .addComponent(btnBuscarArbitro)
+                            .addComponent(btnActualizarArbitro)
+                            .addComponent(btnEliminarArbitro)
+                            .addComponent(btnLimpiarArbitro)))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnCertificadoArbitro)
+                .addContainerGap(262, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Árbitro", jPanel12);
@@ -2486,7 +2690,8 @@ public class Vista extends javax.swing.JFrame {
             int edad = Integer.parseInt(this.txtEdadJugador.getText());
             String nacionalidad = this.txtNacionalidadJugador.getText();
             int salario = Integer.parseInt(this.txtSalarioJugador.getText());
-            Jugador jugador = new Jugador(cedula, nombre, apellido, edad, nacionalidad, apellido, 0, salario);
+            String posicion= this.txtPosicionJugador.getText();
+            Jugador jugador = new Jugador(cedula, nombre, apellido, edad, nacionalidad, posicion, 0, salario);
             this.miLiga.getMisPersonas().add(jugador);
             JOptionPane.showMessageDialog(this, "Se agregó el jugador " + nombre);
             this.actualizarComboJugadorEquipo();
@@ -2509,11 +2714,13 @@ public class Vista extends javax.swing.JFrame {
                 int edad = Integer.parseInt(this.txtEdadJugador.getText());
                 String nacionalidad = this.txtNacionalidadJugador.getText();
                 int salario = Integer.parseInt(this.txtSalarioJugador.getText());
+                String posicion= this.txtPosicionJugador.getText();
                 jugador.setNombre(nombre);
                 jugador.setApellido(apellido);
                 jugador.setEdad(edad);
                 jugador.setNacionalidad(nacionalidad);
                 jugador.setSalario(salario);
+                jugador.setPosicion(posicion);
                 JOptionPane.showMessageDialog(this, "Se actualizó el jugador de cédula " + cedula);
                 this.txtCedulaJugador.setEditable(true);
                 this.limpiarCajas();
@@ -2539,6 +2746,8 @@ public class Vista extends javax.swing.JFrame {
                 this.txtEdadJugador.setText("" + jugador.getEdad());
                 this.txtNacionalidadJugador.setText("" + jugador.getNacionalidad());
                 this.txtSalarioJugador.setText("" + jugador.getSalario());
+                this.txtGolesJugador.setText("" + jugador.getGolesMarcados());
+                this.txtPosicionJugador.setText(jugador.getPosicion());
                 this.txtEquipoJugador.setText(this.equipoAsignado(jugador.getMiEquipo()));
 
             } else {
@@ -2729,6 +2938,142 @@ public class Vista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
         }
     }//GEN-LAST:event_btnEliminarRelacionPartidoEstadioActionPerformed
+
+    private void btnLimpiarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarJugadorActionPerformed
+        this.txtCedulaJugador.setEditable(true);
+        limpiarCajas();
+    }//GEN-LAST:event_btnLimpiarJugadorActionPerformed
+
+    //SECCION PERSONAS -> ARBITRO
+    private void txtCedulaArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaArbitroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCedulaArbitroActionPerformed
+
+    private void btnAgregarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarArbitroActionPerformed
+        String cedula = this.txtCedulaArbitro.getText();
+        Persona persona = this.miLiga.buscarPersona(cedula);
+        if (persona == null) {
+            String nombre = this.txtNombreArbitro.getText();
+            String apellido = this.txtApellidoArbitro.getText();
+            int edad = Integer.parseInt(this.txtEdadArbitro.getText());
+            boolean FIFA= this.checkArbitroFIfa.isSelected();
+            Arbitro arbitro= new Arbitro(cedula, nombre, apellido, edad, FIFA);
+            this.miLiga.getMisPersonas().add(arbitro);
+            JOptionPane.showMessageDialog(this, "Se agregó el arbitro " + nombre);
+        } else {
+            JOptionPane.showMessageDialog(null, "Ya existe una persona con esa cédula");
+        }
+
+        this.limpiarCajas();
+        this.actualizarTablaArbitro();
+    }//GEN-LAST:event_btnAgregarArbitroActionPerformed
+
+    private void btnBuscarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarArbitroActionPerformed
+        String cedula= JOptionPane.showInputDialog(this, "Ingrese la cedula del arbitro que desea buscar");
+        Persona buscarpersona= this.miLiga.buscarPersona(cedula);
+        if(buscarpersona != null){
+            if(buscarpersona instanceof Arbitro){
+                this.txtCedulaArbitro.setEditable(false);
+                Arbitro arbitro= (Arbitro)buscarpersona;
+                this.txtCedulaArbitro.setText(arbitro.getCedula());
+                this.txtNombreArbitro.setText(arbitro.getNombre());
+                this.txtApellidoArbitro.setText(arbitro.getApellido());
+                this.txtEdadArbitro.setText("" + arbitro.getEdad());
+                this.checkArbitroFIfa.setSelected(arbitro.isFifa());
+            }else {
+                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
+        }
+    }//GEN-LAST:event_btnBuscarArbitroActionPerformed
+
+    private void btnActualizarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarArbitroActionPerformed
+        String cedula = this.txtCedulaArbitro.getText();
+        Persona buscarPersona = miLiga.buscarPersona(cedula);
+        if (buscarPersona != null) {
+            if (buscarPersona instanceof Arbitro) {
+                Arbitro arbitro = (Arbitro) buscarPersona;
+                String nombre = this.txtNombreArbitro.getText();
+                String apellido = this.txtApellidoArbitro.getText();
+                int edad = Integer.parseInt(this.txtEdadArbitro.getText());
+                boolean FIFA = this.checkArbitroFIfa.isSelected();
+                arbitro.setNombre(nombre);
+                arbitro.setApellido(apellido);
+                arbitro.setEdad(edad);
+                arbitro.setFifa(FIFA);
+                JOptionPane.showMessageDialog(this, "Se actualizó el árbitro de cédula " + cedula);
+                this.actualizarTablaArbitro();
+                this.txtCedulaArbitro.setEditable(true);
+                this.limpiarCajas();
+            } else {
+                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
+        }
+    }//GEN-LAST:event_btnActualizarArbitroActionPerformed
+
+    private void btnEliminarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarArbitroActionPerformed
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cédula del árbitro que desea eliminar");
+        Persona buscarPersona = miLiga.buscarPersona(cedula);
+        if (buscarPersona != null) {
+            if (buscarPersona instanceof Arbitro) {
+                this.miLiga.getMisPersonas().remove(buscarPersona);
+                JOptionPane.showMessageDialog(this, "El árbitro de cédula " + cedula + " se eliminó");
+            } else {
+                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
+        }
+        this.actualizarTablaArbitro();
+        this.limpiarCajas();
+    }//GEN-LAST:event_btnEliminarArbitroActionPerformed
+
+    private void btnLimpiarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarArbitroActionPerformed
+        this.txtCedulaArbitro.setEditable(true);
+        limpiarCajas();
+    }//GEN-LAST:event_btnLimpiarArbitroActionPerformed
+
+    private void btnCertificadoArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCertificadoArbitroActionPerformed
+        String cedula = this.txtCedulaArbitro.getText();
+        Persona buscarPersona = this.miLiga.buscarPersona(cedula);
+        if (buscarPersona != null) {
+            if (buscarPersona instanceof Arbitro) {
+                Arbitro arbitro= (Arbitro) buscarPersona;
+                String cuerpo = this.cuerpoCertificados(buscarPersona);
+                String finalCertificado = this.finalCertificados();
+                String propio = " y actúa en calidad de árbitro. ";                 
+                String contenido = cuerpo + propio + finalCertificado;
+                this.guardarArchivo(contenido, "doc");
+            } else {
+                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
+        }
+    }//GEN-LAST:event_btnCertificadoArbitroActionPerformed
+    
+    //TABLA ARBITROS    
+    public void actualizarTablaArbitro(){
+    String nombreColumnas[] = {"Cedula", "Nombre", "Apellido", "Edad", "Arb. FIFA"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblArbitro.setModel(miModelo);
+        LinkedList<Persona> lista = this.miLiga.getMisPersonas();
+        for (Persona actual : lista) {
+            if (actual instanceof Arbitro) {
+                String fila[] = new String[nombreColumnas.length];
+                fila[0] = actual.getCedula();
+                fila[1] = actual.getNombre();
+                fila[2] = actual.getApellido();
+                fila[3] = "" + actual.getEdad();
+                fila[4] = "" + ((Arbitro) actual).isFifa();
+                miModelo.addRow(fila);
+            }
+        }
+    }
+
     //TABLA JUGADORES
 
     public void actualizarTablaJugador() {
@@ -2911,12 +3256,16 @@ public class Vista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Jpanel;
+    private javax.swing.JLabel apellidoArbitro;
+    private javax.swing.JLabel arbitroFIFA;
     private javax.swing.JButton btnActualizarAficionado;
+    private javax.swing.JButton btnActualizarArbitro;
     private javax.swing.JButton btnActualizarEquipo;
     private javax.swing.JButton btnActualizarEstadio;
     private javax.swing.JButton btnActualizarJugador;
     private javax.swing.JButton btnActualizarTecnico;
     private javax.swing.JButton btnAgregarAficionado;
+    private javax.swing.JButton btnAgregarArbitro;
     private javax.swing.JButton btnAgregarEquipo;
     private javax.swing.JButton btnAgregarEstadio;
     private javax.swing.JButton btnAgregarJugador;
@@ -2926,14 +3275,17 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarRelacionTecnicoEquipo;
     private javax.swing.JButton btnAgregarTecnico;
     private javax.swing.JButton btnBuscarAficionado;
+    private javax.swing.JButton btnBuscarArbitro;
     private javax.swing.JButton btnBuscarEquipo;
     private javax.swing.JButton btnBuscarEstadio;
     private javax.swing.JButton btnBuscarJugador;
     private javax.swing.JButton btnBuscarTecnico;
     private javax.swing.JButton btnCertificadoAficionado;
+    private javax.swing.JButton btnCertificadoArbitro;
     private javax.swing.JButton btnCertificadoJugador;
     private javax.swing.JButton btnCertificadoTecnico;
     private javax.swing.JButton btnEliminarAficionado;
+    private javax.swing.JButton btnEliminarArbitro;
     private javax.swing.JButton btnEliminarEquipo;
     private javax.swing.JButton btnEliminarEstadio;
     private javax.swing.JButton btnEliminarJugador;
@@ -2943,14 +3295,19 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarRelacionTecnicoEquipo;
     private javax.swing.JButton btnEliminarTecnico;
     private javax.swing.JButton btnLimpiarAficionado;
+    private javax.swing.JButton btnLimpiarArbitro;
     private javax.swing.JButton btnLimpiarEquipo;
     private javax.swing.JButton btnLimpiarEstadio;
+    private javax.swing.JButton btnLimpiarJugador;
     private javax.swing.JButton btnLimpiarTecnico;
     private javax.swing.JComboBox<String> cbAficionadoEquipo;
     private javax.swing.JComboBox<String> cbJugadorEquipo;
     private javax.swing.JComboBox<String> cbPartidoEstadio;
     private javax.swing.JComboBox<String> cbTecnicoEquipo;
+    private javax.swing.JLabel cedulaArbitro;
     private javax.swing.JCheckBox checkAbonoAficionado;
+    private javax.swing.JCheckBox checkArbitroFIfa;
+    private javax.swing.JLabel edadArbitro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2983,6 +3340,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -3006,6 +3364,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3023,6 +3382,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblArqueroEquipo;
     private javax.swing.JLabel lblCapacidadEstadio;
     private javax.swing.JLabel lblCiudadEstadio;
+    private javax.swing.JLabel lblEquipoJugador;
     private javax.swing.JLabel lblIdentificadorEstadio;
     private javax.swing.JLabel lblJugadorMasGolesEquipo;
     private javax.swing.JLabel lblJugadorMasJovenEquipo;
@@ -3032,8 +3392,10 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblRelacionPartidosEstadio;
     private javax.swing.JLabel lblSumaTotalNominaEquipo;
     private javax.swing.JLabel lblTituloListaEstadios;
+    private javax.swing.JLabel nombreArbitro;
     private javax.swing.JTable tblAficionado;
     private javax.swing.JTable tblAficionadoEquipo;
+    private javax.swing.JTable tblArbitro;
     private javax.swing.JTable tblEquipo;
     private javax.swing.JTable tblEstadio;
     private javax.swing.JTable tblJugador;
@@ -3043,16 +3405,19 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTable tblPosiciones;
     private javax.swing.JTable tblTecnico;
     private javax.swing.JTextField txtApellidoAficionado;
+    private javax.swing.JTextField txtApellidoArbitro;
     private javax.swing.JTextField txtApellidoJugador;
     private javax.swing.JTextField txtApellidoTecnico;
     private javax.swing.JTextField txtArqueroEquipo;
     private javax.swing.JTextField txtCantidadPartidosGoleadaEquipo;
     private javax.swing.JTextField txtCapacidadEstadio;
     private javax.swing.JTextField txtCedulaAficionado;
+    private javax.swing.JTextField txtCedulaArbitro;
     private javax.swing.JTextField txtCedulaJugador;
     private javax.swing.JTextField txtCedulaTecnico;
     private javax.swing.JTextField txtCiudadEstadio;
     private javax.swing.JTextField txtEdadAficionado;
+    private javax.swing.JTextField txtEdadArbitro;
     private javax.swing.JTextField txtEdadJugador;
     private javax.swing.JTextField txtEdadTecnico;
     private javax.swing.JTextField txtEquipoAficionado;
@@ -3063,7 +3428,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtFundacionEquipo;
     private javax.swing.JTextField txtGolesContraEquipo;
     private javax.swing.JTextField txtGolesFavorEquipo;
-    private javax.swing.JTextField txtGolesMarcadosJugador;
+    private javax.swing.JTextField txtGolesJugador;
     private javax.swing.JTextField txtIdentificadorEquipo;
     private javax.swing.JTextField txtIdentificadorEstadio;
     private javax.swing.JTextField txtJugadorJovenEquipo;
@@ -3071,12 +3436,14 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtMostrarTecnicoEquipo;
     private javax.swing.JTextField txtNacionalidadJugador;
     private javax.swing.JTextField txtNombreAficionado;
+    private javax.swing.JTextField txtNombreArbitro;
     private javax.swing.JTextField txtNombreEquipo;
     private javax.swing.JTextField txtNombreEstadio;
     private javax.swing.JTextField txtNombreJugador;
     private javax.swing.JTextField txtNombreTecnico;
     private javax.swing.JTextField txtNominaEquipo;
     private javax.swing.JTextField txtPartidosEquipo;
+    private javax.swing.JTextField txtPosicionJugador;
     private javax.swing.JTextField txtPromedioEdadJugadoresEquipo;
     private javax.swing.JTextField txtPuntosEquipo;
     private javax.swing.JTextField txtSalarioJugador;
