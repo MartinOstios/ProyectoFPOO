@@ -5,7 +5,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Liga"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Default Cursor"/>
+      <Color id="Cursor Por defecto"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
@@ -133,29 +133,18 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="39" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
-=======
                               <EmptySpace max="32767" attributes="0"/>
->>>>>>> b00de2f741b37addb8dbd8b93b7589175e09ca3d
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtCedulaTecnico" min="-2" max="-2" attributes="0"/>
@@ -202,15 +191,11 @@
                                       <Component id="btnCertificadoTecnico" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-<<<<<<< HEAD
-                              <EmptySpace pref="112" max="32767" attributes="0"/>
-=======
                               <EmptySpace max="32767" attributes="0"/>
->>>>>>> b00de2f741b37addb8dbd8b93b7589175e09ca3d
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -338,11 +323,6 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel30">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Lista t&#xe9;cnicos"/>
-                      </Properties>
-                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel9">
@@ -381,6 +361,7 @@
                                               <Component id="txtCedulaAficionado" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                               <Component id="checkAbonoAficionado" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="btnAgregarAficionado" min="-2" max="-2" attributes="0"/>
@@ -392,33 +373,25 @@
                                           <Component id="btnEliminarAficionado" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="btnLimpiarAficionado" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace pref="29" max="32767" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
-=======
-                              <EmptySpace max="32767" attributes="0"/>
->>>>>>> b00de2f741b37addb8dbd8b93b7589175e09ca3d
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtCedulaAficionado" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -464,16 +437,12 @@
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-<<<<<<< HEAD
-                              <EmptySpace pref="112" max="32767" attributes="0"/>
-=======
                               <EmptySpace max="32767" attributes="0"/>
->>>>>>> b00de2f741b37addb8dbd8b93b7589175e09ca3d
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -600,11 +569,6 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCertificadoAficionadoActionPerformed"/>
                       </Events>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel29">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Lista aficionados"/>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -816,6 +780,9 @@
                       </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtEquipoJugador">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEquipoJugadorActionPerformed"/>
                       </Events>
@@ -1034,18 +1001,13 @@
                               <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="txtIdentificadorEquipo" min="-2" max="-2" attributes="0"/>
@@ -1102,12 +1064,10 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="112" max="32767" attributes="0"/>
+                              <EmptySpace pref="144" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1249,11 +1209,6 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarEquipoActionPerformed"/>
                       </Events>
-                    </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel31">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Lista equipos"/>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1476,9 +1431,6 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtMostrarTecnicoEquipo">
-                      <Properties>
-                        <Property name="editable" type="boolean" value="false"/>
-                      </Properties>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane5">
                       <AuxValues>

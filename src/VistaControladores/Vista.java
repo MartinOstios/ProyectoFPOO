@@ -308,7 +308,6 @@ public class Vista extends javax.swing.JFrame {
         btnCertificadoTecnico = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         txtEquipoTecnico = new javax.swing.JTextField();
-        jLabel30 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         txtCedulaAficionado = new javax.swing.JTextField();
@@ -332,7 +331,6 @@ public class Vista extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         txtEquipoAficionado = new javax.swing.JTextField();
         btnCertificadoAficionado = new javax.swing.JButton();
-        jLabel29 = new javax.swing.JLabel();
         Jpanel = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
@@ -388,7 +386,6 @@ public class Vista extends javax.swing.JFrame {
         btnActualizarEquipo = new javax.swing.JButton();
         btnEliminarEquipo = new javax.swing.JButton();
         btnLimpiarEquipo = new javax.swing.JButton();
-        jLabel31 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         cbTecnicoEquipo = new javax.swing.JComboBox<>();
@@ -495,8 +492,6 @@ public class Vista extends javax.swing.JFrame {
 
         txtEquipoTecnico.setEditable(false);
 
-        jLabel30.setText("Lista técnicos");
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -533,22 +528,16 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(txtApellidoTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombreTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel30)
-                .addGap(210, 210, 210))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel30)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addGap(35, 35, 35)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -586,9 +575,9 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoTecnico))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addContainerGap()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -664,8 +653,6 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        jLabel29.setText("Lista aficionados");
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -691,7 +678,8 @@ public class Vista extends javax.swing.JFrame {
                                 .addComponent(txtApellidoAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtNombreAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtCedulaAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(checkAbonoAficionado)))
+                                .addComponent(checkAbonoAficionado))
+                            .addGap(195, 195, 195))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                             .addComponent(btnAgregarAficionado)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -701,24 +689,20 @@ public class Vista extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(btnEliminarAficionado)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnLimpiarAficionado)))
-                    .addComponent(btnCertificadoAficionado))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                            .addComponent(btnLimpiarAficionado)
+                            .addGap(18, 18, 18)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(btnCertificadoAficionado)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel29)
-                .addGap(196, 196, 196))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel29)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
+                        .addGap(35, 35, 35)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(txtCedulaAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -756,9 +740,9 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoAficionado))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addContainerGap()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Aficionado", jPanel9);
@@ -815,6 +799,7 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        txtEquipoJugador.setEditable(false);
         txtEquipoJugador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEquipoJugadorActionPerformed(evt);
@@ -1092,8 +1077,6 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        jLabel31.setText("Lista equipos");
-
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -1140,10 +1123,6 @@ public class Vista extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel31)
-                .addGap(231, 231, 231))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1195,10 +1174,8 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(btnLimpiarEquipo)))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel31)
-                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Gestionar", jPanel13);
@@ -1258,8 +1235,6 @@ public class Vista extends javax.swing.JFrame {
         });
 
         jLabel28.setText("Técnico actual:");
-
-        txtMostrarTecnicoEquipo.setEditable(false);
 
         tblJugadorTecnico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
