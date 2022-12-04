@@ -41,6 +41,9 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarTablaTecnicos();
         this.actualizarTablaAficionado();
         this.actualizarTablaEquipo();
+        this.actualizarComboTecnicoEquipo();
+        this.actualizarComboJugadorEquipo();
+        this.actualizarComboAficionadoEquipo();
         this.tablaPosiciones();
 
         //TESTEO
@@ -295,6 +298,7 @@ public class Vista extends javax.swing.JFrame {
         btnCertificadoTecnico = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         txtEquipoTecnico = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         txtCedulaAficionado = new javax.swing.JTextField();
@@ -318,6 +322,7 @@ public class Vista extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         txtEquipoAficionado = new javax.swing.JTextField();
         btnCertificadoAficionado = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
@@ -349,6 +354,7 @@ public class Vista extends javax.swing.JFrame {
         btnActualizarEquipo = new javax.swing.JButton();
         btnEliminarEquipo = new javax.swing.JButton();
         btnLimpiarEquipo = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         cbTecnicoEquipo = new javax.swing.JComboBox<>();
@@ -455,6 +461,8 @@ public class Vista extends javax.swing.JFrame {
 
         txtEquipoTecnico.setEditable(false);
 
+        jLabel30.setText("Lista técnicos");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -491,16 +499,22 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(txtApellidoTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombreTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel30)
+                .addGap(210, 210, 210))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel30)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addGap(10, 10, 10)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -538,9 +552,9 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoTecnico))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -616,6 +630,8 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        jLabel29.setText("Lista aficionados");
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -641,8 +657,7 @@ public class Vista extends javax.swing.JFrame {
                                 .addComponent(txtApellidoAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtNombreAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtCedulaAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(checkAbonoAficionado))
-                            .addGap(195, 195, 195))
+                                .addComponent(checkAbonoAficionado)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                             .addComponent(btnAgregarAficionado)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -652,20 +667,24 @@ public class Vista extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(btnEliminarAficionado)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnLimpiarAficionado)
-                            .addGap(18, 18, 18)))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(btnCertificadoAficionado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addComponent(btnLimpiarAficionado)))
+                    .addComponent(btnCertificadoAficionado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel29)
+                .addGap(196, 196, 196))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel29)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addGap(10, 10, 10)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(txtCedulaAficionado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -703,9 +722,9 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoAficionado))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Aficionado", jPanel9);
@@ -842,6 +861,8 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
+        jLabel31.setText("Lista equipos");
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -888,6 +909,10 @@ public class Vista extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel31)
+                .addGap(231, 231, 231))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -939,8 +964,10 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(btnLimpiarEquipo)))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(jLabel31)
+                        .addGap(18, 18, 18)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Gestionar", jPanel13);
@@ -1000,6 +1027,8 @@ public class Vista extends javax.swing.JFrame {
         });
 
         jLabel28.setText("Técnico actual:");
+
+        txtMostrarTecnicoEquipo.setEditable(false);
 
         tblJugadorTecnico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1276,6 +1305,7 @@ public class Vista extends javax.swing.JFrame {
             Tecnico nuevoTecnico = new Tecnico(cedula, nombre, apellido, edad, experiencia, salario);
             this.miLiga.getMisPersonas().add(nuevoTecnico);
             JOptionPane.showMessageDialog(this, "Se agregó el técnico " + nombre);
+            this.actualizarComboTecnicoEquipo();
         } else {
             JOptionPane.showMessageDialog(null, "Ya existe una persona con esa cédula");
         }
@@ -1393,6 +1423,7 @@ public class Vista extends javax.swing.JFrame {
             Aficionado nuevoAficionado = new Aficionado(cedula, nombre, apellido, edad, fidelidad, abono);
             this.miLiga.getMisPersonas().add(nuevoAficionado);
             JOptionPane.showMessageDialog(this, "Se agregó el aficionado " + nombre);
+            this.actualizarComboAficionadoEquipo();
             this.actualizarTablaAficionado();
         } else {
             JOptionPane.showMessageDialog(null, "Ya existe una persona con esa cédula");
@@ -1569,6 +1600,7 @@ public class Vista extends javax.swing.JFrame {
             this.txtPartidosEquipo.setText("" + equipoEncontrado.getPartidosJugados());
             this.txtGolesFavorEquipo.setText("" + equipoEncontrado.getGolesFavor());
             this.txtGolesContraEquipo.setText("" + equipoEncontrado.getGolesContra());
+            this.txtMostrarTecnicoEquipo.setText(this.personaAsignada(equipoEncontrado.getTecnico()));
         } else {
             JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
         }
@@ -1590,6 +1622,8 @@ public class Vista extends javax.swing.JFrame {
             this.actualizarTablaEquipo();
             this.txtIdentificadorEquipo.setEditable(true);
             this.limpiarCajas();
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
         }
     }//GEN-LAST:event_btnActualizarEquipoActionPerformed
 
@@ -1628,13 +1662,80 @@ public class Vista extends javax.swing.JFrame {
 
     //==========================================================================
     //SECCIÓN EQUIPO -> PLANILLA
+    public void actualizarComboTecnicoEquipo() {
+        this.cbTecnicoEquipo.removeAllItems();
+        for (Persona actual : this.miLiga.getMisPersonas()) {
+            if (actual instanceof Tecnico) {
+                this.cbTecnicoEquipo.addItem(actual.getCedula() + " - " + actual.getNombre());
+            }
+        }
+    }
+
+    public void actualizarComboJugadorEquipo() {
+        this.cbJugadorEquipo.removeAllItems();
+        for (Persona actual : this.miLiga.getMisPersonas()) {
+            if (actual instanceof Jugador) {
+                this.cbJugadorEquipo.addItem(actual.getCedula() + " - " + actual.getNombre());
+            }
+        }
+    }
+
+    public void actualizarComboAficionadoEquipo() {
+        this.cbAficionadoEquipo.removeAllItems();
+        for (Persona actual : this.miLiga.getMisPersonas()) {
+            if (actual instanceof Aficionado) {
+                this.cbAficionadoEquipo.addItem(actual.getCedula() + " - " + actual.getNombre());
+            }
+        }
+    }
 
     private void btnAgregarRelacionTecnicoEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionTecnicoEquipoActionPerformed
-        // TODO add your handling code here:
+        String identificador = this.txtIdentificadorEquipo.getText();
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        if (equipoEncontrado != null) {
+            String seleccion = (String) this.cbTecnicoEquipo.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Tecnico tecnicoEncontrado = (Tecnico) this.miLiga.buscarPersona(cedula);
+            if (equipoEncontrado.getTecnico() == null) {
+                if (tecnicoEncontrado.getMiEquipo() == null) {
+                    equipoEncontrado.setTecnico(tecnicoEncontrado);
+                    tecnicoEncontrado.setMiEquipo(equipoEncontrado);
+                    JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el técnico " + tecnicoEncontrado.getNombre() + " con el equipo " + equipoEncontrado.getNombre());
+
+                    this.actualizarComboTecnicoEquipo();
+                    this.txtMostrarTecnicoEquipo.setText(tecnicoEncontrado.getNombre());
+                } else {
+                    JOptionPane.showMessageDialog(this, "El tecnico seleccionado se encuentra asociado a un equipo actualmente");
+                }
+            } else{
+                JOptionPane.showMessageDialog(this, "Antes de asociar un técnico, elimine el que está asociado actualmente al equipo");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
     }//GEN-LAST:event_btnAgregarRelacionTecnicoEquipoActionPerformed
 
     private void btnEliminarRelacionTecnicoEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionTecnicoEquipoActionPerformed
-        // TODO add your handling code here:
+        String identificador = this.txtIdentificadorEquipo.getText();
+        Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
+        if (equipoEncontrado != null) {
+            String seleccion = (String) this.cbTecnicoEquipo.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Tecnico tecnicoEncontrado = (Tecnico) this.miLiga.buscarPersona(cedula);
+            if (tecnicoEncontrado.equals(equipoEncontrado.getTecnico())) {
+                equipoEncontrado.setTecnico(null);
+                tecnicoEncontrado.setMiEquipo(null);
+                JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el técnico " + tecnicoEncontrado.getNombre() + " del equipo " + equipoEncontrado.getNombre());
+
+                this.actualizarComboTecnicoEquipo();
+                this.txtMostrarTecnicoEquipo.setText("No asignado");
+            } else {
+                JOptionPane.showMessageDialog(this, "Ese técnico no está asociado con el equipo seleccionado");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
     }//GEN-LAST:event_btnEliminarRelacionTecnicoEquipoActionPerformed
 
     private void btnAgregarRelacionJugadorTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionJugadorTecnicoActionPerformed
@@ -1750,6 +1851,14 @@ public class Vista extends javax.swing.JFrame {
         }
     }
 
+    public String personaAsignada(Persona persona) {
+        if (persona != null) {
+            return persona.getNombre();
+        } else {
+            return "No asignado";
+        }
+    }
+
     //==========================================================================
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1833,7 +1942,10 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
