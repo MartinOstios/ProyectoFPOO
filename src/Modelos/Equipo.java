@@ -141,11 +141,17 @@ public class Equipo implements Serializable{
         for (Jugador actual : this.getMisJugadores()) {
             resultado += actual.getSalario();
         }
-        return resultado + this.getTecnico().getSalario();
+        if(this.getTecnico()!=null){
+            return resultado + this.getTecnico().getSalario();
+        }else{
+            return resultado;
+        }
+        
+    
     }
     
     public Jugador getArquero(){
-        Jugador resultado = new Jugador("-1", "-1", "-1", -1, "-1", "-1", -1, -1);
+        Jugador resultado = new Jugador("-1", "No asignado", "-1", -1, "-1", "-1", -1, -1);
         for (Jugador actual : this.getMisJugadores()) {
             if(actual.getPosicion().equals("Arquero")){
                 resultado = actual;

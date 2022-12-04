@@ -133,7 +133,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="58" max="32767" attributes="0"/>
+                              <EmptySpace pref="90" max="32767" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -385,7 +385,7 @@
                                   </Group>
                                   <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="48" max="32767" attributes="0"/>
+                              <EmptySpace pref="80" max="32767" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -639,7 +639,7 @@
                                       <Component id="btnEliminarJugador" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="56" max="32767" attributes="0"/>
+                              <EmptySpace pref="88" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jScrollPane7" min="-2" pref="380" max="-2" attributes="0"/>
@@ -911,7 +911,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane3" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane3" pref="946" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -990,7 +990,7 @@
                                       <Component id="btnLimpiarEquipo" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                              <EmptySpace pref="80" max="32767" attributes="0"/>
                               <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1268,7 +1268,7 @@
                                   </Group>
                                   <Component id="jScrollPane6" min="-2" pref="370" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="106" max="32767" attributes="0"/>
+                              <EmptySpace pref="157" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1497,7 +1497,7 @@
                                       <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="260" max="32767" attributes="0"/>
+                              <EmptySpace pref="292" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1561,14 +1561,41 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblPromEdadJugadoresEquipo" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
-                                  <Component id="lblJugadorMasJovenEquipo" alignment="0" min="-2" pref="262" max="-2" attributes="0"/>
-                                  <Component id="lblPartidosGoleadaEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
-                                  <Component id="lblJugadorMasGolesEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
-                                  <Component id="lblSumaTotalNominaEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
-                                  <Component id="lblArqueroEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblJugadorMasJovenEquipo" alignment="0" min="-2" pref="262" max="-2" attributes="0"/>
+                                          <Component id="lblPromEdadJugadoresEquipo" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
+                                          <Component id="lblPartidosGoleadaEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtCantidadPartidosGoleadaEquipo" min="-2" pref="141" max="-2" attributes="0"/>
+                                          <Component id="txtJugadorJovenEquipo" min="-2" pref="141" max="-2" attributes="0"/>
+                                          <Component id="txtPromedioEdadJugadoresEquipo" min="-2" pref="141" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblJugadorMasGolesEquipo" min="-2" pref="332" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtJugadorMasGolesEquipo" min="-2" pref="141" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblSumaTotalNominaEquipo" min="-2" pref="332" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtNominaEquipo" min="-2" pref="141" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblArqueroEquipo" min="-2" pref="332" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="txtArqueroEquipo" min="-2" pref="141" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace pref="567" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="492" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1576,18 +1603,36 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblJugadorMasJovenEquipo" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblJugadorMasJovenEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtJugadorJovenEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblPromEdadJugadoresEquipo" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblPromEdadJugadoresEquipo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtPromedioEdadJugadoresEquipo" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblPartidosGoleadaEquipo" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblPartidosGoleadaEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCantidadPartidosGoleadaEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblJugadorMasGolesEquipo" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblJugadorMasGolesEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtJugadorMasGolesEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblSumaTotalNominaEquipo" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblSumaTotalNominaEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNominaEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="lblArqueroEquipo" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="372" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblArqueroEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtArqueroEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="336" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1623,6 +1668,36 @@
                         <Property name="text" type="java.lang.String" value="Arquero:"/>
                       </Properties>
                     </Component>
+                    <Component class="javax.swing.JTextField" name="txtJugadorJovenEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtPromedioEdadJugadoresEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtCantidadPartidosGoleadaEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtJugadorMasGolesEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtNominaEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtArqueroEquipo">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
               </SubComponents>
@@ -1641,7 +1716,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="915" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1663,7 +1738,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="915" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1685,7 +1760,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="915" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1713,7 +1788,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="210" max="32767" attributes="0"/>
+                      <EmptySpace pref="261" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="600" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
@@ -1776,7 +1851,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="915" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
