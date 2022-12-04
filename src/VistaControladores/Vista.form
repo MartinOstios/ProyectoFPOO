@@ -1435,7 +1435,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="tblJugadorTecnico">
+                        <Component class="javax.swing.JTable" name="tblJugadorEquipo">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="0" rowCount="4"/>
@@ -1457,7 +1457,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="tblAficionadoTecnico">
+                        <Component class="javax.swing.JTable" name="tblAficionadoEquipo">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="0" rowCount="4"/>
@@ -1486,15 +1486,65 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="890" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="354" max="-2" attributes="0"/>
+                                      <Component id="labelTituloListaPartidoEquipo" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="260" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="557" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="labelTituloListaPartidoEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="85" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="labelTituloListaPartidoEquipo">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="18" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Lista de partidos"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTable" name="tblPartidosEquipo">
+                          <Properties>
+                            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                              <Table columnCount="0" rowCount="4"/>
+                            </Property>
+                            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                              <TableColumnModel selectionModel="0"/>
+                            </Property>
+                            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                            </Property>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel16">
                   <Constraints>
@@ -1508,15 +1558,72 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="890" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblPromEdadJugadoresEquipo" alignment="0" min="-2" pref="294" max="-2" attributes="0"/>
+                                  <Component id="lblJugadorMasJovenEquipo" alignment="0" min="-2" pref="262" max="-2" attributes="0"/>
+                                  <Component id="lblPartidosGoleadaEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                  <Component id="lblJugadorMasGolesEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                  <Component id="lblSumaTotalNominaEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                  <Component id="lblArqueroEquipo" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="567" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="557" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lblJugadorMasJovenEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblPromEdadJugadoresEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblPartidosGoleadaEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblJugadorMasGolesEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblSumaTotalNominaEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblArqueroEquipo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="372" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="lblJugadorMasJovenEquipo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Jugador m&#xe1;s joven: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblPromEdadJugadoresEquipo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Promedio edad de jugadores: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblPartidosGoleadaEquipo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cantidad partidos ganados por goleada: "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblJugadorMasGolesEquipo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Jugador que ha anotado m&#xe1;s goles:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblSumaTotalNominaEquipo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Suma total de la n&#xf3;mina:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="lblArqueroEquipo">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Arquero:"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
                 </Container>
               </SubComponents>
             </Container>

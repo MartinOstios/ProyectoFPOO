@@ -17,6 +17,9 @@ public class Partido implements Serializable{
     private int golesLocal;
     private int golesVisitante;
     private Arbitro miArbitro;
+    private Equipo miEquipoLocal;
+    private Equipo miEquipoVisitante;
+    private Jornada miJornada;
     
     public Partido(String id, String fecha, int golesLocal, int golesVisitante) {
         this.id = id;
@@ -94,8 +97,46 @@ public class Partido implements Serializable{
     public void setMiArbitro(Arbitro miArbitro) {
         this.miArbitro = miArbitro;
     }
-    
-    
-    
-    
+
+    /**
+     * @return the miEquipoLocal
+     */
+    public Equipo getMiEquipoLocal() {
+        return miEquipoLocal;
+    }
+
+    /**
+     * @param miEquipoLocal the miEquipoLocal to set
+     */
+    public void setMiEquipoLocal(Equipo miEquipoLocal) {
+        this.miEquipoLocal = miEquipoLocal;
+    }
+
+    /**
+     * @return the miEquipoVisitante
+     */
+    public Equipo getMiEquipoVisitante() {
+        return miEquipoVisitante;
+    }
+
+    /**
+     * @param miEquipoVisitante the miEquipoVisitante to set
+     */
+    public void setMiEquipoVisitante(Equipo miEquipoVisitante) {
+        this.miEquipoVisitante = miEquipoVisitante;
+    }
+
+    /**
+     * @return the miJornada
+     */
+    public Jornada getMiJornada() {
+        return miJornada;
+    }
+
+    /**
+     * @param miJornada the miJornada to set
+     */
+    public void setMiJornada(Jornada miJornada) {
+        this.miJornada = miJornada;
+    }
 }

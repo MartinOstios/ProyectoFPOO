@@ -14,9 +14,6 @@ public class Estadio implements Serializable{
     private String nombre;
     private int capacidad;
     private LinkedList<Partido> misPartidos;
-    private Equipo miEquipoLocal;
-    private Equipo miEquipoVisitante;
-    private Jornada miJornada;
     
     /**
      * Constructor de objetos Estadio, con valores dados por el usuario
@@ -134,50 +131,4 @@ public class Estadio implements Serializable{
     public void setMisPartidos(LinkedList<Partido> misPartidos) {
         this.misPartidos = misPartidos;
     }
-
-    /**
-     * @return the miEquipoLocal
-     */
-    public Equipo getMiEquipoLocal() {
-        return miEquipoLocal;
-    }
-
-    /**
-     * @param miEquipoLocal the miEquipoLocal to set
-     */
-    public void setMiEquipoLocal(Equipo miEquipoLocal) {
-        this.miEquipoLocal = miEquipoLocal;
-    }
-
-    /**
-     * @return the miEquipoVisitante
-     */
-    public Equipo getMiEquipoVisitante() {
-        return miEquipoVisitante;
-    }
-
-    /**
-     * @param miEquipoVisitante the miEquipoVisitante to set
-     */
-    public void setMiEquipoVisitante(Equipo miEquipoVisitante) {
-        this.miEquipoVisitante = miEquipoVisitante;
-    }
-
-    /**
-     * @return the miJornada
-     */
-    public Jornada getMiJornada() {
-        return miJornada;
-    }
-
-    /**
-     * @param miJornada the miJornada to set
-     */
-    public void setMiJornada(Jornada miJornada) {
-        this.miJornada = miJornada;
-    }
-    
-    
-    
-    
 }

@@ -72,7 +72,13 @@ public class Equipo implements Serializable{
      */
     public Jugador jugadorMasJoven(){
         Jugador resultado = null;
-        
+        int menor = Integer.MAX_VALUE;
+        for (Jugador actual : this.misJugadores) {
+            if(actual.getEdad()<menor){
+                menor = actual.getEdad();
+                resultado = actual;
+            }
+        }
         return resultado;
     }
     
@@ -116,7 +122,13 @@ public class Equipo implements Serializable{
      */
     public Jugador jugadorMayorGoles(){
         Jugador resultado = null;
-        
+        int mayor = Integer.MIN_VALUE;
+        for (Jugador actual : this.getMisJugadores()) {
+            if(actual.getGolesMarcados()>mayor){
+                mayor = actual.getGolesMarcados();
+                resultado = actual;
+            }
+        }
         return resultado;
     }
     
@@ -133,7 +145,7 @@ public class Equipo implements Serializable{
     }
     
     public Jugador getArquero(){
-        Jugador resultado = null;
+        Jugador resultado = new Jugador("-1", "-1", "-1", -1, "-1", "-1", -1, -1);
         for (Jugador actual : this.getMisJugadores()) {
             if(actual.getPosicion().equals("Arquero")){
                 resultado = actual;
