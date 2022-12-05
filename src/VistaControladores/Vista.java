@@ -42,19 +42,21 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarTablaAficionado();
         this.actualizarTablaEquipo();
         this.actualizarTablaEstadio();
+        this.actualizarTablaPartido();
         this.actualizarComboTecnicoEquipo();
         this.actualizarComboJugadorEquipo();
         this.actualizarComboAficionadoEquipo();
         this.actualizarComboPartidoEstadio();
         this.actualizarComboPartidosJornada();
+        this.actualizarComboArbitroPartido();
+        this.actualizarComboJornadaPartido();
         this.actualizarTablaJugador();
         this.tablaPosiciones();
         this.actualizarTablaArbitro();
         this.actualizarTablaJornada();
-        
 
         //TESTEO
-        //OBJETOS PARA TESTEO
+//        //OBJETOS PARA TESTEO
 //        miLiga.crearEquipo("1" ,"Once Caldas", 1945, 5, 1, 12, 7, 18, 5);
 //        miLiga.crearEquipo("2" ,"Nacional", 1965, 8, 3, 15, 13, 18, 5);
 //        miLiga.crearEquipo("3" ,"Santa Fé", 1998, 10, 0, 12, 9, 18, 5);
@@ -294,15 +296,21 @@ public class Vista extends javax.swing.JFrame {
         this.txtNombreEstadio.setText("");
         this.txtCapacidadEstadio.setText("");
         this.actualizarTablaPartidoEstadio("-1");
-        
+
         this.txtCedulaArbitro.setText("");
         this.txtNombreArbitro.setText("");
-        this.apellidoArbitro.setText("");
+        this.txtApellidoArbitro.setText("");
         this.txtEdadArbitro.setText("");
         this.checkArbitroFIfa.setSelected(false);
-        
+
         this.txtNumeroJornada.setText("");
         this.txtEsloganJornada.setText("");
+        this.actualizarTablaPartidosJornada(-1);
+
+        this.txtIdentificadorPartido.setText("");
+        this.txtFechaPartido.setText("");
+        this.txtMostrarArbitroPartido.setText("");
+        this.txtMostrarJornadaPartido.setText("");
 
     }
 
@@ -504,6 +512,33 @@ public class Vista extends javax.swing.JFrame {
         jScrollPane10 = new javax.swing.JScrollPane();
         tblPartidoEstadio = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jPanel10 = new javax.swing.JPanel();
+        lblIdentificadorPartido = new javax.swing.JLabel();
+        lblFechaPartido = new javax.swing.JLabel();
+        txtIdentificadorPartido = new javax.swing.JTextField();
+        txtFechaPartido = new javax.swing.JTextField();
+        btnAgregarPartido = new javax.swing.JButton();
+        btnBuscarPartido = new javax.swing.JButton();
+        btnActualizarPartido = new javax.swing.JButton();
+        btnEliminarPartido = new javax.swing.JButton();
+        btnLimpiarPartido = new javax.swing.JButton();
+        lblTituloListaPartido = new javax.swing.JLabel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        tblPartido = new javax.swing.JTable();
+        lblRelacionArbitroPartido = new javax.swing.JLabel();
+        cbArbitroPartido = new javax.swing.JComboBox<>();
+        btnAgregarRelacionArbitroPartido = new javax.swing.JButton();
+        btnEliminarRelacionArbitroPartido = new javax.swing.JButton();
+        txtMostrarArbitroPartido = new javax.swing.JTextField();
+        lblMostraArbitroPartido = new javax.swing.JLabel();
+        lblJornadaPartido = new javax.swing.JLabel();
+        cbJornadaPartido = new javax.swing.JComboBox<>();
+        btnAgregarRelacionJornadaPartido = new javax.swing.JButton();
+        btnEliminarRelacionJornadaPartido = new javax.swing.JButton();
+        lblMostraJornadaPartido = new javax.swing.JLabel();
+        txtMostrarJornadaPartido = new javax.swing.JTextField();
+        jPanel17 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         NumeroJornada = new javax.swing.JLabel();
         EsloganJornada = new javax.swing.JLabel();
@@ -644,7 +679,7 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(txtApellidoTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombreTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCedulaTecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
@@ -697,7 +732,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoTecnico))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(273, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -812,7 +847,7 @@ public class Vista extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(btnLimpiarAficionado)))
                     .addComponent(btnCertificadoAficionado))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
@@ -865,7 +900,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoAficionado))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Aficionado", jPanel9);
@@ -978,7 +1013,7 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(txtPosicionJugador)
                             .addComponent(txtGolesJugador)
                             .addComponent(txtEquipoJugador))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
                         .addGroup(JpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JpanelLayout.createSequentialGroup()
                                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1056,7 +1091,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(jLabel37)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Jugador", Jpanel);
@@ -1183,11 +1218,11 @@ public class Vista extends javax.swing.JFrame {
                                     .addComponent(txtNombreArbitro)
                                     .addComponent(txtApellidoArbitro)
                                     .addComponent(txtEdadArbitro))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                                 .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(114, 114, 114))
+                                .addGap(144, 144, 144))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                                 .addComponent(jLabel39)
                                 .addGap(246, 246, 246))))))
@@ -1234,7 +1269,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnCertificadoArbitro)
-                .addContainerGap(402, Short.MAX_VALUE))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Árbitro", jPanel12);
@@ -1245,8 +1280,8 @@ public class Vista extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1013, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1375,7 +1410,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(btnEliminarEquipo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnLimpiarEquipo)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -1430,7 +1465,7 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Gestionar", jPanel13);
@@ -1562,7 +1597,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminarRelacionAficionadoEquipo))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1591,7 +1626,7 @@ public class Vista extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Planilla", jPanel14);
@@ -1624,7 +1659,7 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(197, 197, 197)
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(318, Short.MAX_VALUE))
+                .addContainerGap(378, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1633,7 +1668,7 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(labelTituloListaPartidoEquipo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Partidos", jPanel15);
@@ -1723,7 +1758,7 @@ public class Vista extends javax.swing.JFrame {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblArqueroEquipo)
                     .addComponent(txtArqueroEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(485, Short.MAX_VALUE))
+                .addContainerGap(336, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Reportes", jPanel16);
@@ -1734,7 +1769,7 @@ public class Vista extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 967, Short.MAX_VALUE)
+                .addComponent(jTabbedPane3)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -1847,10 +1882,6 @@ public class Vista extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblTituloListaEstadios)
-                .addGap(234, 234, 234))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1870,15 +1901,10 @@ public class Vista extends javax.swing.JFrame {
                                     .addComponent(lblCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
-                                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 308, Short.MAX_VALUE)
+                                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(btnAgregarEstadio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1900,7 +1926,16 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(btnEliminarRelacionPartidoEstadio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel38)
-                        .addGap(229, 229, 229))))
+                        .addGap(230, 230, 230))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(lblTituloListaEstadios)
+                                .addGap(234, 234, 234))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(32, 32, 32))))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1935,35 +1970,259 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblRelacionPartidosEstadio)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cbPartidoEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnAgregarRelacionPartidoEstadio)
-                                .addComponent(btnEliminarRelacionPartidoEstadio)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel38)
-                        .addGap(18, 18, 18)))
+                    .addComponent(lblRelacionPartidosEstadio)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cbPartidoEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAgregarRelacionPartidoEstadio)
+                        .addComponent(btnEliminarRelacionPartidoEstadio))
+                    .addComponent(jLabel38))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Estadio", jPanel3);
+
+        lblIdentificadorPartido.setText("Identificador:");
+
+        lblFechaPartido.setText("Fecha:");
+
+        btnAgregarPartido.setText("Agregar");
+        btnAgregarPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarPartidoActionPerformed(evt);
+            }
+        });
+
+        btnBuscarPartido.setText("Buscar");
+        btnBuscarPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarPartidoActionPerformed(evt);
+            }
+        });
+
+        btnActualizarPartido.setText("Actualizar");
+        btnActualizarPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarPartidoActionPerformed(evt);
+            }
+        });
+
+        btnEliminarPartido.setText("Eliminar");
+        btnEliminarPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarPartidoActionPerformed(evt);
+            }
+        });
+
+        btnLimpiarPartido.setText("Limpiar");
+        btnLimpiarPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarPartidoActionPerformed(evt);
+            }
+        });
+
+        lblTituloListaPartido.setText("Lista de partidos");
+
+        tblPartido.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane14.setViewportView(tblPartido);
+
+        lblRelacionArbitroPartido.setText("Árbitro del partido:");
+
+        cbArbitroPartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnAgregarRelacionArbitroPartido.setText("Agregar");
+        btnAgregarRelacionArbitroPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarRelacionArbitroPartidoActionPerformed(evt);
+            }
+        });
+
+        btnEliminarRelacionArbitroPartido.setText("Eliminar");
+        btnEliminarRelacionArbitroPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarRelacionArbitroPartidoActionPerformed(evt);
+            }
+        });
+
+        txtMostrarArbitroPartido.setEditable(false);
+
+        lblMostraArbitroPartido.setText("Arbitro");
+
+        lblJornadaPartido.setText("Jornada:");
+
+        cbJornadaPartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnAgregarRelacionJornadaPartido.setText("Agregar");
+        btnAgregarRelacionJornadaPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarRelacionJornadaPartidoActionPerformed(evt);
+            }
+        });
+
+        btnEliminarRelacionJornadaPartido.setText("Eliminar");
+        btnEliminarRelacionJornadaPartido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarRelacionJornadaPartidoActionPerformed(evt);
+            }
+        });
+
+        lblMostraJornadaPartido.setText("Jornada");
+
+        txtMostrarJornadaPartido.setEditable(false);
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addComponent(lblFechaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtFechaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addComponent(btnAgregarPartido)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnBuscarPartido)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnActualizarPartido)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnEliminarPartido)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnLimpiarPartido))
+                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblRelacionArbitroPartido)
+                                            .addComponent(lblJornadaPartido))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addComponent(cbJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnAgregarRelacionJornadaPartido)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnEliminarRelacionJornadaPartido))
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addComponent(cbArbitroPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnAgregarRelacionArbitroPartido)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btnEliminarRelacionArbitroPartido)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtMostrarArbitroPartido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(28, 28, 28))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                                        .addComponent(lblMostraArbitroPartido)
+                                        .addGap(75, 75, 75))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                                        .addComponent(lblMostraJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(62, 62, 62)))))
+                        .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(lblIdentificadorPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtIdentificadorPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTituloListaPartido)
+                        .addGap(207, 207, 207))))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIdentificadorPartido)
+                    .addComponent(txtIdentificadorPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTituloListaPartido))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblFechaPartido)
+                            .addComponent(txtFechaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAgregarPartido)
+                            .addComponent(btnBuscarPartido)
+                            .addComponent(btnActualizarPartido)
+                            .addComponent(btnEliminarPartido)
+                            .addComponent(btnLimpiarPartido))
+                        .addGap(35, 35, 35)
+                        .addComponent(lblMostraArbitroPartido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblRelacionArbitroPartido)
+                            .addComponent(cbArbitroPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAgregarRelacionArbitroPartido)
+                            .addComponent(btnEliminarRelacionArbitroPartido)
+                            .addComponent(txtMostrarArbitroPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addComponent(lblMostraJornadaPartido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblJornadaPartido)
+                            .addComponent(cbJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAgregarRelacionJornadaPartido)
+                            .addComponent(btnEliminarRelacionJornadaPartido)
+                            .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(106, Short.MAX_VALUE))
+        );
+
+        jTabbedPane4.addTab("Partido", jPanel10);
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1027, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 557, Short.MAX_VALUE)
+        );
+
+        jTabbedPane4.addTab("Goles", jPanel17);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 979, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane4)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 756, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane4)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Partido", jPanel4);
@@ -2101,7 +2360,7 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(193, 193, 193)
                         .addComponent(ListaPartidosJornada)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2142,7 +2401,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane12))
-                .addContainerGap(156, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Jornada", jPanel5);
@@ -2172,7 +2431,7 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel13)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(274, Short.MAX_VALUE)
+                .addContainerGap(347, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(105, 105, 105))
         );
@@ -2192,11 +2451,11 @@ public class Vista extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 979, Short.MAX_VALUE)
+            .addGap(0, 1052, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 756, Short.MAX_VALUE)
+            .addGap(0, 607, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Reportes", jPanel7);
@@ -2208,14 +2467,14 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addGap(28, 28, 28))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -2886,7 +3145,7 @@ public class Vista extends javax.swing.JFrame {
             int edad = Integer.parseInt(this.txtEdadJugador.getText());
             String nacionalidad = this.txtNacionalidadJugador.getText();
             int salario = Integer.parseInt(this.txtSalarioJugador.getText());
-            String posicion= this.txtPosicionJugador.getText();
+            String posicion = this.txtPosicionJugador.getText();
             Jugador jugador = new Jugador(cedula, nombre, apellido, edad, nacionalidad, posicion, 0, salario);
             this.miLiga.getMisPersonas().add(jugador);
             JOptionPane.showMessageDialog(this, "Se agregó el jugador " + nombre);
@@ -2910,7 +3169,7 @@ public class Vista extends javax.swing.JFrame {
                 int edad = Integer.parseInt(this.txtEdadJugador.getText());
                 String nacionalidad = this.txtNacionalidadJugador.getText();
                 int salario = Integer.parseInt(this.txtSalarioJugador.getText());
-                String posicion= this.txtPosicionJugador.getText();
+                String posicion = this.txtPosicionJugador.getText();
                 jugador.setNombre(nombre);
                 jugador.setApellido(apellido);
                 jugador.setEdad(edad);
@@ -3023,6 +3282,7 @@ public class Vista extends javax.swing.JFrame {
             this.txtCiudadEstadio.setText(estadioEncontrado.getCiudad());
             this.txtNombreEstadio.setText(estadioEncontrado.getNombre());
             this.txtCapacidadEstadio.setText("" + estadioEncontrado.getCapacidad());
+            this.actualizarTablaPartidoEstadio(identificador);
         } else {
             JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
         }
@@ -3084,7 +3344,12 @@ public class Vista extends javax.swing.JFrame {
     public void actualizarComboPartidoEstadio() {
         this.cbPartidoEstadio.removeAllItems();
         for (Partido partido : this.miLiga.getMisPartidos()) {
-            this.cbPartidoEstadio.addItem(partido.getId() + " - " + partido.getFecha());
+            if (partido.getMiEstadio() == null) {
+                this.cbPartidoEstadio.addItem(partido.getId() + " - " + partido.getFecha() + " - Disponible");
+            } else {
+                this.cbPartidoEstadio.addItem(partido.getId() + " - " + partido.getFecha() + " - Asignado");
+            }
+
         }
     }
 
@@ -3103,20 +3368,29 @@ public class Vista extends javax.swing.JFrame {
                 fila[3] = "" + actual.getGolesVisitante();
                 miModelo.addRow(fila);
             }
-        }else{
+        } else {
             miModelo.setRowCount(0);
         }
-        
+
     }
 
     private void btnAgregarRelacionPartidoEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionPartidoEstadioActionPerformed
         String identificador = this.txtIdentificadorEstadio.getText();
         Estadio estadioEncontrado = this.miLiga.buscarEstadio(identificador);
         if (estadioEncontrado != null) {
+
             int indice = this.cbPartidoEstadio.getSelectedIndex();
             Partido seleccionado = this.miLiga.getMisPartidos().get(indice);
-            estadioEncontrado.getMisPartidos().add(seleccionado);
-            JOptionPane.showMessageDialog(this, "Se ha asociado el partido de ID " + seleccionado.getId() + " con el estadio " + estadioEncontrado.getNombre());
+            if (seleccionado.getMiEstadio() == null) {
+                estadioEncontrado.getMisPartidos().add(seleccionado);
+                seleccionado.setMiEstadio(estadioEncontrado);
+                JOptionPane.showMessageDialog(this, "Se ha asociado el partido de ID " + seleccionado.getId() + " con el estadio " + estadioEncontrado.getNombre());
+                this.actualizarTablaPartidoEstadio(identificador);
+                this.actualizarComboPartidoEstadio();
+            } else {
+                JOptionPane.showMessageDialog(this, "El partido seleccionado ya está asignado");
+            }
+
         } else {
             JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
         }
@@ -3128,8 +3402,16 @@ public class Vista extends javax.swing.JFrame {
         if (estadioEncontrado != null) {
             int indice = this.cbPartidoEstadio.getSelectedIndex();
             Partido seleccionado = this.miLiga.getMisPartidos().get(indice);
-            estadioEncontrado.getMisPartidos().remove(seleccionado);
-            JOptionPane.showMessageDialog(this, "Se ha desasociado el partido de ID " + seleccionado.getId() + " del estadio " + estadioEncontrado.getNombre());
+            if (this.buscarPartidoEstadio(seleccionado, estadioEncontrado)) {
+                estadioEncontrado.getMisPartidos().remove(seleccionado);
+                seleccionado.setMiEstadio(null);
+                JOptionPane.showMessageDialog(this, "Se ha desasociado el partido de ID " + seleccionado.getId() + " del estadio " + estadioEncontrado.getNombre());
+                this.actualizarTablaPartidoEstadio(identificador);
+                this.actualizarComboPartidoEstadio();
+            } else {
+                JOptionPane.showMessageDialog(this, "El partido seleccionado, no está asociado con el estadio");
+            }
+
         } else {
             JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
         }
@@ -3152,10 +3434,11 @@ public class Vista extends javax.swing.JFrame {
             String nombre = this.txtNombreArbitro.getText();
             String apellido = this.txtApellidoArbitro.getText();
             int edad = Integer.parseInt(this.txtEdadArbitro.getText());
-            boolean FIFA= this.checkArbitroFIfa.isSelected();
-            Arbitro arbitro= new Arbitro(cedula, nombre, apellido, edad, FIFA);
+            boolean FIFA = this.checkArbitroFIfa.isSelected();
+            Arbitro arbitro = new Arbitro(cedula, nombre, apellido, edad, FIFA);
             this.miLiga.getMisPersonas().add(arbitro);
             JOptionPane.showMessageDialog(this, "Se agregó el arbitro " + nombre);
+            this.actualizarComboArbitroPartido();
         } else {
             JOptionPane.showMessageDialog(null, "Ya existe una persona con esa cédula");
         }
@@ -3165,18 +3448,18 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarArbitroActionPerformed
 
     private void btnBuscarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarArbitroActionPerformed
-        String cedula= JOptionPane.showInputDialog(this, "Ingrese la cedula del arbitro que desea buscar");
-        Persona buscarpersona= this.miLiga.buscarPersona(cedula);
-        if(buscarpersona != null){
-            if(buscarpersona instanceof Arbitro){
+        String cedula = JOptionPane.showInputDialog(this, "Ingrese la cedula del arbitro que desea buscar");
+        Persona buscarpersona = this.miLiga.buscarPersona(cedula);
+        if (buscarpersona != null) {
+            if (buscarpersona instanceof Arbitro) {
                 this.txtCedulaArbitro.setEditable(false);
-                Arbitro arbitro= (Arbitro)buscarpersona;
+                Arbitro arbitro = (Arbitro) buscarpersona;
                 this.txtCedulaArbitro.setText(arbitro.getCedula());
                 this.txtNombreArbitro.setText(arbitro.getNombre());
                 this.txtApellidoArbitro.setText(arbitro.getApellido());
                 this.txtEdadArbitro.setText("" + arbitro.getEdad());
                 this.checkArbitroFIfa.setSelected(arbitro.isFifa());
-            }else {
+            } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
             }
         } else {
@@ -3217,6 +3500,7 @@ public class Vista extends javax.swing.JFrame {
             if (buscarPersona instanceof Arbitro) {
                 this.miLiga.getMisPersonas().remove(buscarPersona);
                 JOptionPane.showMessageDialog(this, "El árbitro de cédula " + cedula + " se eliminó");
+                this.actualizarComboArbitroPartido();
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
             }
@@ -3237,10 +3521,10 @@ public class Vista extends javax.swing.JFrame {
         Persona buscarPersona = this.miLiga.buscarPersona(cedula);
         if (buscarPersona != null) {
             if (buscarPersona instanceof Arbitro) {
-                Arbitro arbitro= (Arbitro) buscarPersona;
+                Arbitro arbitro = (Arbitro) buscarPersona;
                 String cuerpo = this.cuerpoCertificados(buscarPersona);
                 String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de árbitro. ";                 
+                String propio = " y actúa en calidad de árbitro. ";
                 String contenido = cuerpo + propio + finalCertificado;
                 this.guardarArchivo(contenido, "doc");
             } else {
@@ -3250,51 +3534,57 @@ public class Vista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
         }
     }//GEN-LAST:event_btnCertificadoArbitroActionPerformed
-    public void actualizarComboPartidosJornada(){
-    this.cbPartidosJornada.removeAllItems();
+    public void actualizarComboPartidosJornada() {
+        this.cbPartidosJornada.removeAllItems();
         for (Partido partido : this.miLiga.getMisPartidos()) {
-            this.cbPartidosJornada.addItem(partido.getId() + " - " + partido.getFecha());
+            if (partido.getMiJornada() == null) {
+                this.cbPartidosJornada.addItem(partido.getId() + " - " + partido.getFecha() + " - Disponible");
+            } else {
+                this.cbPartidosJornada.addItem(partido.getId() + " - " + partido.getFecha() + " - Asignado");
+            }
+
         }
-    }    
-    
+    }
+
     private void cbPartidosJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPartidosJornadaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbPartidosJornadaActionPerformed
 
     //SECCION JORNADA
     private void btnActualizarJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarJornadaActionPerformed
-        int id= Integer.parseInt(this.txtNumeroJornada.getText());
-        Jornada buscarJornada= this.miLiga.buscarJornada(id);
+        int id = Integer.parseInt(this.txtNumeroJornada.getText());
+        Jornada buscarJornada = this.miLiga.buscarJornada(id);
         if (buscarJornada != null) {
-                int numero= Integer.parseInt(this.txtNumeroJornada.getText());
-                String eslogan= this.txtEsloganJornada.getText();
-                buscarJornada.setNumero(numero);
-                buscarJornada.setEslogan(eslogan);
-                JOptionPane.showMessageDialog(this, "Se actualizó la jornada de número " + numero);
-                this.txtNumeroJornada.setEditable(true);
-                this.limpiarCajas();
+            int numero = Integer.parseInt(this.txtNumeroJornada.getText());
+            String eslogan = this.txtEsloganJornada.getText();
+            buscarJornada.setNumero(numero);
+            buscarJornada.setEslogan(eslogan);
+            JOptionPane.showMessageDialog(this, "Se actualizó la jornada de número " + numero);
+            this.txtNumeroJornada.setEditable(true);
+            this.limpiarCajas();
         } else {
             JOptionPane.showMessageDialog(this, "El numero ingresado es incorrecto");
         }
         this.actualizarTablaJornada();
     }//GEN-LAST:event_btnActualizarJornadaActionPerformed
 
-    
+
     private void btnLimpiarJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarJornadaActionPerformed
         limpiarCajas();
         this.txtNumeroJornada.setEditable(true);
     }//GEN-LAST:event_btnLimpiarJornadaActionPerformed
 
     private void btnAgregarJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarJornadaActionPerformed
-        int id= Integer.parseInt(this.txtNumeroJornada.getText());
-        Jornada buscarJornada= this.miLiga.buscarJornada(id);
-        if(buscarJornada==null){
-            int numero= Integer.parseInt(this.txtNumeroJornada.getText());
-            String eslogan= this.txtEsloganJornada.getText();
-            Jornada jornada= new Jornada(numero, eslogan);
+        int id = Integer.parseInt(this.txtNumeroJornada.getText());
+        Jornada buscarJornada = this.miLiga.buscarJornada(id);
+        if (buscarJornada == null) {
+            int numero = Integer.parseInt(this.txtNumeroJornada.getText());
+            String eslogan = this.txtEsloganJornada.getText();
+            Jornada jornada = new Jornada(numero, eslogan);
             this.miLiga.getMisJornadas().add(jornada);
             JOptionPane.showMessageDialog(this, "Se ha creado la jornada número: " + numero);
-            }else {
+            this.actualizarComboJornadaPartido();
+        } else {
             JOptionPane.showMessageDialog(this, "Ya existe una jornada con este número");
         }
         limpiarCajas();
@@ -3302,13 +3592,13 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarJornadaActionPerformed
 
     private void btnBuscarJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarJornadaActionPerformed
-       int identificador = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese el número de la jornada "));
-       Jornada jornadaEncontrada = this.miLiga.buscarJornada(identificador);
+        int identificador = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese el número de la jornada "));
+        Jornada jornadaEncontrada = this.miLiga.buscarJornada(identificador);
         if (jornadaEncontrada != null) {
             this.txtNumeroJornada.setEditable(false);
             this.txtNumeroJornada.setText("" + jornadaEncontrada.getNumero());
             this.txtEsloganJornada.setText(jornadaEncontrada.getEslogan());
-            actualizarTablaPartidosJornada();
+            actualizarTablaPartidosJornada(identificador);
         } else {
             JOptionPane.showMessageDialog(this, "El número ingresado es erróneo");
         }
@@ -3316,11 +3606,12 @@ public class Vista extends javax.swing.JFrame {
 
     private void btnEliminarJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarJornadaActionPerformed
         int numero = Integer.parseInt(JOptionPane.showInputDialog(this, "Ingrese el número de la jornada que desea eliminar"));
-        Jornada jornada= this.miLiga.buscarJornada(numero);
+        Jornada jornada = this.miLiga.buscarJornada(numero);
         if (jornada != null) {
-                this.miLiga.getMisJornadas().remove(jornada);
-                JOptionPane.showMessageDialog(this, "La jornada de número " + numero + " se eliminó");
-        }   else {
+            this.miLiga.getMisJornadas().remove(jornada);
+            JOptionPane.showMessageDialog(this, "La jornada de número " + numero + " se eliminó");
+            this.actualizarComboJornadaPartido();
+        } else {
             JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
         }
         this.actualizarTablaJornada();
@@ -3334,65 +3625,218 @@ public class Vista extends javax.swing.JFrame {
 
     private void btnAgregarPartidoJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPartidoJornadaActionPerformed
         int identificador = Integer.parseInt(this.txtNumeroJornada.getText());
-        Jornada actual= this.miLiga.buscarJornada(identificador);
+        Jornada actual = this.miLiga.buscarJornada(identificador);
         if (actual != null) {
             int indice = this.cbPartidosJornada.getSelectedIndex();
             Partido seleccionado = this.miLiga.getMisPartidos().get(indice);
-            actual.getMisPartidos().add(seleccionado);
-            JOptionPane.showMessageDialog(this, "Se ha asociado el partido de ID " + seleccionado.getId() + " con la jornada " + actual.getNumero());
-            this.actualizarComboPartidosJornada();
+            if (seleccionado.getMiJornada() == null) {
+                actual.getMisPartidos().add(seleccionado);
+                seleccionado.setMiJornada(actual);
+                JOptionPane.showMessageDialog(this, "Se ha asociado el partido de ID " + seleccionado.getId() + " con la jornada " + actual.getNumero());
+                this.actualizarTablaPartidosJornada(identificador);
+                this.actualizarComboPartidosJornada();
+            } else {
+                JOptionPane.showMessageDialog(this, "El partido está asociado a una jornada");
+            }
+
         } else {
             JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
         }
-       
+
     }//GEN-LAST:event_btnAgregarPartidoJornadaActionPerformed
 
     private void btnEliminarPartidoJornadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPartidoJornadaActionPerformed
         int identificador = Integer.parseInt(this.txtNumeroJornada.getText());
-        Jornada actual= this.miLiga.buscarJornada(identificador);
+        Jornada actual = this.miLiga.buscarJornada(identificador);
         if (actual != null) {
             int indice = this.cbPartidosJornada.getSelectedIndex();
             Partido seleccionado = this.miLiga.getMisPartidos().get(indice);
-            actual.getMisPartidos().remove(seleccionado);
-            JOptionPane.showMessageDialog(this, "Se ha asociado el partido de ID " + seleccionado.getId() + " con la jornada " + actual.getNumero());
-            this.actualizarComboPartidosJornada();
+            if (this.buscarPartidoJornada(seleccionado, actual)) {
+                actual.getMisPartidos().remove(seleccionado);
+                seleccionado.setMiJornada(null);
+                JOptionPane.showMessageDialog(this, "Se ha desasociado el partido de ID " + seleccionado.getId() + " con la jornada " + actual.getNumero());
+                this.actualizarComboPartidosJornada();
+                this.actualizarTablaPartidosJornada(identificador);
+            } else {
+                JOptionPane.showMessageDialog(this, "El partido seleccionado no está asociado con la jornada");
+            }
         } else {
             JOptionPane.showMessageDialog(this, "El ID de estadio ingresado es erróneo");
         }
     }//GEN-LAST:event_btnEliminarPartidoJornadaActionPerformed
-    
-    //TABLA PARTIDOS JORNADA
-    public void actualizarTablaPartidosJornada(){
-     String nombreColumnas[] = {"Identificador", "Fecha", "Goles local", "Goles visitante"};
+    //==========================================================================
+    //==========================================================================
+    //SECCIÓN PARTIDOS
+
+    public void actualizarTablaPartido() {
+        String nombreColumnas[] = {"Id", "Fecha", "Goles local", "Goles visitante"};
         DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
-        this.tblPartidoJornada.setModel(miModelo);
+        this.tblPartido.setModel(miModelo);
         LinkedList<Partido> lista = this.miLiga.getMisPartidos();
         for (Partido actual : lista) {
+            String fila[] = new String[nombreColumnas.length];
+            fila[0] = actual.getId();
+            fila[1] = actual.getFecha();
+            fila[2] = "" + actual.getGolesLocal();
+            fila[3] = "" + actual.getGolesVisitante();
+            miModelo.addRow(fila);
+        }
+
+    }
+
+    public void actualizarComboArbitroPartido() {
+        this.cbArbitroPartido.removeAllItems();
+        for (Persona actual : this.miLiga.getMisPersonas()) {
+            if (actual instanceof Arbitro) {
+                if (((Arbitro) actual).getMiPartido() == null) {
+                    this.cbArbitroPartido.addItem(actual.getCedula() + " - " + actual.getNombre() + " - Disponible");
+                } else {
+                    this.cbArbitroPartido.addItem(actual.getCedula() + " - " + actual.getNombre() + " - Asignado");
+                }
+            }
+        }
+    }
+
+    public void actualizarComboJornadaPartido() {
+        this.cbJornadaPartido.removeAllItems();
+        for (Jornada actual : this.miLiga.getMisJornadas()) {
+            this.cbJornadaPartido.addItem("" + actual.getNumero());
+        }
+    }
+
+    private void btnAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPartidoActionPerformed
+        String identificador = this.txtIdentificadorPartido.getText();
+        Partido partidoEncontrado = this.miLiga.buscarPartido(identificador);
+        if (partidoEncontrado == null) {
+            String fecha = this.txtFechaPartido.getText();
+            Partido partidoNuevo = new Partido(identificador, fecha, 0, 0);
+            this.miLiga.getMisPartidos().add(partidoNuevo);
+            JOptionPane.showMessageDialog(this, "Se ha creado el partido de ID " + identificador);
+            this.actualizarComboPartidoEstadio();
+            this.actualizarComboPartidosJornada();
+            this.actualizarTablaPartido();
+            this.limpiarCajas();
+        } else {
+            JOptionPane.showMessageDialog(this, "Ya existe un partido con ese identificador");
+        }
+    }//GEN-LAST:event_btnAgregarPartidoActionPerformed
+
+    private void btnBuscarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPartidoActionPerformed
+        String identificador = JOptionPane.showInputDialog(this, "Ingrese el identificador del partido");
+        Partido partidoEncontrado = this.miLiga.buscarPartido(identificador);
+        if (partidoEncontrado != null) {
+            this.txtIdentificadorPartido.setEditable(false);
+            this.txtIdentificadorPartido.setText(identificador);
+            this.txtFechaPartido.setText(partidoEncontrado.getFecha());
+            this.txtMostrarArbitroPartido.setText(this.personaAsignada(partidoEncontrado.getMiArbitro()));
+            this.txtMostrarJornadaPartido.setText(this.jornadaAsignada(partidoEncontrado.getMiJornada()));
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnBuscarPartidoActionPerformed
+
+    private void btnActualizarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarPartidoActionPerformed
+        String identificador = this.txtIdentificadorPartido.getText();
+        Partido partidoEncontrado = this.miLiga.buscarPartido(identificador);
+        if (partidoEncontrado != null) {
+            String fecha = this.txtFechaPartido.getText();
+            partidoEncontrado.setFecha(fecha);
+            JOptionPane.showMessageDialog(this, "Se actualizó el partido con ID " + identificador);
+            this.actualizarTablaPartido();
+            this.limpiarCajas();
+            this.txtIdentificadorPartido.setEditable(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnActualizarPartidoActionPerformed
+
+    private void btnEliminarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPartidoActionPerformed
+        String identificador = JOptionPane.showInputDialog(this, "Ingrese el identificador del partido que desea eliminar");
+        Partido partidoEncontrado = this.miLiga.buscarPartido(identificador);
+        if (partidoEncontrado != null) {
+            this.miLiga.getMisPartidos().remove(partidoEncontrado);
+            JOptionPane.showMessageDialog(this, "Se eliminó el partido con ID " + identificador);
+            this.actualizarTablaPartido();
+            this.limpiarCajas();
+            this.actualizarComboPartidoEstadio();
+            this.actualizarComboPartidosJornada();
+
+            //Partido->Estadio
+            if (partidoEncontrado.getMiEstadio() != null) {
+                partidoEncontrado.getMiEstadio().getMisPartidos().remove(partidoEncontrado);
+            }
+
+            //Partido->Jornada
+            if (partidoEncontrado.getMiJornada() != null) {
+                partidoEncontrado.getMiJornada().getMisPartidos().remove(partidoEncontrado);
+            }
+
+            this.txtIdentificadorPartido.setEditable(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
+        }
+    }//GEN-LAST:event_btnEliminarPartidoActionPerformed
+
+    private void btnLimpiarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarPartidoActionPerformed
+        this.limpiarCajas();
+        this.txtIdentificadorPartido.setEditable(true);
+    }//GEN-LAST:event_btnLimpiarPartidoActionPerformed
+
+    private void btnAgregarRelacionArbitroPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionArbitroPartidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarRelacionArbitroPartidoActionPerformed
+
+    private void btnEliminarRelacionArbitroPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionArbitroPartidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarRelacionArbitroPartidoActionPerformed
+
+    private void btnAgregarRelacionJornadaPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionJornadaPartidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarRelacionJornadaPartidoActionPerformed
+
+    private void btnEliminarRelacionJornadaPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionJornadaPartidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarRelacionJornadaPartidoActionPerformed
+
+    //TABLA PARTIDOS JORNADA
+    public void actualizarTablaPartidosJornada(int identificador) {
+        String nombreColumnas[] = {"Identificador", "Fecha", "Goles local", "Goles visitante"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblPartidoJornada.setModel(miModelo);
+        Jornada jornadaEncontrada = this.miLiga.buscarJornada(identificador);
+        if (jornadaEncontrada != null) {
+            LinkedList<Partido> lista = jornadaEncontrada.getMisPartidos();
+            for (Partido actual : lista) {
                 String fila[] = new String[nombreColumnas.length];
                 fila[0] = actual.getId();
                 fila[1] = actual.getFecha();
                 fila[2] = "" + actual.getGolesLocal();
                 fila[3] = "" + actual.getGolesVisitante();
                 miModelo.addRow(fila);
-        }   
+            }
+        } else {
+            miModelo.setRowCount(0);
+        }
+
     }
+
     //TABLA JORNADA
-    public void actualizarTablaJornada(){
-     String nombreColumnas[] = {"Número", "Eslogan"};
+    public void actualizarTablaJornada() {
+        String nombreColumnas[] = {"Número", "Eslogan"};
         DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
         this.tblJornada.setModel(miModelo);
         LinkedList<Jornada> lista = this.miLiga.getMisJornadas();
         for (Jornada actual : lista) {
-                String fila[] = new String[nombreColumnas.length];
-                fila[0] = "" + actual.getNumero();
-                fila[1] = actual.getEslogan();
-                miModelo.addRow(fila);
-        }   
+            String fila[] = new String[nombreColumnas.length];
+            fila[0] = "" + actual.getNumero();
+            fila[1] = actual.getEslogan();
+            miModelo.addRow(fila);
+        }
     }
-    
+
     //TABLA ARBITROS    
-    public void actualizarTablaArbitro(){
-    String nombreColumnas[] = {"Cedula", "Nombre", "Apellido", "Edad", "Arb. FIFA"};
+    public void actualizarTablaArbitro() {
+        String nombreColumnas[] = {"Cedula", "Nombre", "Apellido", "Edad", "Arb. FIFA"};
         DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
         this.tblArbitro.setModel(miModelo);
         LinkedList<Persona> lista = this.miLiga.getMisPersonas();
@@ -3410,7 +3854,6 @@ public class Vista extends javax.swing.JFrame {
     }
 
     //TABLA JUGADORES
-
     public void actualizarTablaJugador() {
         String nombreColumnas[] = {"Cedula", "Nombre", "Apellido", "Edad", "Nacionalidad", "Posición", "Goles", "Salario"};
         DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
@@ -3537,6 +3980,14 @@ public class Vista extends javax.swing.JFrame {
         }
     }
 
+    public String jornadaAsignada(Jornada jornada) {
+        if (jornada != null) {
+            return "" + jornada.getNumero();
+        } else {
+            return "No asignado";
+        }
+    }
+
     public boolean buscarJugadorEquipo(Jugador jugador, Equipo equipo) {
         for (Jugador actual : equipo.getMisJugadores()) {
             if (actual.equals(jugador)) {
@@ -3555,6 +4006,24 @@ public class Vista extends javax.swing.JFrame {
         return false;
     }
 
+    public boolean buscarPartidoEstadio(Partido partido, Estadio estadio) {
+        for (Partido actual : estadio.getMisPartidos()) {
+            if (actual.equals(partido)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean buscarPartidoJornada(Partido partido, Jornada jornada) {
+        for (Partido actual : jornada.getMisPartidos()) {
+            if (actual.equals(partido)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     //==========================================================================
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -3567,16 +4036,24 @@ public class Vista extends javax.swing.JFrame {
                 if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -3603,6 +4080,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnActualizarEstadio;
     private javax.swing.JButton btnActualizarJornada;
     private javax.swing.JButton btnActualizarJugador;
+    private javax.swing.JButton btnActualizarPartido;
     private javax.swing.JButton btnActualizarTecnico;
     private javax.swing.JButton btnAgregarAficionado;
     private javax.swing.JButton btnAgregarArbitro;
@@ -3610,8 +4088,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarEstadio;
     private javax.swing.JButton btnAgregarJornada;
     private javax.swing.JButton btnAgregarJugador;
+    private javax.swing.JButton btnAgregarPartido;
     private javax.swing.JButton btnAgregarPartidoJornada;
     private javax.swing.JButton btnAgregarRelacionAficionadoEquipo;
+    private javax.swing.JButton btnAgregarRelacionArbitroPartido;
+    private javax.swing.JButton btnAgregarRelacionJornadaPartido;
     private javax.swing.JButton btnAgregarRelacionJugadorEquipo;
     private javax.swing.JButton btnAgregarRelacionPartidoEstadio;
     private javax.swing.JButton btnAgregarRelacionTecnicoEquipo;
@@ -3622,6 +4103,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarEstadio;
     private javax.swing.JButton btnBuscarJornada;
     private javax.swing.JButton btnBuscarJugador;
+    private javax.swing.JButton btnBuscarPartido;
     private javax.swing.JButton btnBuscarTecnico;
     private javax.swing.JButton btnCertificadoAficionado;
     private javax.swing.JButton btnCertificadoArbitro;
@@ -3633,8 +4115,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarEstadio;
     private javax.swing.JButton btnEliminarJornada;
     private javax.swing.JButton btnEliminarJugador;
+    private javax.swing.JButton btnEliminarPartido;
     private javax.swing.JButton btnEliminarPartidoJornada;
     private javax.swing.JButton btnEliminarRelacionAficionadoEquipo;
+    private javax.swing.JButton btnEliminarRelacionArbitroPartido;
+    private javax.swing.JButton btnEliminarRelacionJornadaPartido;
     private javax.swing.JButton btnEliminarRelacionJugadorEquipo;
     private javax.swing.JButton btnEliminarRelacionPartidoEstadio;
     private javax.swing.JButton btnEliminarRelacionTecnicoEquipo;
@@ -3645,8 +4130,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiarEstadio;
     private javax.swing.JButton btnLimpiarJornada;
     private javax.swing.JButton btnLimpiarJugador;
+    private javax.swing.JButton btnLimpiarPartido;
     private javax.swing.JButton btnLimpiarTecnico;
     private javax.swing.JComboBox<String> cbAficionadoEquipo;
+    private javax.swing.JComboBox<String> cbArbitroPartido;
+    private javax.swing.JComboBox<String> cbJornadaPartido;
     private javax.swing.JComboBox<String> cbJugadorEquipo;
     private javax.swing.JComboBox<String> cbPartidoEstadio;
     private javax.swing.JComboBox<String> cbPartidosJornada;
@@ -3696,12 +4184,14 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -3715,6 +4205,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3726,6 +4217,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JLabel labelTituloListaAficionados;
     private javax.swing.JLabel labelTituloListaPartidoEquipo;
     private javax.swing.JLabel labelTituloTablaTecnico;
@@ -3733,15 +4225,22 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblCapacidadEstadio;
     private javax.swing.JLabel lblCiudadEstadio;
     private javax.swing.JLabel lblEquipoJugador;
+    private javax.swing.JLabel lblFechaPartido;
     private javax.swing.JLabel lblIdentificadorEstadio;
+    private javax.swing.JLabel lblIdentificadorPartido;
+    private javax.swing.JLabel lblJornadaPartido;
     private javax.swing.JLabel lblJugadorMasGolesEquipo;
     private javax.swing.JLabel lblJugadorMasJovenEquipo;
+    private javax.swing.JLabel lblMostraArbitroPartido;
+    private javax.swing.JLabel lblMostraJornadaPartido;
     private javax.swing.JLabel lblNombreEstadio;
     private javax.swing.JLabel lblPartidosGoleadaEquipo;
     private javax.swing.JLabel lblPromEdadJugadoresEquipo;
+    private javax.swing.JLabel lblRelacionArbitroPartido;
     private javax.swing.JLabel lblRelacionPartidosEstadio;
     private javax.swing.JLabel lblSumaTotalNominaEquipo;
     private javax.swing.JLabel lblTituloListaEstadios;
+    private javax.swing.JLabel lblTituloListaPartido;
     private javax.swing.JLabel nombreArbitro;
     private javax.swing.JTable tblAficionado;
     private javax.swing.JTable tblAficionadoEquipo;
@@ -3751,6 +4250,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTable tblJornada;
     private javax.swing.JTable tblJugador;
     private javax.swing.JTable tblJugadorEquipo;
+    private javax.swing.JTable tblPartido;
     private javax.swing.JTable tblPartidoEstadio;
     private javax.swing.JTable tblPartidoJornada;
     private javax.swing.JTable tblPartidosEquipo;
@@ -3777,6 +4277,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtEquipoTecnico;
     private javax.swing.JTextField txtEsloganJornada;
     private javax.swing.JTextField txtExperienciaTecnico;
+    private javax.swing.JTextField txtFechaPartido;
     private javax.swing.JTextField txtFidelidadAficionado;
     private javax.swing.JTextField txtFundacionEquipo;
     private javax.swing.JTextField txtGolesContraEquipo;
@@ -3784,8 +4285,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtGolesJugador;
     private javax.swing.JTextField txtIdentificadorEquipo;
     private javax.swing.JTextField txtIdentificadorEstadio;
+    private javax.swing.JTextField txtIdentificadorPartido;
     private javax.swing.JTextField txtJugadorJovenEquipo;
     private javax.swing.JTextField txtJugadorMasGolesEquipo;
+    private javax.swing.JTextField txtMostrarArbitroPartido;
+    private javax.swing.JTextField txtMostrarJornadaPartido;
     private javax.swing.JTextField txtMostrarTecnicoEquipo;
     private javax.swing.JTextField txtNacionalidadJugador;
     private javax.swing.JTextField txtNombreAficionado;

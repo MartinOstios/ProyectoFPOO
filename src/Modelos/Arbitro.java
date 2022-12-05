@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public class Arbitro extends Persona implements Serializable{
     private boolean fifa;
-    
+    private Partido miPartido;
 
     public Arbitro(String cedula, String nombre, String apellido, int edad, boolean fifa) {
         super(cedula, nombre, apellido, edad);
@@ -32,6 +32,20 @@ public class Arbitro extends Persona implements Serializable{
      */
     public void setFifa(boolean fifa) {
         this.fifa = fifa;
+    }
+
+    /**
+     * @return the miPartido
+     */
+    public Partido getMiPartido() {
+        return miPartido;
+    }
+
+    /**
+     * @param miPartido the miPartido to set
+     */
+    public void setMiPartido(Partido miPartido) {
+        this.miPartido = miPartido;
     }
     
     

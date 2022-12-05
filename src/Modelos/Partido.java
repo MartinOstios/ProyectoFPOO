@@ -20,6 +20,7 @@ public class Partido implements Serializable{
     private Equipo miEquipoLocal;
     private Equipo miEquipoVisitante;
     private Jornada miJornada;
+    private Estadio miEstadio;
     
     public Partido(String id, String fecha, int golesLocal, int golesVisitante) {
         this.id = id;
@@ -138,5 +139,19 @@ public class Partido implements Serializable{
      */
     public void setMiJornada(Jornada miJornada) {
         this.miJornada = miJornada;
+    }
+
+    /**
+     * @return the miEstadio
+     */
+    public Estadio getMiEstadio() {
+        return miEstadio;
+    }
+
+    /**
+     * @param miEstadio the miEstadio to set
+     */
+    public void setMiEstadio(Estadio miEstadio) {
+        this.miEstadio = miEstadio;
     }
 }
