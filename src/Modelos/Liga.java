@@ -66,6 +66,16 @@ public class Liga implements Serializable {
         return resultado;
     }
     
+    public Equipo buscarEquipoNombre(String nombre) {
+        Equipo resultado = null;
+        for (Equipo actual : this.getMisEquipos()) {
+            if (actual.getNombre().equals(nombre)) {
+                resultado = actual;
+            }
+        }
+        return resultado;
+    }
+    
     public Partido buscarPartido(String id) {
         Partido resultado = null;
         for (Partido actual : this.getMisPartidos()) {

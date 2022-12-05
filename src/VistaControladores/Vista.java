@@ -49,7 +49,7 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarComboPartidoEstadio();
         this.actualizarComboPartidosJornada();
         this.actualizarComboArbitroPartido();
-        this.actualizarComboJornadaPartido();
+        this.actualizarComboEquipoPartido();
         this.actualizarTablaJugador();
         this.tablaPosiciones();
         this.actualizarTablaArbitro();
@@ -311,6 +311,10 @@ public class Vista extends javax.swing.JFrame {
         this.txtFechaPartido.setText("");
         this.txtMostrarArbitroPartido.setText("");
         this.txtMostrarJornadaPartido.setText("");
+        this.txtMostrarEquipoLocal.setText("");
+        this.txtMostrarEquipoVisitante.setText("");
+        this.txtGolesEquipoLocal.setText("");
+        this.txtGolesEquipoVisitante.setText("");
 
     }
 
@@ -532,13 +536,34 @@ public class Vista extends javax.swing.JFrame {
         btnEliminarRelacionArbitroPartido = new javax.swing.JButton();
         txtMostrarArbitroPartido = new javax.swing.JTextField();
         lblMostraArbitroPartido = new javax.swing.JLabel();
-        lblJornadaPartido = new javax.swing.JLabel();
-        cbJornadaPartido = new javax.swing.JComboBox<>();
-        btnAgregarRelacionJornadaPartido = new javax.swing.JButton();
-        btnEliminarRelacionJornadaPartido = new javax.swing.JButton();
         lblMostraJornadaPartido = new javax.swing.JLabel();
         txtMostrarJornadaPartido = new javax.swing.JTextField();
         jPanel17 = new javax.swing.JPanel();
+        lblEquipoLocalPartido = new javax.swing.JLabel();
+        cbEquipoLocalPartido = new javax.swing.JComboBox<>();
+        lblEquipoLocalSeleccionadoPartido = new javax.swing.JLabel();
+        txtMostrarEquipoLocal = new javax.swing.JTextField();
+        lblEquipoVisitantePartido = new javax.swing.JLabel();
+        cbEquipoVisitantePartido = new javax.swing.JComboBox<>();
+        lblEquipoVisitanteSeleccionadoPartido = new javax.swing.JLabel();
+        txtMostrarEquipoVisitante = new javax.swing.JTextField();
+        lblGolesLocalPartido = new javax.swing.JLabel();
+        txtGolesEquipoLocal = new javax.swing.JTextField();
+        btnAgregarEquipoLocal = new javax.swing.JButton();
+        lblGolesVisitantePartido = new javax.swing.JLabel();
+        txtGolesEquipoVisitante = new javax.swing.JTextField();
+        lblJugadoresLocalPartido = new javax.swing.JLabel();
+        cbJugadorLocalPartido = new javax.swing.JComboBox<>();
+        spinnerGolesLocal = new javax.swing.JSpinner();
+        lblGolesLocal = new javax.swing.JLabel();
+        btnAgregarGolesLocal = new javax.swing.JButton();
+        lblJugadoresVisitantePartido = new javax.swing.JLabel();
+        cbJugadorVisitantePartido = new javax.swing.JComboBox<>();
+        lblGolesVisitante = new javax.swing.JLabel();
+        spinnerGolesVisitante = new javax.swing.JSpinner();
+        btnAgregarGolesVisitante = new javax.swing.JButton();
+        txtGolesLocal = new javax.swing.JTextField();
+        txtGolesVisitante = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         NumeroJornada = new javax.swing.JLabel();
         EsloganJornada = new javax.swing.JLabel();
@@ -2061,24 +2086,6 @@ public class Vista extends javax.swing.JFrame {
 
         lblMostraArbitroPartido.setText("Arbitro");
 
-        lblJornadaPartido.setText("Jornada:");
-
-        cbJornadaPartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        btnAgregarRelacionJornadaPartido.setText("Agregar");
-        btnAgregarRelacionJornadaPartido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarRelacionJornadaPartidoActionPerformed(evt);
-            }
-        });
-
-        btnEliminarRelacionJornadaPartido.setText("Eliminar");
-        btnEliminarRelacionJornadaPartido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarRelacionJornadaPartidoActionPerformed(evt);
-            }
-        });
-
         lblMostraJornadaPartido.setText("Jornada");
 
         txtMostrarJornadaPartido.setEditable(false);
@@ -2109,27 +2116,18 @@ public class Vista extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(btnLimpiarPartido))
                                     .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addComponent(lblRelacionArbitroPartido)
+                                        .addGap(10, 10, 10)
                                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblRelacionArbitroPartido)
-                                            .addComponent(lblJornadaPartido))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                                .addComponent(cbJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btnAgregarRelacionJornadaPartido)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btnEliminarRelacionJornadaPartido))
-                                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                                .addComponent(cbArbitroPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                                                .addComponent(cbArbitroPartido, 0, 141, Short.MAX_VALUE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(btnAgregarRelacionArbitroPartido)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btnEliminarRelacionArbitroPartido)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtMostrarArbitroPartido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                .addComponent(btnEliminarRelacionArbitroPartido)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(txtMostrarArbitroPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGap(28, 28, 28))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -2183,27 +2181,187 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addComponent(lblMostraJornadaPartido)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblJornadaPartido)
-                            .addComponent(cbJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAgregarRelacionJornadaPartido)
-                            .addComponent(btnEliminarRelacionJornadaPartido)
-                            .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(106, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Partido", jPanel10);
 
+        lblEquipoLocalPartido.setText("Equipo local: ");
+
+        cbEquipoLocalPartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblEquipoLocalSeleccionadoPartido.setText("Equipo");
+
+        txtMostrarEquipoLocal.setEditable(false);
+
+        lblEquipoVisitantePartido.setText("Equipo visitante: ");
+
+        cbEquipoVisitantePartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblEquipoVisitanteSeleccionadoPartido.setText("Equipo");
+
+        txtMostrarEquipoVisitante.setEditable(false);
+
+        lblGolesLocalPartido.setText("Goles local: ");
+
+        btnAgregarEquipoLocal.setText("Agregar");
+        btnAgregarEquipoLocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarEquipoLocalActionPerformed(evt);
+            }
+        });
+
+        lblGolesVisitantePartido.setText("Goles visitante: ");
+
+        lblJugadoresLocalPartido.setText("Jugadores local: ");
+
+        cbJugadorLocalPartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblGolesLocal.setText("Goles: ");
+
+        btnAgregarGolesLocal.setText("Agregar");
+        btnAgregarGolesLocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarGolesLocalActionPerformed(evt);
+            }
+        });
+
+        lblJugadoresVisitantePartido.setText("Jugadores visitante: ");
+
+        cbJugadorVisitantePartido.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblGolesVisitante.setText("Goles: ");
+
+        btnAgregarGolesVisitante.setText("Agregar");
+        btnAgregarGolesVisitante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarGolesVisitanteActionPerformed(evt);
+            }
+        });
+
+        txtGolesLocal.setEditable(false);
+
+        txtGolesVisitante.setEditable(false);
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1027, Short.MAX_VALUE)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGap(214, 214, 214)
+                .addComponent(lblEquipoLocalSeleccionadoPartido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblEquipoVisitanteSeleccionadoPartido)
+                .addGap(213, 213, 213))
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel17Layout.createSequentialGroup()
+                                        .addComponent(lblJugadoresLocalPartido)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblGolesLocal))
+                                    .addGroup(jPanel17Layout.createSequentialGroup()
+                                        .addComponent(cbJugadorLocalPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(spinnerGolesLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(28, 28, 28)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnAgregarGolesLocal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtGolesLocal)))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblEquipoLocalPartido, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblGolesLocalPartido))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnAgregarEquipoLocal)
+                                    .addComponent(cbEquipoLocalPartido, 0, 79, Short.MAX_VALUE)
+                                    .addComponent(txtGolesEquipoLocal))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtMostrarEquipoLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(259, 259, 259)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(lblGolesVisitantePartido, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtGolesEquipoVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(lblEquipoVisitantePartido)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cbEquipoVisitantePartido, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtMostrarEquipoVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                                .addComponent(lblJugadoresVisitantePartido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblGolesVisitante))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(cbJugadorVisitantePartido, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(spinnerGolesVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAgregarGolesVisitante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtGolesVisitante))))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEquipoLocalSeleccionadoPartido)
+                    .addComponent(lblEquipoVisitanteSeleccionadoPartido))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEquipoLocalPartido)
+                    .addComponent(cbEquipoLocalPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMostrarEquipoLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEquipoVisitantePartido)
+                    .addComponent(cbEquipoVisitantePartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMostrarEquipoVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblGolesLocalPartido)
+                            .addComponent(txtGolesEquipoLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addComponent(btnAgregarEquipoLocal)
+                        .addGap(52, 52, 52))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblGolesVisitantePartido)
+                            .addComponent(txtGolesEquipoVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(103, 103, 103)))
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblJugadoresLocalPartido)
+                    .addComponent(lblGolesLocal)
+                    .addComponent(txtGolesLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbJugadorLocalPartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerGolesLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgregarGolesLocal))
+                .addGap(79, 79, 79)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblJugadoresVisitantePartido)
+                    .addComponent(lblGolesVisitante)
+                    .addComponent(txtGolesVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbJugadorVisitantePartido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerGolesVisitante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgregarGolesVisitante))
+                .addContainerGap(151, Short.MAX_VALUE))
         );
 
         jTabbedPane4.addTab("Goles", jPanel17);
@@ -2951,7 +3109,7 @@ public class Vista extends javax.swing.JFrame {
     }
 
     public void actualizarTablaPartidosEquipo(String identificador) {
-        String nombreColumnas[] = {"Identificador", "Fecha", "Jornada", "Goles local", "Goles visitante"};
+        String nombreColumnas[] = {"Identificador", "Fecha", "Goles local", "Goles visitante"};
         DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
         this.tblPartidosEquipo.setModel(miModelo);
         Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificador);
@@ -2961,9 +3119,8 @@ public class Vista extends javax.swing.JFrame {
                 String fila[] = new String[nombreColumnas.length];
                 fila[0] = actual.getId();
                 fila[1] = actual.getFecha();
-                fila[2] = "" + actual.getMiJornada().getNumero();
-                fila[3] = "" + actual.getGolesLocal();
-                fila[4] = "" + actual.getGolesVisitante();
+                fila[2] = "" + actual.getGolesLocal();
+                fila[3] = "" + actual.getGolesVisitante();
                 miModelo.addRow(fila);
             }
         } else {
@@ -3583,7 +3740,6 @@ public class Vista extends javax.swing.JFrame {
             Jornada jornada = new Jornada(numero, eslogan);
             this.miLiga.getMisJornadas().add(jornada);
             JOptionPane.showMessageDialog(this, "Se ha creado la jornada número: " + numero);
-            this.actualizarComboJornadaPartido();
         } else {
             JOptionPane.showMessageDialog(this, "Ya existe una jornada con este número");
         }
@@ -3610,7 +3766,6 @@ public class Vista extends javax.swing.JFrame {
         if (jornada != null) {
             this.miLiga.getMisJornadas().remove(jornada);
             JOptionPane.showMessageDialog(this, "La jornada de número " + numero + " se eliminó");
-            this.actualizarComboJornadaPartido();
         } else {
             JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
         }
@@ -3654,6 +3809,7 @@ public class Vista extends javax.swing.JFrame {
             if (this.buscarPartidoJornada(seleccionado, actual)) {
                 actual.getMisPartidos().remove(seleccionado);
                 seleccionado.setMiJornada(null);
+                this.txtMostrarJornadaPartido.setText("No asignado");
                 JOptionPane.showMessageDialog(this, "Se ha desasociado el partido de ID " + seleccionado.getId() + " con la jornada " + actual.getNumero());
                 this.actualizarComboPartidosJornada();
                 this.actualizarTablaPartidosJornada(identificador);
@@ -3697,12 +3853,6 @@ public class Vista extends javax.swing.JFrame {
         }
     }
 
-    public void actualizarComboJornadaPartido() {
-        this.cbJornadaPartido.removeAllItems();
-        for (Jornada actual : this.miLiga.getMisJornadas()) {
-            this.cbJornadaPartido.addItem("" + actual.getNumero());
-        }
-    }
 
     private void btnAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPartidoActionPerformed
         String identificador = this.txtIdentificadorPartido.getText();
@@ -3730,6 +3880,8 @@ public class Vista extends javax.swing.JFrame {
             this.txtFechaPartido.setText(partidoEncontrado.getFecha());
             this.txtMostrarArbitroPartido.setText(this.personaAsignada(partidoEncontrado.getMiArbitro()));
             this.txtMostrarJornadaPartido.setText(this.jornadaAsignada(partidoEncontrado.getMiJornada()));
+            this.txtMostrarEquipoLocal.setText(this.equipoAsignado(partidoEncontrado.getMiEquipoLocal()));
+            this.txtMostrarEquipoVisitante.setText(this.equipoAsignado(partidoEncontrado.getMiEquipoVisitante()));
         } else {
             JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
         }
@@ -3771,6 +3923,16 @@ public class Vista extends javax.swing.JFrame {
                 partidoEncontrado.getMiJornada().getMisPartidos().remove(partidoEncontrado);
             }
 
+            //Partido->Equipo local
+            if (partidoEncontrado.getMiEquipoLocal() != null) {
+                partidoEncontrado.getMiEquipoLocal().getMisPartidos().remove(partidoEncontrado);
+            }
+
+            //Partido->Equipo visitante
+            if (partidoEncontrado.getMiEquipoVisitante() != null) {
+                partidoEncontrado.getMiEquipoVisitante().getMisPartidos().remove(partidoEncontrado);
+            }
+
             this.txtIdentificadorPartido.setEditable(true);
         } else {
             JOptionPane.showMessageDialog(this, "El identificador ingresado es erróneo");
@@ -3783,20 +3945,202 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimpiarPartidoActionPerformed
 
     private void btnAgregarRelacionArbitroPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionArbitroPartidoActionPerformed
-        // TODO add your handling code here:
+        String identificador = this.txtIdentificadorPartido.getText();
+        Partido partidoEncontrado = this.miLiga.buscarPartido(identificador);
+        if (partidoEncontrado != null) {
+            String seleccion = (String) this.cbArbitroPartido.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Arbitro arbitroEncontrado = (Arbitro) this.miLiga.buscarPersona(cedula);
+            if (partidoEncontrado.getMiArbitro() == null) {
+                if (arbitroEncontrado.getMiPartido() == null) {
+                    partidoEncontrado.setMiArbitro(arbitroEncontrado);
+                    arbitroEncontrado.setMiPartido(partidoEncontrado);
+                    JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el árbitro " + arbitroEncontrado.getNombre() + " con el partido " + partidoEncontrado.getId());
+                    this.txtMostrarArbitroPartido.setText(arbitroEncontrado.getNombre());
+                    this.actualizarComboArbitroPartido();
+                } else {
+                    JOptionPane.showMessageDialog(this, "El árbitro seleccionado se encuentra asociado actualmente a un partido");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Antes de asociar un árbitro, elimine el que está asociado actualmente al partido");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador de partido ingresado es erróneo");
+        }
     }//GEN-LAST:event_btnAgregarRelacionArbitroPartidoActionPerformed
 
     private void btnEliminarRelacionArbitroPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionArbitroPartidoActionPerformed
-        // TODO add your handling code here:
+        String identificador = this.txtIdentificadorPartido.getText();
+        Partido partidoEncontrado = this.miLiga.buscarPartido(identificador);
+        if (partidoEncontrado != null) {
+            String seleccion = (String) this.cbArbitroPartido.getSelectedItem();
+            String cedula = seleccion.split(" - ")[0];
+            Arbitro arbitroEncontrado = (Arbitro) this.miLiga.buscarPersona(cedula);
+            if (arbitroEncontrado.equals(partidoEncontrado.getMiArbitro())) {
+                partidoEncontrado.setMiArbitro(null);
+                arbitroEncontrado.setMiPartido(null);
+                JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el árbitro " + arbitroEncontrado.getNombre() + " del partido " + partidoEncontrado.getId());
+                this.txtMostrarArbitroPartido.setText("No asignado");
+                this.actualizarComboArbitroPartido();
+            } else {
+                JOptionPane.showMessageDialog(this, "Ese árbitro no está asociado con el partido seleccionado");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador de partido ingresado es erróneo");
+        }
     }//GEN-LAST:event_btnEliminarRelacionArbitroPartidoActionPerformed
 
-    private void btnAgregarRelacionJornadaPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRelacionJornadaPartidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarRelacionJornadaPartidoActionPerformed
+    //=========================================================================
+    //=========================================================================
+    //=========================================================================
+    //=========================================================================
+    //Sección partido - goles
+    public void actualizarComboEquipoPartido() {
+        this.cbEquipoLocalPartido.removeAllItems();
+        this.cbEquipoVisitantePartido.removeAllItems();
+        for (Equipo actual : this.miLiga.getMisEquipos()) {
+            this.cbEquipoLocalPartido.addItem(actual.getNombre());
+            this.cbEquipoVisitantePartido.addItem(actual.getNombre());
+        }
+    }
 
-    private void btnEliminarRelacionJornadaPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRelacionJornadaPartidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminarRelacionJornadaPartidoActionPerformed
+    public void actualizarComboJugadorLocalPartido() {
+        this.cbJugadorLocalPartido.removeAllItems();
+        String nombreEquipo = this.txtMostrarEquipoLocal.getText();
+        Equipo encontrado = this.miLiga.buscarEquipoNombre(nombreEquipo);
+        if (encontrado.getMisJugadores().size() > 0) {
+            for (Jugador actual : encontrado.getMisJugadores()) {
+                this.cbJugadorLocalPartido.addItem(actual.getNombre());
+            }
+        } else {
+            this.cbJugadorLocalPartido.addItem("No jugador");
+        }
+    }
+
+    public void actualizarComboJugadorVisitantePartido() {
+        this.cbJugadorVisitantePartido.removeAllItems();
+        String nombreEquipo = this.txtMostrarEquipoVisitante.getText();
+        Equipo encontrado = this.miLiga.buscarEquipoNombre(nombreEquipo);
+        if (encontrado.getMisJugadores().size() > 0) {
+            for (Jugador actual : encontrado.getMisJugadores()) {
+                this.cbJugadorVisitantePartido.addItem(actual.getNombre());
+            }
+        } else {
+            this.cbJugadorVisitantePartido.addItem("No jugador");
+        }
+
+    }
+
+
+    private void btnAgregarEquipoLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEquipoLocalActionPerformed
+        String identificador = this.txtIdentificadorPartido.getText();
+        Partido encontrado = this.miLiga.buscarPartido(identificador);
+        if (encontrado != null) {
+            int indiceLocal = this.cbEquipoLocalPartido.getSelectedIndex();
+            int indiceVisitante = this.cbEquipoVisitantePartido.getSelectedIndex();
+            Equipo equipoLocal = this.miLiga.getMisEquipos().get(indiceLocal);
+            Equipo equipoVisitante = this.miLiga.getMisEquipos().get(indiceVisitante);
+            if (!equipoLocal.equals(equipoVisitante)) {
+                int golesLocal = Integer.parseInt(this.txtGolesEquipoLocal.getText());
+                int golesVisitante = Integer.parseInt(this.txtGolesEquipoVisitante.getText());
+                //Asignarle los goles local y visitante al partido
+                encontrado.setGolesLocal(golesLocal);
+                encontrado.setGolesVisitante(golesVisitante);
+
+                //Asignarle los equipos
+                encontrado.setMiEquipoLocal(equipoLocal);
+                encontrado.setMiEquipoVisitante(equipoVisitante);
+
+                //Asignarle al equipo local y visitante el partido
+                equipoLocal.getMisPartidos().add(encontrado);
+                equipoVisitante.getMisPartidos().add(encontrado);
+
+                //Agregar los goles al equipo local
+                equipoLocal.setGolesFavor(equipoLocal.getGolesFavor() + golesLocal);
+                equipoLocal.setGolesContra(equipoLocal.getGolesContra() + golesVisitante);
+
+                //Agregar los goles al equipo visitante
+                equipoVisitante.setGolesFavor(equipoVisitante.getGolesFavor() + golesVisitante);
+                equipoVisitante.setGolesContra(equipoVisitante.getGolesContra() + golesLocal);
+
+                //Sumar puntos
+                if (golesLocal > golesVisitante) {
+                    equipoLocal.setPuntos(equipoLocal.getPuntos() + 3);
+                } else if (golesLocal < golesVisitante) {
+                    equipoVisitante.setPuntos(equipoVisitante.getPuntos() + 3);
+                } else {
+                    equipoLocal.setPuntos(equipoLocal.getPuntos() + 1);
+                    equipoVisitante.setPuntos(equipoVisitante.getPuntos() + 1);
+                }
+
+                this.txtGolesLocal.setText("" + golesLocal);
+                this.txtGolesVisitante.setText("" + golesVisitante);
+
+                JOptionPane.showMessageDialog(this, "Se agregaron los equipos correctamente");
+                this.txtMostrarEquipoLocal.setText(equipoLocal.getNombre());
+                this.txtMostrarEquipoVisitante.setText(equipoVisitante.getNombre());
+                this.actualizarTablaEquipo();
+                this.actualizarTablaPartido();
+                this.tablaPosiciones();
+                this.actualizarComboJugadorLocalPartido();
+                this.actualizarComboJugadorVisitantePartido();
+            } else {
+                JOptionPane.showMessageDialog(this, "Ha seleccionado los mismos equipos");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "El identificador del partido es erróneo");
+        }
+    }//GEN-LAST:event_btnAgregarEquipoLocalActionPerformed
+
+    private void btnAgregarGolesLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarGolesLocalActionPerformed
+        String nombreEquipo = this.txtMostrarEquipoLocal.getText();
+        Equipo encontrado = this.miLiga.buscarEquipoNombre(nombreEquipo);
+        int golesLocal = Integer.parseInt(this.txtGolesLocal.getText());
+        if (golesLocal > 0) {
+            int indice = this.cbJugadorLocalPartido.getSelectedIndex();
+            Jugador jugadorEquipo = encontrado.getMisJugadores().get(indice);
+            int golesSeleccionados = (Integer) this.spinnerGolesLocal.getValue();
+            if (golesSeleccionados <= golesLocal) {
+                jugadorEquipo.setGolesMarcados(jugadorEquipo.getGolesMarcados() + golesSeleccionados);
+                this.txtGolesLocal.setText("" + (golesLocal - golesSeleccionados));
+                this.spinnerGolesLocal.setValue(0);
+                this.actualizarTablaJugador();
+                JOptionPane.showMessageDialog(this, "Se agregaron " + golesSeleccionados + " goles al jugador " + jugadorEquipo.getNombre());
+            } else {
+                JOptionPane.showMessageDialog(this, "Eligió más goles de los que debía");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "No se pueden agregar más goles");
+        }
+
+    }//GEN-LAST:event_btnAgregarGolesLocalActionPerformed
+
+    private void btnAgregarGolesVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarGolesVisitanteActionPerformed
+        String nombreEquipo = this.txtMostrarEquipoVisitante.getText();
+        Equipo encontrado = this.miLiga.buscarEquipoNombre(nombreEquipo);
+        int golesVisitante = Integer.parseInt(this.txtGolesVisitante.getText());
+        if (golesVisitante > 0) {
+            int indice = this.cbJugadorVisitantePartido.getSelectedIndex();
+            Jugador jugadorEquipo = encontrado.getMisJugadores().get(indice);
+            int golesSeleccionados = (Integer) this.spinnerGolesVisitante.getValue();
+            if (golesSeleccionados <= golesVisitante) {
+                jugadorEquipo.setGolesMarcados(jugadorEquipo.getGolesMarcados() + golesSeleccionados);
+                this.txtGolesVisitante.setText("" + (golesVisitante - golesSeleccionados));
+                this.spinnerGolesVisitante.setValue(0);
+                this.actualizarTablaJugador();
+                JOptionPane.showMessageDialog(this, "Se agregaron " + golesSeleccionados + " goles al jugador " + jugadorEquipo.getNombre());
+            } else {
+                JOptionPane.showMessageDialog(this, "Eligió más goles de los que debía");
+            }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "No se pueden agregar más goles");
+        }
+    }//GEN-LAST:event_btnAgregarGolesVisitanteActionPerformed
 
     //TABLA PARTIDOS JORNADA
     public void actualizarTablaPartidosJornada(int identificador) {
@@ -4085,14 +4429,16 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarAficionado;
     private javax.swing.JButton btnAgregarArbitro;
     private javax.swing.JButton btnAgregarEquipo;
+    private javax.swing.JButton btnAgregarEquipoLocal;
     private javax.swing.JButton btnAgregarEstadio;
+    private javax.swing.JButton btnAgregarGolesLocal;
+    private javax.swing.JButton btnAgregarGolesVisitante;
     private javax.swing.JButton btnAgregarJornada;
     private javax.swing.JButton btnAgregarJugador;
     private javax.swing.JButton btnAgregarPartido;
     private javax.swing.JButton btnAgregarPartidoJornada;
     private javax.swing.JButton btnAgregarRelacionAficionadoEquipo;
     private javax.swing.JButton btnAgregarRelacionArbitroPartido;
-    private javax.swing.JButton btnAgregarRelacionJornadaPartido;
     private javax.swing.JButton btnAgregarRelacionJugadorEquipo;
     private javax.swing.JButton btnAgregarRelacionPartidoEstadio;
     private javax.swing.JButton btnAgregarRelacionTecnicoEquipo;
@@ -4119,7 +4465,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarPartidoJornada;
     private javax.swing.JButton btnEliminarRelacionAficionadoEquipo;
     private javax.swing.JButton btnEliminarRelacionArbitroPartido;
-    private javax.swing.JButton btnEliminarRelacionJornadaPartido;
     private javax.swing.JButton btnEliminarRelacionJugadorEquipo;
     private javax.swing.JButton btnEliminarRelacionPartidoEstadio;
     private javax.swing.JButton btnEliminarRelacionTecnicoEquipo;
@@ -4134,8 +4479,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiarTecnico;
     private javax.swing.JComboBox<String> cbAficionadoEquipo;
     private javax.swing.JComboBox<String> cbArbitroPartido;
-    private javax.swing.JComboBox<String> cbJornadaPartido;
+    private javax.swing.JComboBox<String> cbEquipoLocalPartido;
+    private javax.swing.JComboBox<String> cbEquipoVisitantePartido;
     private javax.swing.JComboBox<String> cbJugadorEquipo;
+    private javax.swing.JComboBox<String> cbJugadorLocalPartido;
+    private javax.swing.JComboBox<String> cbJugadorVisitantePartido;
     private javax.swing.JComboBox<String> cbPartidoEstadio;
     private javax.swing.JComboBox<String> cbPartidosJornada;
     private javax.swing.JComboBox<String> cbTecnicoEquipo;
@@ -4225,12 +4573,21 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblCapacidadEstadio;
     private javax.swing.JLabel lblCiudadEstadio;
     private javax.swing.JLabel lblEquipoJugador;
+    private javax.swing.JLabel lblEquipoLocalPartido;
+    private javax.swing.JLabel lblEquipoLocalSeleccionadoPartido;
+    private javax.swing.JLabel lblEquipoVisitantePartido;
+    private javax.swing.JLabel lblEquipoVisitanteSeleccionadoPartido;
     private javax.swing.JLabel lblFechaPartido;
+    private javax.swing.JLabel lblGolesLocal;
+    private javax.swing.JLabel lblGolesLocalPartido;
+    private javax.swing.JLabel lblGolesVisitante;
+    private javax.swing.JLabel lblGolesVisitantePartido;
     private javax.swing.JLabel lblIdentificadorEstadio;
     private javax.swing.JLabel lblIdentificadorPartido;
-    private javax.swing.JLabel lblJornadaPartido;
     private javax.swing.JLabel lblJugadorMasGolesEquipo;
     private javax.swing.JLabel lblJugadorMasJovenEquipo;
+    private javax.swing.JLabel lblJugadoresLocalPartido;
+    private javax.swing.JLabel lblJugadoresVisitantePartido;
     private javax.swing.JLabel lblMostraArbitroPartido;
     private javax.swing.JLabel lblMostraJornadaPartido;
     private javax.swing.JLabel lblNombreEstadio;
@@ -4242,6 +4599,8 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblTituloListaEstadios;
     private javax.swing.JLabel lblTituloListaPartido;
     private javax.swing.JLabel nombreArbitro;
+    private javax.swing.JSpinner spinnerGolesLocal;
+    private javax.swing.JSpinner spinnerGolesVisitante;
     private javax.swing.JTable tblAficionado;
     private javax.swing.JTable tblAficionadoEquipo;
     private javax.swing.JTable tblArbitro;
@@ -4281,14 +4640,20 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtFidelidadAficionado;
     private javax.swing.JTextField txtFundacionEquipo;
     private javax.swing.JTextField txtGolesContraEquipo;
+    private javax.swing.JTextField txtGolesEquipoLocal;
+    private javax.swing.JTextField txtGolesEquipoVisitante;
     private javax.swing.JTextField txtGolesFavorEquipo;
     private javax.swing.JTextField txtGolesJugador;
+    private javax.swing.JTextField txtGolesLocal;
+    private javax.swing.JTextField txtGolesVisitante;
     private javax.swing.JTextField txtIdentificadorEquipo;
     private javax.swing.JTextField txtIdentificadorEstadio;
     private javax.swing.JTextField txtIdentificadorPartido;
     private javax.swing.JTextField txtJugadorJovenEquipo;
     private javax.swing.JTextField txtJugadorMasGolesEquipo;
     private javax.swing.JTextField txtMostrarArbitroPartido;
+    private javax.swing.JTextField txtMostrarEquipoLocal;
+    private javax.swing.JTextField txtMostrarEquipoVisitante;
     private javax.swing.JTextField txtMostrarJornadaPartido;
     private javax.swing.JTextField txtMostrarTecnicoEquipo;
     private javax.swing.JTextField txtNacionalidadJugador;

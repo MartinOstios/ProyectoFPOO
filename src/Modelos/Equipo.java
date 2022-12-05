@@ -222,7 +222,7 @@ public class Equipo implements Serializable{
      * @return the partidosJugados
      */
     public int getPartidosJugados() {
-        return partidosJugados;
+        return this.getMisPartidos().size();
     }
 
     /**
