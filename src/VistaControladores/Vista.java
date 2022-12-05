@@ -59,7 +59,7 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarTablaManager();
 
         //TESTEO
-//        //OBJETOS PARA TESTEO
+        //OBJETOS PARA TESTEO
 //        miLiga.crearEquipo("1" ,"Once Caldas", 1945, 5, 1, 12, 7, 18, 5);
 //        miLiga.crearEquipo("2" ,"Nacional", 1965, 8, 3, 15, 13, 18, 5);
 //        miLiga.crearEquipo("3" ,"Santa Fé", 1998, 10, 0, 12, 9, 18, 5);
