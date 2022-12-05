@@ -199,7 +199,7 @@
                                   </Group>
                                   <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="133" max="32767" attributes="0"/>
+                              <EmptySpace pref="273" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -385,7 +385,7 @@
                                   </Group>
                                   <Component id="btnCertificadoAficionado" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="80" max="32767" attributes="0"/>
+                              <EmptySpace pref="84" max="32767" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -451,7 +451,7 @@
                                   </Group>
                                   <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="120" max="32767" attributes="0"/>
+                              <EmptySpace pref="279" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -726,7 +726,7 @@
                                       <Component id="jScrollPane7" min="-2" pref="343" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="91" max="32767" attributes="0"/>
+                              <EmptySpace pref="231" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1020,7 +1020,7 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnCertificadoArbitro" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="262" max="32767" attributes="0"/>
+                              <EmptySpace pref="402" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1159,7 +1159,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTabbedPane3" pref="946" max="32767" attributes="0"/>
+                      <Component id="jTabbedPane3" pref="967" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1238,7 +1238,7 @@
                                       <Component id="btnLimpiarEquipo" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="80" max="32767" attributes="0"/>
+                              <EmptySpace pref="84" max="32767" attributes="0"/>
                               <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1308,7 +1308,7 @@
                                       <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="144" max="32767" attributes="0"/>
+                              <EmptySpace pref="299" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1516,7 +1516,7 @@
                                   </Group>
                                   <Component id="jScrollPane6" min="-2" pref="370" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="157" max="32767" attributes="0"/>
+                              <EmptySpace pref="187" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1552,7 +1552,7 @@
                                   <Component id="jScrollPane5" pref="395" max="32767" attributes="0"/>
                                   <Component id="jScrollPane6" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="43" max="32767" attributes="0"/>
+                              <EmptySpace pref="203" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1745,7 +1745,7 @@
                                       <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="292" max="32767" attributes="0"/>
+                              <EmptySpace pref="318" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1756,7 +1756,7 @@
                               <Component id="labelTituloListaPartidoEquipo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jScrollPane8" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="85" max="32767" attributes="0"/>
+                              <EmptySpace pref="240" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1880,7 +1880,7 @@
                                   <Component id="lblArqueroEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtArqueroEquipo" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="336" max="32767" attributes="0"/>
+                              <EmptySpace pref="485" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2000,7 +2000,7 @@
                                                   <Component id="txtNombreEstadio" min="-2" pref="120" max="-2" attributes="0"/>
                                                   <Component id="txtCapacidadEstadio" min="-2" pref="120" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace pref="222" max="32767" attributes="0"/>
+                                              <EmptySpace pref="239" max="32767" attributes="0"/>
                                               <Component id="jScrollPane9" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -2087,7 +2087,7 @@
                                       <Component id="btnEliminarRelacionPartidoEstadio" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="28" max="32767" attributes="0"/>
+                              <EmptySpace pref="185" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
@@ -2213,6 +2213,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPartidoEstadioActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -2274,12 +2277,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="979" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="756" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -2296,15 +2299,259 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="NumeroJornada" pref="81" max="32767" attributes="0"/>
+                                          <Component id="EsloganJornada" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtNumeroJornada" pref="152" max="32767" attributes="0"/>
+                                          <Component id="txtEsloganJornada" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel42" min="-2" pref="81" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                      <Component id="cbPartidosJornada" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="btnAgregarPartidoJornada" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnEliminarPartidoJornada" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="btnAgregarJornada" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnBuscarJornada" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnActualizarJornada" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnLimpiarJornada" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnEliminarJornada" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="jScrollPane13" min="-2" pref="362" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
+                              <Component id="ListaPartidosJornada" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jScrollPane12" min="-2" pref="423" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="ListaJornadas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="NumeroJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNumeroJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ListaJornadas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EsloganJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtEsloganJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="btnAgregarJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnBuscarJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnActualizarJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnLimpiarJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbPartidosJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAgregarPartidoJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarPartidoJornada" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="ListaPartidosJornada" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jScrollPane13" min="-2" pref="265" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane12" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="156" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="NumeroJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="EsloganJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eslogan:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNumeroJornada">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEsloganJornada">
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane12">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="tblJornada">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="0" rowCount="4"/>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0"/>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="btnAgregarJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Agregar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnActualizarJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Actualizar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActualizarJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnBuscarJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Buscar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnEliminarJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnLimpiarJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Limpiar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel42">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Partido:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbPartidosJornada">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbPartidosJornadaActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnAgregarPartidoJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Agregar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarPartidoJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnEliminarPartidoJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarPartidoJornadaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ListaJornadas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lista jornadas"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="ListaPartidosJornada">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Lista partidos por jornada"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane13">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="tblPartidoJornada">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="0" rowCount="4"/>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0"/>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel6">
           <Constraints>
@@ -2324,7 +2571,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="261" max="32767" attributes="0"/>
+                      <EmptySpace pref="274" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="600" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
@@ -2387,12 +2634,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="966" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="979" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="756" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
