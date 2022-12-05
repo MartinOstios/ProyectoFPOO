@@ -233,7 +233,7 @@ public class Vista extends javax.swing.JFrame {
             JFileChooser file = new JFileChooser();
             file.showSaveDialog(this);
             //String ruta = "" + file.getCurrentDirectory();
-            try (BufferedWriter save = new BufferedWriter(new FileWriter(file.getSelectedFile().toString() + "." + extension))) {
+            try ( BufferedWriter save = new BufferedWriter(new FileWriter(file.getSelectedFile().toString() + "." + extension))) {
                 save.write(contenido);
             }
             JOptionPane.showMessageDialog(null, "El archivo se ha guardado exitosamente",
@@ -2652,17 +2652,16 @@ public class Vista extends javax.swing.JFrame {
                                             .addGroup(jPanel11Layout.createSequentialGroup()
                                                 .addGap(66, 66, 66)
                                                 .addComponent(jLabel43)))))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                                 .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(173, 173, 173))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(19, 19, 19))))))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4505,8 +4504,8 @@ public class Vista extends javax.swing.JFrame {
                 this.miLiga.getMisPersonas().remove(buscarPersona);
                 JOptionPane.showMessageDialog(this, "El manager de cédula " + cedula + " se eliminó");
                 Manager manager = (Manager) buscarPersona;
-//                //Eliminar el jugador de la relación con equipo
-//                jugador.getMiEquipo().getMisJugadores().remove(jugador);
+//                //Eliminar el jugador de la relación con Manager
+//                jugador.getMi().getMisJugadores().remove(jugador);
 //                this.actualizarComboJugadorEquipo();
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un manager");
@@ -4521,7 +4520,9 @@ public class Vista extends javax.swing.JFrame {
     private void btnLimpiarManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarManagerActionPerformed
         limpiarCajas();
         this.txtCedulaManager.setEditable(true);
+        this.actualizarTablaJugadoresManager("-1");
     }//GEN-LAST:event_btnLimpiarManagerActionPerformed
+
 
     private void btnAñadirJugadoresManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirJugadoresManagerActionPerformed
         String cedula = this.txtCedulaManager.getText();
@@ -4531,11 +4532,11 @@ public class Vista extends javax.swing.JFrame {
                 String seleccion = (String) this.cbManagerJugadores.getSelectedItem();
                 String cedulaJugador = seleccion.split(" - ")[0];
                 Jugador jugadorEncontrado = (Jugador) this.miLiga.buscarPersona(cedulaJugador);
-                if (jugadorEncontrado.getMiEquipo() == null) {
+                if (jugadorEncontrado.getMiManager() == null) {
                     ((Manager) managerEncontrado).getMisJugadores().add(jugadorEncontrado);
                     jugadorEncontrado.setMiManager((Manager) managerEncontrado);
                     JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el jugador " + jugadorEncontrado.getNombre() + " con el manager " + managerEncontrado.getNombre());
-//                    this.actualizarTablaJugadoresManager(identificador);
+                    this.actualizarTablaJugadoresManager(cedula);
                     this.actualizarComboJugadorManager();
                 } else {
                     JOptionPane.showMessageDialog(this, "El jugador seleccionado se encuentra asociado a otro manager");
@@ -4546,6 +4547,7 @@ public class Vista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAñadirJugadoresManagerActionPerformed
 
+
     private void btnEliminarJugadorManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarJugadorManagerActionPerformed
         String cedula = this.txtCedulaManager.getText();
         Persona managerEncontrado = this.miLiga.buscarPersona(cedula);
@@ -4554,18 +4556,49 @@ public class Vista extends javax.swing.JFrame {
                 String seleccion = (String) this.cbManagerJugadores.getSelectedItem();
                 String cedulaJugador = seleccion.split(" - ")[0];
                 Jugador jugadorEncontrado = (Jugador) this.miLiga.buscarPersona(cedulaJugador);
-                if (jugadorEncontrado.getMiEquipo() == null) {
-                    ((Manager) managerEncontrado).getMisJugadores().remove(jugadorEncontrado);
-                    JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el jugador " + jugadorEncontrado.getNombre() + " con el manager " + managerEncontrado.getNombre());
-//                    this.actualizarTablaJugadoresManager(identificador);
-                    this.actualizarComboJugadorManager();
+                if (buscarJugadorManager(jugadorEncontrado, (Manager) managerEncontrado)) {
+                    
+                        ((Manager) managerEncontrado).getMisJugadores().remove(jugadorEncontrado);
+                        JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el jugador " + jugadorEncontrado.getNombre() + " del manager " + managerEncontrado.getNombre());
+                        this.actualizarTablaJugadoresManager(cedula);
+                        jugadorEncontrado.setMiManager(null);
+                        this.actualizarComboJugadorManager();
+                   
+                } else {
+                    JOptionPane.showMessageDialog(this, "El jugador que esta intentando desasociar no lo gestiona el manager elegido");
+                }
+            } 
+
+        }else {
+                JOptionPane.showMessageDialog(this, "La cédula del manager ingresado es erróneo");
+            }
+
+    }//GEN-LAST:event_btnEliminarJugadorManagerActionPerformed
+
+    public void actualizarTablaJugadoresManager(String cedula) {
+        String nombreColumnas[] = {"Cédula", "Nombre", "Apellido", "Edad", "Salario"};
+        DefaultTableModel miModelo = new DefaultTableModel(null, nombreColumnas);
+        this.tblJugadorManager.setModel(miModelo);
+        Persona personaEncontrada = this.miLiga.buscarPersona(cedula);
+        if (personaEncontrada != null) {
+            if (personaEncontrada instanceof Manager) {
+                for (Persona actual : ((Manager) personaEncontrada).getMisJugadores()) {
+                    if (actual instanceof Jugador) {
+                        String fila[] = new String[nombreColumnas.length];
+                        fila[0] = actual.getCedula();
+                        fila[1] = actual.getNombre();
+                        fila[2] = actual.getApellido();
+                        fila[3] = "" + actual.getEdad();
+                        fila[4] = "" + ((Jugador) actual).getSalario();
+                        miModelo.addRow(fila);
+                    }
                 }
             }
         } else {
-            JOptionPane.showMessageDialog(this, "La cédula del manager ingresado es erróneo");
+            miModelo.setRowCount(0);
         }
-    }//GEN-LAST:event_btnEliminarJugadorManagerActionPerformed
 
+    }
     private void btnAgregarEquipoManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEquipoManagerActionPerformed
         String cedula = this.txtCedulaManager.getText();
         Persona managerEncontrado = this.miLiga.buscarPersona(cedula);
@@ -4579,7 +4612,7 @@ public class Vista extends javax.swing.JFrame {
                         ((Manager) managerEncontrado).setMiEquipo(equipoEncontrado);
                         equipoEncontrado.setMiManager((Manager) managerEncontrado);
                         JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el equipo " + equipoEncontrado.getNombre() + " con el manager " + managerEncontrado.getNombre());
-//                      this.actualizarTablaJugadoresManager(identificador);
+                        this.actualizarTablaJugadoresManager(cedula);
                         this.actualizarComboEquipoManager();
                         this.txtEquipoManager.setText(equipoEncontrado.getNombre());
                     } else {
@@ -4607,7 +4640,7 @@ public class Vista extends javax.swing.JFrame {
                     ((Manager) managerEncontrado).setMiEquipo(null);
                     equipoEncontrado.setMiManager(null);
                     JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el equipo " + equipoEncontrado.getNombre() + " con el manager " + managerEncontrado.getNombre());
-//                    this.actualizarTablaJugadoresManager(identificador);
+                    this.actualizarTablaJugadoresManager(cedula);
                     this.actualizarComboEquipoManager();
                     this.txtEquipoManager.setText("No asignado");
                 } else {
@@ -4906,6 +4939,16 @@ public class Vista extends javax.swing.JFrame {
 
     public boolean buscarEquipoManager(Equipo equipo, Manager manager) {
         return true;
+    }
+
+    public boolean buscarJugadorManager(Jugador jugador, Manager manager) {
+        for (Jugador actual: manager.getMisJugadores()) {
+            if (actual.equals(jugador)) {
+                    return true;
+            }    
+        }
+        return false;
+
     }
 
     //==========================================================================
