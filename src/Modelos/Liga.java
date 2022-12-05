@@ -261,7 +261,6 @@ public class Liga implements Serializable {
             }
 
         }
-        System.out.println("Equipo: " + menorGoles.getNombre());
         resultado = menorGoles.getArquero();
         return resultado;
     }

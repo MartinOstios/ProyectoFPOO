@@ -66,7 +66,7 @@ public class Vista extends javax.swing.JFrame {
         this.txtVallaMenosVencida.setText(this.miLiga.arqueroMenosGoles().getNombre());
         this.txtNombreEstadioMasgoles.setText(this.miLiga.nombreEstadioMasGoles());
         this.txtIDPartidoMasGoles.setText(this.miLiga.idPartidoMasGoles());
-        
+
         //TESTEO
         //OBJETOS PARA TESTEO
 //        miLiga.crearEquipo("1" ,"Once Caldas", 1945, 5, 1, 12, 7, 18, 5);
@@ -242,7 +242,7 @@ public class Vista extends javax.swing.JFrame {
             JFileChooser file = new JFileChooser();
             file.showSaveDialog(this);
             //String ruta = "" + file.getCurrentDirectory();
-            try ( BufferedWriter save = new BufferedWriter(new FileWriter(file.getSelectedFile().toString() + "." + extension))) {
+            try (BufferedWriter save = new BufferedWriter(new FileWriter(file.getSelectedFile().toString() + "." + extension))) {
                 save.write(contenido);
             }
             JOptionPane.showMessageDialog(null, "El archivo se ha guardado exitosamente",
@@ -777,7 +777,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(btnEliminarEquipo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnLimpiarEquipo)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -964,7 +964,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminarRelacionAficionadoEquipo))
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(284, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1026,7 +1026,7 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(197, 197, 197)
                         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(378, Short.MAX_VALUE))
+                .addContainerGap(419, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1272,7 +1272,7 @@ public class Vista extends javax.swing.JFrame {
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtCapacidadEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 308, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 349, Short.MAX_VALUE)
                                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(btnAgregarEstadio)
@@ -1465,7 +1465,7 @@ public class Vista extends javax.swing.JFrame {
                                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txtMostrarJornadaPartido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                                                .addComponent(cbArbitroPartido, 0, 141, Short.MAX_VALUE)
+                                                .addComponent(cbArbitroPartido, 0, 182, Short.MAX_VALUE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(btnAgregarRelacionArbitroPartido)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1660,7 +1660,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnAgregarGolesVisitante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtGolesVisitante))))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1867,7 +1867,7 @@ public class Vista extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(193, 193, 193)
                         .addComponent(ListaPartidosJornada)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1938,7 +1938,7 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel13)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(347, Short.MAX_VALUE)
+                .addContainerGap(388, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(105, 105, 105))
         );
@@ -2005,7 +2005,7 @@ public class Vista extends javax.swing.JFrame {
                     .addComponent(txtVallaMenosVencida)
                     .addComponent(txtNombreEstadioMasgoles)
                     .addComponent(txtIDPartidoMasGoles))
-                .addContainerGap(568, Short.MAX_VALUE))
+                .addContainerGap(610, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2206,7 +2206,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoTecnico))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Técnico", jPanel8);
@@ -2374,7 +2374,7 @@ public class Vista extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCertificadoAficionado))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Aficionado", jPanel9);
@@ -2699,74 +2699,72 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel41)
-                        .addGap(202, 202, 202))
                     .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblAfiliacionManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblEdadManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblApellidoManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblNombreManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblCedulaManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtCedulaManager)
+                            .addComponent(txtApellidoManager, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(txtNombreManager, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                            .addComponent(txtEdadManager)
+                            .addComponent(txtAfiliacionManager)))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(btnAgregarManager)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnBuscarManager)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnActualizarManager)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarManager)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLimpiarManager))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(lblEquipoManager, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblJugadoresManager, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblAfiliacionManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblEdadManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblApellidoManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblNombreManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblCedulaManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(cbManagerJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtCedulaManager)
-                                    .addComponent(txtApellidoManager, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                    .addComponent(txtNombreManager, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                    .addComponent(txtEdadManager)
-                                    .addComponent(txtAfiliacionManager)))
+                                .addComponent(btnAñadirJugadoresManager)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnEliminarJugadorManager))
                             .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(btnAgregarManager)
+                                .addComponent(cbManagerEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnBuscarManager)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnActualizarManager)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnEliminarManager)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnLimpiarManager))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblEquipoManager, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblJugadoresManager, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel11Layout.createSequentialGroup()
+                                        .addComponent(btnAgregarEquipoManager)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnEliminarEquipoManager))
+                                    .addComponent(btnCertificadoManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel11Layout.createSequentialGroup()
-                                        .addComponent(cbManagerJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnAñadirJugadoresManager)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnEliminarJugadorManager))
+                                        .addGap(44, 44, 44)
+                                        .addComponent(txtEquipoManager, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel11Layout.createSequentialGroup()
-                                        .addComponent(cbManagerEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                                .addComponent(btnAgregarEquipoManager)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(btnEliminarEquipoManager))
-                                            .addComponent(btnCertificadoManager, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                                .addGap(44, 44, 44)
-                                                .addComponent(txtEquipoManager, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                                .addGap(66, 66, 66)
-                                                .addComponent(jLabel43)))))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(173, 173, 173))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(19, 19, 19))))))
+                                        .addGap(66, 66, 66)
+                                        .addComponent(jLabel43)))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(110, 110, 110))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(241, 241, 241))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel41)
+                .addGap(274, 274, 274))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2805,11 +2803,9 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(jLabel40)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel41)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
+                        .addGap(39, 39, 39)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblJugadoresManager)
                             .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2829,6 +2825,8 @@ public class Vista extends javax.swing.JFrame {
                             .addComponent(btnCertificadoManager)
                             .addComponent(txtEquipoManager, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel41)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2996,7 +2994,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnCertificadoArbitro)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Árbitro", jPanel12);
@@ -3124,7 +3122,9 @@ public class Vista extends javax.swing.JFrame {
                 //Eliminar al técnico de las relaciones:
                 Tecnico tecnico = (Tecnico) buscarPersona;
                 //Eliminar el tecnico de la relación con el equipo
-                tecnico.getMiEquipo().setTecnico(null);
+                if (tecnico.getMiEquipo() != null) {
+                    tecnico.getMiEquipo().setTecnico(null);
+                }
                 this.actualizarComboTecnicoEquipo();
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un técnico");
@@ -3246,7 +3246,9 @@ public class Vista extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "El aficionado de cédula " + cedula + " se eliminó");
                 Aficionado aficionado = (Aficionado) buscarPersona;
                 //Eliminar el jugador de la relación con equipo
-                aficionado.getMiEquipo().getMisAficionados().remove(aficionado);
+                if (aficionado.getMiEquipo() != null) {
+                    aficionado.getMiEquipo().getMisAficionados().remove(aficionado);
+                }
                 this.actualizarComboAficionadoEquipo();
                 this.actualizarTablaAficionado();
             } else {
@@ -3773,7 +3775,10 @@ public class Vista extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "El jugador de cédula " + cedula + " se eliminó");
                 Jugador jugador = (Jugador) buscarPersona;
                 //Eliminar el jugador de la relación con equipo
-                jugador.getMiEquipo().getMisJugadores().remove(jugador);
+                if (jugador.getMiEquipo() != null) {
+                    jugador.getMiEquipo().getMisJugadores().remove(jugador);
+                }
+
                 this.actualizarComboJugadorEquipo();
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un jugador");
@@ -4566,7 +4571,7 @@ public class Vista extends javax.swing.JFrame {
                 this.txtEdadManager.setText("" + manager.getEdad());
                 this.txtAfiliacionManager.setText("" + manager.getAniosAfiliacion());
                 this.txtEquipoManager.setText(this.equipoAsignado(manager.getMiEquipo()));
-
+                this.actualizarTablaJugadoresManager(cedula);
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un manager");
             }
@@ -4662,21 +4667,21 @@ public class Vista extends javax.swing.JFrame {
                 String cedulaJugador = seleccion.split(" - ")[0];
                 Jugador jugadorEncontrado = (Jugador) this.miLiga.buscarPersona(cedulaJugador);
                 if (buscarJugadorManager(jugadorEncontrado, (Manager) managerEncontrado)) {
-                    
-                        ((Manager) managerEncontrado).getMisJugadores().remove(jugadorEncontrado);
-                        JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el jugador " + jugadorEncontrado.getNombre() + " del manager " + managerEncontrado.getNombre());
-                        this.actualizarTablaJugadoresManager(cedula);
-                        jugadorEncontrado.setMiManager(null);
-                        this.actualizarComboJugadorManager();
-                   
+
+                    ((Manager) managerEncontrado).getMisJugadores().remove(jugadorEncontrado);
+                    JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el jugador " + jugadorEncontrado.getNombre() + " del manager " + managerEncontrado.getNombre());
+                    this.actualizarTablaJugadoresManager(cedula);
+                    jugadorEncontrado.setMiManager(null);
+                    this.actualizarComboJugadorManager();
+
                 } else {
                     JOptionPane.showMessageDialog(this, "El jugador que esta intentando desasociar no lo gestiona el manager elegido");
                 }
-            } 
-
-        }else {
-                JOptionPane.showMessageDialog(this, "La cédula del manager ingresado es erróneo");
             }
+
+        } else {
+            JOptionPane.showMessageDialog(this, "La cédula del manager ingresado es erróneo");
+        }
 
     }//GEN-LAST:event_btnEliminarJugadorManagerActionPerformed
 
@@ -4738,10 +4743,9 @@ public class Vista extends javax.swing.JFrame {
         Persona managerEncontrado = this.miLiga.buscarPersona(cedula);
         if (managerEncontrado != null) {
             if (managerEncontrado instanceof Manager) {
-                String seleccion = (String) this.cbManagerEquipo.getSelectedItem();
-                String identificadorEquipo = seleccion.split(" - ")[0];
-                Equipo equipoEncontrado = this.miLiga.buscarEquipo(identificadorEquipo);
-                if (equipoEncontrado.getMiManager().equals(managerEncontrado)) {
+                int indice = this.cbManagerEquipo.getSelectedIndex();
+                Equipo equipoEncontrado = this.miLiga.getMisEquipos().get(indice);
+                if (equipoEncontrado.equals(((Manager) managerEncontrado).getMiEquipo())) {
                     ((Manager) managerEncontrado).setMiEquipo(null);
                     equipoEncontrado.setMiManager(null);
                     JOptionPane.showMessageDialog(this, "Se ha desasociado correctamente el equipo " + equipoEncontrado.getNombre() + " con el manager " + managerEncontrado.getNombre());
@@ -5051,10 +5055,10 @@ public class Vista extends javax.swing.JFrame {
     }
 
     public boolean buscarJugadorManager(Jugador jugador, Manager manager) {
-        for (Jugador actual: manager.getMisJugadores()) {
+        for (Jugador actual : manager.getMisJugadores()) {
             if (actual.equals(jugador)) {
-                    return true;
-            }    
+                return true;
+            }
         }
         return false;
 
