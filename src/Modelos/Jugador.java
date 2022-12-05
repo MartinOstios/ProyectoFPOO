@@ -17,6 +17,7 @@ public class Jugador extends Persona implements Serializable{
     private int golesMarcados;
     private int salario;
     private Equipo miEquipo;
+    private Manager miManager;
 
     public Jugador(String cedula, String nombre, String apellido, int edad, String nacionalidad, String posicion, int golesMarcados, int salario) {
         super(cedula, nombre, apellido, edad);
@@ -94,6 +95,20 @@ public class Jugador extends Persona implements Serializable{
      */
     public void setMiEquipo(Equipo miEquipo) {
         this.miEquipo = miEquipo;
+    }
+
+    /**
+     * @return the miManager
+     */
+    public Manager getMiManager() {
+        return miManager;
+    }
+
+    /**
+     * @param miManager the miManager to set
+     */
+    public void setMiManager(Manager miManager) {
+        this.miManager = miManager;
     }
     
     

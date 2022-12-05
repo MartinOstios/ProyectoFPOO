@@ -22,6 +22,7 @@ public class Equipo implements Serializable{
     private LinkedList<Aficionado> misAficionados;
     private LinkedList<Jugador> misJugadores;
     private Tecnico tecnico;
+    private Manager miManager;
     
     /**
      * Constructor de objetos Equipo, con valores dados por el usuario
@@ -342,5 +343,19 @@ public class Equipo implements Serializable{
      */
     public void setId(String id) {
         this.id = id;
+    }
+
+    /**
+     * @return the miManager
+     */
+    public Manager getMiManager() {
+        return miManager;
+    }
+
+    /**
+     * @param miManager the miManager to set
+     */
+    public void setMiManager(Manager miManager) {
+        this.miManager = miManager;
     }
 }
