@@ -21,6 +21,18 @@ public class Tecnico extends Persona implements Serializable{
         this.aniosExperiencia = aniosExperiencia;
         this.salario = salario;
     }
+    @Override
+    public String cuerpoCertificado() {
+        return " y actúa en calidad de técnico del equipo " + this.equipoAsignado();
+    }
+
+    public String equipoAsignado() {
+        if (this.getMiEquipo() != null) {
+            return this.getMiEquipo().getNombre();
+        } else {
+            return "No asignado";
+        }
+    }
 
     /**
      * @return the aniosExperiencia

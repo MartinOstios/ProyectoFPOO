@@ -26,6 +26,19 @@ public class Jugador extends Persona implements Serializable{
         this.golesMarcados = golesMarcados;
         this.salario = salario;
     }
+    
+    @Override
+    public String cuerpoCertificado() {
+        return " y actúa en calidad de jugador del equipo " + this.equipoAsignado() + " ocupando la posición de " + this.getPosicion() + ".";
+    }
+    
+    public String equipoAsignado() {
+        if (this.getMiEquipo() != null) {
+            return this.getMiEquipo().getNombre();
+        } else {
+            return "No asignado";
+        }
+    }
 
     /**
      * @return the nacionalidad
@@ -110,6 +123,8 @@ public class Jugador extends Persona implements Serializable{
     public void setMiManager(Manager miManager) {
         this.miManager = miManager;
     }
+
+    
     
     
     

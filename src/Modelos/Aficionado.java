@@ -21,6 +21,19 @@ public class Aficionado extends Persona implements Serializable{
         this.aniosFidelidad = aniosFidelidad;
         this.abono = abono;
     }
+    
+    @Override
+    public String cuerpoCertificado() {
+        return " y actúa en calidad de aficionado del equipo " + this.equipoAsignado() + " afirmando que lleva " + this.getAniosFidelidad() + " años acompañándolos en las buenas y las malas campañas";
+    }
+    
+    public String equipoAsignado() {
+        if (this.getMiEquipo() != null) {
+            return this.getMiEquipo().getNombre();
+        } else {
+            return "No asignado";
+        }
+    }
 
     /**
      * @return the aniosFidelidad
@@ -63,6 +76,8 @@ public class Aficionado extends Persona implements Serializable{
     public void setMiEquipo(Equipo miEquipo) {
         this.miEquipo = miEquipo;
     }
+
+    
     
     
     

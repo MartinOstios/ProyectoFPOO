@@ -12,15 +12,29 @@ import java.util.LinkedList;
  *
  * @author Usuario
  */
-public class Manager extends Persona implements Serializable{
+public class Manager extends Persona implements Serializable {
+
     private int aniosAfiliacion;
     private Equipo miEquipo;
     private LinkedList<Jugador> misJugadores;
-        
+
     public Manager(String cedula, String nombre, String apellido, int edad, int aniosAfiliacion) {
         super(cedula, nombre, apellido, edad);
         this.aniosAfiliacion = aniosAfiliacion;
         this.misJugadores = new LinkedList<>();
+    }
+
+    @Override
+    public String cuerpoCertificado() {
+        return " y actúa en calidad de manager del equipo " + this.equipoAsignado() + " y de " + this.getMisJugadores().size() + " jugadores.";
+    }
+
+    public String equipoAsignado() {
+        if (this.getMiEquipo() != null) {
+            return this.getMiEquipo().getNombre();
+        } else {
+            return "No asignado";
+        }
     }
 
     /**
@@ -64,10 +78,5 @@ public class Manager extends Persona implements Serializable{
     public void setMisJugadores(LinkedList<Jugador> misJugadores) {
         this.misJugadores = misJugadores;
     }
-    
-    
-    
-    
-    
-    
+
 }

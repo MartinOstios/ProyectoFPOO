@@ -19,7 +19,12 @@ public class Arbitro extends Persona implements Serializable{
         super(cedula, nombre, apellido, edad);
         this.fifa = fifa;
     }
-
+    
+    @Override
+    public String cuerpoCertificado() {
+        return " y actúa en calidad de árbitro.";
+    }
+    
     /**
      * @return the fifa
      */
@@ -47,7 +52,6 @@ public class Arbitro extends Persona implements Serializable{
     public void setMiPartido(Partido miPartido) {
         this.miPartido = miPartido;
     }
-    
     
     
     

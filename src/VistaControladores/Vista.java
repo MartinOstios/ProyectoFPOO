@@ -3186,11 +3186,7 @@ public class Vista extends javax.swing.JFrame {
         if (buscarPersona != null) {
             if (buscarPersona instanceof Tecnico) {
                 Tecnico tecnico = (Tecnico) buscarPersona;
-                String cuerpo = this.cuerpoCertificados(buscarPersona);
-                String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de técnico del equipo " + this.equipoAsignado(tecnico.getMiEquipo());
-
-                String contenido = cuerpo + propio + finalCertificado;
+                String contenido = tecnico.encabezadoCertificado() + tecnico.cuerpoCertificado() + tecnico.finalCertificado();
                 this.guardarArchivo(contenido, "doc");
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un técnico");
@@ -3206,14 +3202,10 @@ public class Vista extends javax.swing.JFrame {
         if (buscarPersona != null) {
             if (buscarPersona instanceof Aficionado) {
                 Aficionado aficionado = (Aficionado) buscarPersona;
-                String cuerpo = this.cuerpoCertificados(buscarPersona);
-                String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de aficionado del equipo " + this.equipoAsignado(aficionado.getMiEquipo()) + " afirmando que lleva " + aficionado.getAniosFidelidad() + " años acompañándolos en las buenas y las malas campañas";
-
-                String contenido = cuerpo + propio + finalCertificado;
+                String contenido = aficionado.encabezadoCertificado() + aficionado.cuerpoCertificado() + aficionado.finalCertificado();
                 this.guardarArchivo(contenido, "doc");
             } else {
-                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un técnico");
+                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un aficionado");
             }
         } else {
             JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
@@ -3695,14 +3687,10 @@ public class Vista extends javax.swing.JFrame {
         if (buscarPersona != null) {
             if (buscarPersona instanceof Jugador) {
                 Jugador jugador = (Jugador) buscarPersona;
-                String cuerpo = this.cuerpoCertificados(buscarPersona);
-                String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de jugador del equipo " + this.equipoAsignado(jugador.getMiEquipo()) + " ocupando la posición de " + jugador.getPosicion() + ".";
-
-                String contenido = cuerpo + propio + finalCertificado;
+                String contenido = jugador.encabezadoCertificado() + jugador.cuerpoCertificado() + jugador.finalCertificado();
                 this.guardarArchivo(contenido, "doc");
             } else {
-                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un técnico");
+                JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un jugador");
             }
         } else {
             JOptionPane.showMessageDialog(this, "La cédula ingresada es incorrecta");
@@ -3977,10 +3965,7 @@ public class Vista extends javax.swing.JFrame {
         if (buscarPersona != null) {
             if (buscarPersona instanceof Arbitro) {
                 Arbitro arbitro = (Arbitro) buscarPersona;
-                String cuerpo = this.cuerpoCertificados(buscarPersona);
-                String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de árbitro. ";
-                String contenido = cuerpo + propio + finalCertificado;
+                String contenido = arbitro.encabezadoCertificado() + arbitro.cuerpoCertificado() + arbitro.finalCertificado();
                 this.guardarArchivo(contenido, "doc");
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un árbitro");
@@ -4477,7 +4462,7 @@ public class Vista extends javax.swing.JFrame {
                 this.txtEdadManager.setText("" + manager.getEdad());
                 this.txtAfiliacionManager.setText("" + manager.getAniosAfiliacion());
                 this.txtEquipoManager.setText(this.equipoAsignado(manager.getMiEquipo()));
-                
+
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un manager");
             }
@@ -4548,7 +4533,7 @@ public class Vista extends javax.swing.JFrame {
                 Jugador jugadorEncontrado = (Jugador) this.miLiga.buscarPersona(cedulaJugador);
                 if (jugadorEncontrado.getMiEquipo() == null) {
                     ((Manager) managerEncontrado).getMisJugadores().add(jugadorEncontrado);
-                    jugadorEncontrado.setMiManager((Manager)managerEncontrado);
+                    jugadorEncontrado.setMiManager((Manager) managerEncontrado);
                     JOptionPane.showMessageDialog(this, "Se ha asociado correctamente el jugador " + jugadorEncontrado.getNombre() + " con el manager " + managerEncontrado.getNombre());
 //                    this.actualizarTablaJugadoresManager(identificador);
                     this.actualizarComboJugadorManager();
@@ -4640,11 +4625,7 @@ public class Vista extends javax.swing.JFrame {
         if (buscarPersona != null) {
             if (buscarPersona instanceof Manager) {
                 Manager manager = (Manager) buscarPersona;
-                String cuerpo = this.cuerpoCertificados(buscarPersona);
-                String finalCertificado = this.finalCertificados();
-                String propio = " y actúa en calidad de manager del equipo " + this.equipoAsignado(manager.getMiEquipo()) + " y de " + manager.getMisJugadores().size() + " jugadores.";
-
-                String contenido = cuerpo + propio + finalCertificado;
+                String contenido = manager.encabezadoCertificado() + manager.cuerpoCertificado() + manager.finalCertificado();
                 this.guardarArchivo(contenido, "doc");
             } else {
                 JOptionPane.showMessageDialog(this, "La cédula ingresada no es de un manager");
@@ -4922,10 +4903,11 @@ public class Vista extends javax.swing.JFrame {
         }
         return false;
     }
-    
-    public boolean buscarEquipoManager(Equipo equipo, Manager manager){
-       return true;
+
+    public boolean buscarEquipoManager(Equipo equipo, Manager manager) {
+        return true;
     }
+
     //==========================================================================
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
