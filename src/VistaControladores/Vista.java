@@ -58,6 +58,15 @@ public class Vista extends javax.swing.JFrame {
         this.actualizarTablaJornada();
         this.actualizarTablaManager();
 
+        //REPORTES GENERALES DE LA LIGA
+        this.txtJugadorMasJoven.setText(this.miLiga.jugadorMasJoven().getNombre());
+        this.txtGoleadorLiga.setText(this.miLiga.jugadorMayorGoles().getNombre());
+        this.txtEquipoMasCaro.setText(this.miLiga.equipoMayorNomina().getNombre());
+        this.txtEquipoMayorCantidadAficionados.setText(this.miLiga.equipoMayorAficionados().getNombre());
+        this.txtVallaMenosVencida.setText(this.miLiga.arqueroMenosGoles().getNombre());
+        this.txtNombreEstadioMasgoles.setText(this.miLiga.nombreEstadioMasGoles());
+        this.txtIDPartidoMasGoles.setText(this.miLiga.idPartidoMasGoles());
+        
         //TESTEO
         //OBJETOS PARA TESTEO
 //        miLiga.crearEquipo("1" ,"Once Caldas", 1945, 5, 1, 12, 7, 18, 5);
@@ -500,6 +509,20 @@ public class Vista extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblPosiciones = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
+        lblJugadorMasJoven = new javax.swing.JLabel();
+        txtJugadorMasJoven = new javax.swing.JTextField();
+        lblGoleadorLiga = new javax.swing.JLabel();
+        txtGoleadorLiga = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        txtEquipoMasCaro = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        txtEquipoMayorCantidadAficionados = new javax.swing.JTextField();
+        lblVallaMenosVendia = new javax.swing.JLabel();
+        txtVallaMenosVencida = new javax.swing.JTextField();
+        lblEstadioMasGoles = new javax.swing.JLabel();
+        txtNombreEstadioMasgoles = new javax.swing.JTextField();
+        lblIdPartidoMasGoles = new javax.swing.JLabel();
+        txtIDPartidoMasGoles = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
@@ -1030,6 +1053,11 @@ public class Vista extends javax.swing.JFrame {
         lblArqueroEquipo.setText("Arquero:");
 
         txtJugadorJovenEquipo.setEditable(false);
+        txtJugadorJovenEquipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtJugadorJovenEquipoActionPerformed(evt);
+            }
+        });
 
         txtPromedioEdadJugadoresEquipo.setEditable(false);
 
@@ -1926,15 +1954,92 @@ public class Vista extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Tabla de posiciones", jPanel6);
 
+        lblJugadorMasJoven.setText("Jugador más joven de la liga:");
+
+        txtJugadorMasJoven.setEditable(false);
+
+        lblGoleadorLiga.setText("Goleador de la liga:");
+
+        txtGoleadorLiga.setEditable(false);
+
+        jLabel44.setText("Equipo más caro de la liga:");
+
+        txtEquipoMasCaro.setEditable(false);
+
+        jLabel45.setText("Equipo con mayor cantidad de aficionados:");
+
+        txtEquipoMayorCantidadAficionados.setEditable(false);
+
+        lblVallaMenosVendia.setText("Valla menos vencida de la liga:");
+
+        txtVallaMenosVencida.setEditable(false);
+
+        lblEstadioMasGoles.setText("Nombre de estadio en el que se han hecho más goles:");
+
+        txtNombreEstadioMasgoles.setEditable(false);
+
+        lblIdPartidoMasGoles.setText("Identificador del partido en el que se hicieron más goles:");
+
+        txtIDPartidoMasGoles.setEditable(false);
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1052, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblIdPartidoMasGoles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel45)
+                    .addComponent(lblJugadorMasJoven, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblGoleadorLiga, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblVallaMenosVendia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblEstadioMasGoles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtJugadorMasJoven)
+                    .addComponent(txtGoleadorLiga)
+                    .addComponent(txtEquipoMasCaro, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                    .addComponent(txtEquipoMayorCantidadAficionados)
+                    .addComponent(txtVallaMenosVencida)
+                    .addComponent(txtNombreEstadioMasgoles)
+                    .addComponent(txtIDPartidoMasGoles))
+                .addContainerGap(568, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 607, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblJugadorMasJoven)
+                            .addComponent(txtJugadorMasJoven, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblGoleadorLiga)
+                            .addComponent(txtGoleadorLiga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(txtEquipoMasCaro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel45))
+                    .addComponent(txtEquipoMayorCantidadAficionados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblVallaMenosVendia)
+                    .addComponent(txtVallaMenosVencida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstadioMasGoles)
+                    .addComponent(txtNombreEstadioMasgoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblIdPartidoMasGoles)
+                    .addComponent(txtIDPartidoMasGoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Reportes", jPanel7);
@@ -4668,6 +4773,10 @@ public class Vista extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnCertificadoManagerActionPerformed
 
+    private void txtJugadorJovenEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJugadorJovenEquipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtJugadorJovenEquipoActionPerformed
+
     public void actualizarComboJugadorManager() {
         this.cbManagerJugadores.removeAllItems();
         for (Persona actual : this.miLiga.getMisPersonas()) {
@@ -5124,6 +5233,8 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -5182,14 +5293,18 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblEquipoManager;
     private javax.swing.JLabel lblEquipoVisitantePartido;
     private javax.swing.JLabel lblEquipoVisitanteSeleccionadoPartido;
+    private javax.swing.JLabel lblEstadioMasGoles;
     private javax.swing.JLabel lblFechaPartido;
+    private javax.swing.JLabel lblGoleadorLiga;
     private javax.swing.JLabel lblGolesLocal;
     private javax.swing.JLabel lblGolesLocalPartido;
     private javax.swing.JLabel lblGolesVisitante;
     private javax.swing.JLabel lblGolesVisitantePartido;
+    private javax.swing.JLabel lblIdPartidoMasGoles;
     private javax.swing.JLabel lblIdentificadorEstadio;
     private javax.swing.JLabel lblIdentificadorPartido;
     private javax.swing.JLabel lblJugadorMasGolesEquipo;
+    private javax.swing.JLabel lblJugadorMasJoven;
     private javax.swing.JLabel lblJugadorMasJovenEquipo;
     private javax.swing.JLabel lblJugadoresLocalPartido;
     private javax.swing.JLabel lblJugadoresManager;
@@ -5205,6 +5320,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel lblSumaTotalNominaEquipo;
     private javax.swing.JLabel lblTituloListaEstadios;
     private javax.swing.JLabel lblTituloListaPartido;
+    private javax.swing.JLabel lblVallaMenosVendia;
     private javax.swing.JLabel nombreArbitro;
     private javax.swing.JSpinner spinnerGolesLocal;
     private javax.swing.JSpinner spinnerGolesVisitante;
@@ -5247,12 +5363,15 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtEquipoAficionado;
     private javax.swing.JTextField txtEquipoJugador;
     private javax.swing.JTextField txtEquipoManager;
+    private javax.swing.JTextField txtEquipoMasCaro;
+    private javax.swing.JTextField txtEquipoMayorCantidadAficionados;
     private javax.swing.JTextField txtEquipoTecnico;
     private javax.swing.JTextField txtEsloganJornada;
     private javax.swing.JTextField txtExperienciaTecnico;
     private javax.swing.JTextField txtFechaPartido;
     private javax.swing.JTextField txtFidelidadAficionado;
     private javax.swing.JTextField txtFundacionEquipo;
+    private javax.swing.JTextField txtGoleadorLiga;
     private javax.swing.JTextField txtGolesContraEquipo;
     private javax.swing.JTextField txtGolesEquipoLocal;
     private javax.swing.JTextField txtGolesEquipoVisitante;
@@ -5260,11 +5379,13 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtGolesJugador;
     private javax.swing.JTextField txtGolesLocal;
     private javax.swing.JTextField txtGolesVisitante;
+    private javax.swing.JTextField txtIDPartidoMasGoles;
     private javax.swing.JTextField txtIdentificadorEquipo;
     private javax.swing.JTextField txtIdentificadorEstadio;
     private javax.swing.JTextField txtIdentificadorPartido;
     private javax.swing.JTextField txtJugadorJovenEquipo;
     private javax.swing.JTextField txtJugadorMasGolesEquipo;
+    private javax.swing.JTextField txtJugadorMasJoven;
     private javax.swing.JTextField txtMostrarArbitroPartido;
     private javax.swing.JTextField txtMostrarEquipoLocal;
     private javax.swing.JTextField txtMostrarEquipoVisitante;
@@ -5275,6 +5396,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombreArbitro;
     private javax.swing.JTextField txtNombreEquipo;
     private javax.swing.JTextField txtNombreEstadio;
+    private javax.swing.JTextField txtNombreEstadioMasgoles;
     private javax.swing.JTextField txtNombreJugador;
     private javax.swing.JTextField txtNombreManager;
     private javax.swing.JTextField txtNombreTecnico;
@@ -5288,5 +5410,6 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField txtSalarioTecnico;
     private javax.swing.JTextField txtTitulosInternacionalesEquipo;
     private javax.swing.JTextField txtTitulosNacionalesEquipo;
+    private javax.swing.JTextField txtVallaMenosVencida;
     // End of variables declaration//GEN-END:variables
 }

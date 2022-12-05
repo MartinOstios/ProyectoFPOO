@@ -119,11 +119,11 @@ public class Liga implements Serializable {
      */
     public Jugador jugadorMasJoven() {
         Jugador resultado = null;
-        int mayor = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         for (Persona actual : this.getMisPersonas()) {
             if (actual instanceof Jugador) {
-                if (actual.getEdad() > mayor) {
-                    mayor = actual.getEdad();
+                if (actual.getEdad() < min) {
+                    min = actual.getEdad();
                     resultado = (Jugador) actual;
                 }
             }

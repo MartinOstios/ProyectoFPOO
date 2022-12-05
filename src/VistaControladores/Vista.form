@@ -820,6 +820,9 @@
                       <Properties>
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtJugadorJovenEquipoActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtPromedioEdadJugadoresEquipo">
                       <Properties>
@@ -2141,15 +2144,148 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="1052" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="lblIdPartidoMasGoles" max="32767" attributes="0"/>
+                          <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblJugadorMasJoven" max="32767" attributes="0"/>
+                          <Component id="lblGoleadorLiga" max="32767" attributes="0"/>
+                          <Component id="lblVallaMenosVendia" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblEstadioMasGoles" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel44" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtJugadorMasJoven" max="32767" attributes="0"/>
+                          <Component id="txtGoleadorLiga" max="32767" attributes="0"/>
+                          <Component id="txtEquipoMasCaro" pref="168" max="32767" attributes="0"/>
+                          <Component id="txtEquipoMayorCantidadAficionados" max="32767" attributes="0"/>
+                          <Component id="txtVallaMenosVencida" max="32767" attributes="0"/>
+                          <Component id="txtNombreEstadioMasgoles" max="32767" attributes="0"/>
+                          <Component id="txtIDPartidoMasGoles" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="568" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="607" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblJugadorMasJoven" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtJugadorMasJoven" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblGoleadorLiga" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtGoleadorLiga" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtEquipoMasCaro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txtEquipoMayorCantidadAficionados" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblVallaMenosVendia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtVallaMenosVencida" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblEstadioMasGoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNombreEstadioMasgoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblIdPartidoMasGoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtIDPartidoMasGoles" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="307" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="lblJugadorMasJoven">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Jugador m&#xe1;s joven de la liga:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtJugadorMasJoven">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblGoleadorLiga">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Goleador de la liga:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtGoleadorLiga">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel44">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Equipo m&#xe1;s caro de la liga:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEquipoMasCaro">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel45">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Equipo con mayor cantidad de aficionados:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtEquipoMayorCantidadAficionados">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblVallaMenosVendia">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Valla menos vencida de la liga:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtVallaMenosVencida">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblEstadioMasGoles">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nombre de estadio en el que se han hecho m&#xe1;s goles:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtNombreEstadioMasgoles">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lblIdPartidoMasGoles">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Identificador del partido en el que se hicieron m&#xe1;s goles:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtIDPartidoMasGoles">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Constraints>
